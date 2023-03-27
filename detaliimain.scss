@@ -1,0 +1,1481 @@
+@import "culori";
+@import "mixinuri";
+body {
+    font-family: "Nunito Sans";
+    line-height: 1.5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@media (min-width: 320px) {
+    .scrollblock {
+        overflow: hidden;
+    }
+    main {
+        .saleoferte {
+            background-color: #F0FEE2;
+            border: 1px solid #F0FEE2;
+            margin: 0;
+            position: absolute;
+            z-index: 1;
+            top: 150px;
+            left: 29px;
+            border-radius: 10px;
+            padding: 4px 8px;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 20.8px;
+            color: #77757F;
+            padding: 4px 11px;
+        }
+        ul {
+            padding: 0;
+        }
+        li,
+        ul {
+            list-style-type: disc;
+        }
+        .titledetails {
+            list-style-type: none;
+        }
+        .containerf {
+            padding: 0 16px;
+            ;
+        }
+        .container {
+            padding: 0 16px;
+        }
+        .detaliu {
+            padding: 40px 0 20px 0;
+            margin: 0;
+        }
+        .hmpage {
+            span {
+                @include tipografie (18px, 800, 18px, $cultitlu);
+                padding-left: 10px;
+            }
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 11px;
+            a {
+                text-decoration: none;
+                @include tipografie(18px, 600, 18px, $culsale)
+            }
+        }
+        img {
+            border: 1px solid $culsale;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        h1 {
+            @include tipografie (24px, 800, 26px, $cultitlu);
+            margin: 0;
+            padding-top: 25px;
+            padding-bottom: 23px;
+        }
+        .stele {
+            line-height: 1;
+            p {
+                margin: 0;
+                padding-left: 5.5px;
+                display: inline-block;
+                padding-left: 103px;
+                @include tipografie(14px, 700, 18px, $cultitlu);
+                &.unu,
+                &.doi {
+                    span {
+                        display: none;
+                    }
+                    font-family: "Font Awesome 5 Free";
+                    -webkit-font-smoothing: antialiased;
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 1;
+                    font-size: 15px;
+                    font-weight: 900;
+                    padding: 0;
+                    text-align: center;
+                    overflow-wrap: unset;
+                    letter-spacing: 3.5px;
+                    position: absolute;
+                    &:after {
+                        content: "\f005 \f005 \f005 \f005 \f005";
+                        color: $culsale;
+                    }
+                }
+                &.doi {
+                    max-width: 0%;
+                    overflow: hidden;
+                    position: absolute;
+                    &:after {
+                        color: $steagalbena;
+                    }
+                    &.unu {
+                        position: relative;
+                    }
+                }
+            }
+        }
+        .instock {
+            @include tipografie(24px, 700, 24.3px, $culbacklact);
+            padding-bottom: 10px
+        }
+        .outstock {
+            @include tipografie(24px, 700, 24.3px, red);
+            padding-bottom: 10px;
+        }
+        .preturi2 {
+            padding-top: 6px;
+            p {
+                @include tipografie(24px, 700, 24.3px, $culpretred);
+                margin: 0;
+                padding: 0;
+                padding-right: 10px;
+                display: inline-block;
+            }
+            #pretnormal {
+                color: $cultxtcateg;
+            }
+            span {
+                text-decoration: line-through;
+                margin: 0;
+                @include tipografie(18px, 700, 24.3px, $fottitlu)
+            }
+        }
+        .detaliu {
+            @include tipografie(14px, 600, 16px, $cultitlu)
+        }
+        h4 {
+            @include tipografie( 18px, 400, 26px, $culsubtitlu);
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .salemb {
+            border-radius: 16px;
+            background-color: $culbacklact;
+            font-family: "Font Awesome 5 Free";
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            font-size: 18px;
+            color: $cultitlu;
+            font-weight: 900;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+            padding: 11.5px 0;
+            margin-top: 10px;
+            text-decoration: none;
+            &:after {
+                content: "\f290";
+                color: white;
+            }
+            span {
+                @include tipografie(22px, 700, 27px, $alb)
+            }
+        }
+        .related {
+            @include tipografie(16px, 800, 18px, $culbacklact);
+        }
+        .detaliifructe {
+            padding-bottom: 16px;
+            padding-top: 18px;
+            .star-rating {
+                display: flex;
+                align-items: center;
+                width: 160px;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                padding-bottom: 20px;
+                position: relative;
+            }
+            .star-rating input {
+                display: none;
+            }
+            .star-rating>label {
+                width: 30px;
+                height: 30px;
+                font-family: Arial;
+                font-size: 30px;
+                transition: 0.2s ease;
+                color: $steagalbena;
+            }
+            .star-rating label:hover {
+                color: $steagalbena;
+                transition: 0.2s ease;
+            }
+            .star-rating label:active::before {
+                transform: scale(1.1);
+            }
+            .star-rating label::before {
+                content: '\2606';
+                position: absolute;
+                top: 0px;
+                line-height: 26px;
+            }
+            .star-rating input:checked~label:before {
+                content: '\2605';
+            }
+        }
+        h3 {
+            @include tipografie(16px, 800, 18px, $culbacklact);
+            margin: 0;
+        }
+        p {
+            @include tipografie(16px, 800, 18px, $cultitlu);
+            margin: 0;
+            padding: 0;
+        }
+        .sub-menu {
+            @include tipografie(16px, 800, 18px, $cultitlu);
+            margin: 0;
+            padding-left: 10px;
+            list-style-position: inside;
+        }
+        .navnutritional {
+            list-style: none;
+            padding: 0;
+            #ingrediente {
+                list-style-type: none;
+            }
+            .titledetails {
+                padding-top: 20px;
+            }
+            .plusicon {
+                display: none;
+            }
+            .plus {
+                font-family: "Font Awesome 5 Free";
+                -webkit-font-smoothing: antialiased;
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                line-height: 0.5;
+                font-size: 35px;
+                font-weight: 900;
+                padding: 0;
+                text-align: center;
+                overflow-wrap: unset;
+                position: absolute;
+                z-index: 0;
+                padding-left: 10px;
+                text-decoration: none;
+                &:after {
+                    content: "\2b";
+                    color: $culbacklact;
+                    font-size: 25px;
+                }
+            }
+            .detaliinutritionale {
+                display: flex;
+                align-items: center;
+            }
+            .showdetailsplus {
+                text-decoration: none;
+                @include tipografie(24px, 800, 28px, $culbacklact);
+                padding-left: 10px;
+            }
+            .showdetailsminus {
+                text-decoration: none;
+                @include tipografie(24px, 800, 28px, $culbacklact);
+                padding-left: 10px;
+            }
+            .showdetails {
+                display: inline-block;
+            }
+            .sub-menu {
+                display: none;
+            }
+            .showsub-menu {
+                &+.sub-menu {
+                    display: block;
+                    margin: 0;
+                    padding-left: 10px;
+                    list-style-position: inside;
+                    @include tipografie(16px, 800, 18px, $cultitlu);
+                    list-style-type: disc;
+                }
+                .plusicon {
+                    display: none;
+                }
+                .plus {
+                    font-family: "Font Awesome 5 Free";
+                    -webkit-font-smoothing: antialiased;
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 0.5;
+                    font-size: 35px;
+                    font-weight: 900;
+                    padding: 0;
+                    text-align: center;
+                    overflow-wrap: unset;
+                    position: absolute;
+                    z-index: 0;
+                    padding-left: 10px;
+                    text-decoration: none;
+                    &:after {
+                        content: "\f068";
+                        color: $culbacklact;
+                    }
+                }
+            }
+        }
+    }
+    .addsubmit {
+        text-decoration: none;
+        background-color: $culbacklact;
+        border-radius: 15px;
+        padding: 10px 55px;
+        @include tipografie(22px, 700, 27px, $alb)
+    }
+    .rating {
+        display: inline-block;
+        unicode-bidi: bidi-override;
+        color: $culsale;
+        font-size: 20px;
+        height: 25px;
+        width: auto;
+        margin: 0;
+        position: relative;
+        padding: 0;
+    }
+    .rating-upper {
+        color: $steagalbena;
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .rating-lower {
+        padding: 0;
+        display: flex;
+        z-index: 0;
+    }
+    .stele {
+        p {
+            .doi {
+                max-width: 0%;
+            }
+        }
+    }
+    .card1:hover {
+        border: 1px solid $culsale;
+        .detalii {
+            .salemb {
+                background-color: $cullachover;
+            }
+        }
+    }
+    .card1 {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 0;
+        border: 1px solid $culsale;
+        background-color: $alb;
+        justify-content: space-between;
+        padding: 16px 0;
+        margin-bottom: 16px;
+        margin-top: 15px;
+        width: 100%;
+        img {
+            border: none;
+        }
+        .fruct {
+            padding-bottom: 85%;
+            width: 85%;
+            float: left;
+            height: 0;
+            .oferte {
+                @include tipografie(16px, normal, 20.8px, $culsubtitlu);
+                padding: 4px 11px;
+                background-color: $bcksale;
+                border: 1px solid $bcksale;
+                margin: 0;
+                position: absolute;
+                z-index: 1;
+                left: 42px;
+                top: 30px;
+                border-radius: 10px;
+                padding: 4px 8px;
+            }
+        }
+        .detalii {
+            width: 90%;
+            display: inline-block;
+            .nume {
+                @include tipografie(18px, 700, 22px, $cultitlu);
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+            }
+            .gramaj {
+                @include tipografie(14px, 600, 18px, $culsubtitlu);
+                margin: 0;
+                padding-bottom: 12px;
+                letter-spacing: 0.03em;
+                padding-top: 15px;
+            }
+            .detalii2 {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: flex-start;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .pret {
+                padding-top: 9.5px;
+                padding-bottom: 16px;
+                @include tipografie(20px, 700, 27px, $cultitlu);
+                margin: 0;
+            }
+            .stele {
+                display: inline-block;
+                width: 100px;
+                padding-top: 14.5px;
+                position: relative;
+                padding-bottom: 16px;
+                p {
+                    margin: 0;
+                    &.unu,
+                    &.doi {
+                        span {
+                            display: none;
+                        }
+                        font-family: "Font Awesome 5 Free";
+                        -webkit-font-smoothing: antialiased;
+                        display: inline-block;
+                        font-style: normal;
+                        font-variant: normal;
+                        text-rendering: auto;
+                        line-height: 1;
+                        font-size: 15px;
+                        font-weight: 900;
+                        padding: 0;
+                        text-align: center;
+                        overflow-wrap: unset;
+                        position: absolute;
+                        z-index: 0;
+                        &:after {
+                            content: "\f005 \f005 \f005 \f005 \f005";
+                            color: $culsale;
+                        }
+                    }
+                    &.doi {
+                        max-width: 0%;
+                        overflow: hidden;
+                        position: absolute;
+                        z-index: 1;
+                        width: 100%;
+                        &:after {
+                            color: $steagalbena;
+                        }
+                        &.unu {
+                            position: relative;
+                        }
+                    }
+                }
+            }
+            .stele2 {
+                display: inline-block;
+                width: 116px;
+                padding-top: 14.5px;
+                position: relative;
+                overflow-wrap: unset;
+                letter-spacing: 8px;
+                padding-bottom: 16px;
+                p {
+                    margin: 0;
+                    &.unu,
+                    &.doi {
+                        span {
+                            display: none;
+                        }
+                        font-family: "Font Awesome 5 Free";
+                        -webkit-font-smoothing: antialiased;
+                        display: inline-block;
+                        font-style: normal;
+                        font-variant: normal;
+                        text-rendering: auto;
+                        line-height: 1;
+                        font-size: 15px;
+                        font-weight: 900;
+                        padding: 0;
+                        text-align: center;
+                        overflow-wrap: unset;
+                        position: absolute;
+                        z-index: 0;
+                        &:after {
+                            content: "\f005 \f005 \f005 \f005 \f005";
+                            color: $culsale;
+                        }
+                    }
+                    &.doi {
+                        max-width: 60%;
+                        overflow: hidden;
+                        position: absolute;
+                        z-index: 1;
+                        width: 100%;
+                        &:after {
+                            color: $steagalbena;
+                        }
+                        &.unu {
+                            position: relative;
+                        }
+                    }
+                }
+            }
+            .stele3 {
+                display: inline-block;
+                width: 116px;
+                padding-top: 14.5px;
+                position: relative;
+                letter-spacing: 8px;
+                padding-bottom: 16px;
+                p {
+                    margin: 0;
+                    &.unu,
+                    &.doi {
+                        span {
+                            display: none;
+                        }
+                        font-family: "Font Awesome 5 Free";
+                        -webkit-font-smoothing: antialiased;
+                        display: inline-block;
+                        font-style: normal;
+                        font-variant: normal;
+                        text-rendering: auto;
+                        line-height: 1;
+                        font-size: 15px;
+                        font-weight: 900;
+                        padding: 0;
+                        text-align: center;
+                        overflow-wrap: unset;
+                        position: absolute;
+                        z-index: 0;
+                        &:after {
+                            content: "\f005 \f005 \f005 \f005 \f005";
+                            color: $culsale;
+                        }
+                    }
+                    &.doi {
+                        max-width: 100%;
+                        overflow: hidden;
+                        position: absolute;
+                        z-index: 1;
+                        width: 100%;
+                        &:after {
+                            color: $steagalbena;
+                        }
+                        &.unu {
+                            position: relative;
+                        }
+                    }
+                }
+            }
+            .salemb {
+                border-radius: 16px;
+                background-color: $culbacklact;
+                font-family: "Font Awesome 5 Free";
+                -webkit-font-smoothing: antialiased;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                line-height: 1;
+                font-size: 18px;
+                color: $cultitlu;
+                font-weight: 900;
+                padding: 0;
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+                display: flex;
+                align-items: baseline;
+                justify-content: center;
+                display: flex;
+                margin: 0;
+                &:after {
+                    content: "\f290";
+                    color: white;
+                    font-size: 20px;
+                    border: 0;
+                }
+            }
+            .mbbuy {
+                @include tipografie(14px, 700, 16px, $alb);
+                display: block;
+                padding-right: 17px;
+            }
+        }
+        .pretred {
+            float: right;
+            padding-top: 8px;
+        }
+        .preturi2 {
+            padding-bottom: 16px;
+            padding-top: 0;
+            width: 100%;
+            .pret1 {
+                @include tipografie(20px, 700, 27px, $culpretred);
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+            }
+            .pret3 {
+                text-decoration: line-through;
+                margin: 0 0 0 10px;
+                @include tipografie(16px, 700, 20px, $cultitlu)
+            }
+        }
+    }
+    .glide {
+        padding: 0 10px;
+    }
+    .glide__track {
+        margin: 0 -10px;
+    }
+    .glide__arrow {
+        box-shadow: none;
+    }
+    .glide__arrow--left {
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+        font-family: "Font Awesome 5 Free";
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-size: 30px;
+        color: $cultitlu;
+        font-weight: 900;
+        position: absolute;
+        left: -15px;
+        &:after {
+            content: "\f0d9";
+            color: $culbacklact;
+        }
+        .arrowslide {
+            display: none;
+        }
+    }
+    .glide__arrow--right {
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+        font-family: "Font Awesome 5 Free";
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-size: 30px;
+        color: $cultitlu;
+        font-weight: 900;
+        position: absolute;
+        right: -15px;
+        &:after {
+            content: "\f0da";
+            color: $culbacklact;
+        }
+        .arrowslide {
+            display: none;
+        }
+    }
+    .glide__slide {
+        margin: 0;
+    }
+    input {
+        border: 2px solid;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+    .butoane {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        span {
+            display: none;
+        }
+        .plus {
+            border: 0;
+            background-color: transparent;
+            font-family: "Font Awesome 5 Free";
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            font-size: 25px;
+            color: $cultitlu;
+            font-weight: 900;
+            padding: 0;
+            top: 16px;
+            right: 5px;
+            position: absolute;
+            &:after {
+                content: "\f067";
+                color: $backfot;
+            }
+        }
+        .minus {
+            border: 0;
+            background-color: transparent;
+            font-family: "Font Awesome 5 Free";
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            font-size: 25px;
+            color: $cultitlu;
+            font-weight: 900;
+            padding: 0;
+            position: absolute;
+            top: 16px;
+            left: 5px;
+            &:before {
+                content: "\f068";
+                color: $backfot;
+            }
+        }
+    }
+}
+
+form input {
+    border-radius: 20px;
+    width: 100%;
+    @include tipografie(16px, 400, 19px, $cultxtsupl);
+    text-align: center
+}
+
+.dateform {
+    padding-top: 15px;
+    label {
+        padding-bottom: 10px;
+    }
+}
+
+form {
+    padding-top: 10px;
+    border-top: 2px solid $cullinie;
+}
+
+form h2 {
+    @include tipografie(16px, 400, 19px, $cultxtcateg);
+}
+
+#nameReview {
+    @include tipografie(16px, 800, 18px, $cultxtcateg);
+    display: inline-block;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+#titleReview {
+    @include tipografie(16px, 800, 18px, $culbacklact)
+}
+
+#descReview {
+    padding-top: 10px;
+    @include tipografie(16px, 800, 18px, $cultxtcateg);
+    padding-bottom: 10px;
+}
+
+#desc {
+    border-radius: 20px;
+    width: 100%;
+    height: 100px;
+    @include tipografie(16px, 400, 19px, $cultxtsupl);
+    text-align: center
+}
+
+#rating {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (min-width:600px) {
+    main {
+        .saleoferte {
+            background-color: #F0FEE2;
+            border: 1px solid #F0FEE2;
+            margin: 0;
+            position: absolute;
+            z-index: 1;
+            top: 150px;
+            left: 45px;
+            border-radius: 10px;
+            padding: 4px 8px;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 20.8px;
+            color: #77757F;
+            padding: 4px 11px;
+        }
+        .but2 {
+            width: 100%;
+        }
+        .butoane {
+            width: 30%;
+        }
+        .salemb {
+            width: 60%;
+            margin-top: 0;
+            margin-left: 15px;
+        }
+    }
+}
+
+@media (min-width:800px) {
+    .arrowup {
+        display: none;
+    }
+    main {
+        .instock {
+            @include tipografie(24px, 700, 24.3px, $culbacklact);
+            display: flex;
+            justify-content: flex-end
+        }
+        .outstock {
+            @include tipografie(24px, 700, 24.3px, red);
+            display: flex;
+            justify-content: flex-end;
+        }
+        .saleoferte {
+            background-color: #F0FEE2;
+            border: 1px solid #F0FEE2;
+            margin: 0;
+            position: absolute;
+            z-index: 1;
+            top: 235px;
+            left: 50px;
+            border-radius: 10px;
+            padding: 4px 8px;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 20.8px;
+            color: #77757F;
+            padding: 4px 11px;
+        }
+        .preturi2 {
+            padding-top: 24px;
+        }
+        .hmpage {
+            padding-bottom: 52px;
+            padding-top: 48px;
+        }
+        .rating {
+            font-size: 20px;
+            width: auto;
+        }
+        .butoane {
+            display: inline-block;
+            width: 30%;
+            .minus {
+                top: 15px;
+                left: 6px;
+                position: absolute;
+            }
+            .plus {
+                top: 15px;
+                right: 7px;
+                position: absolute;
+            }
+        }
+        .rating {
+            display: inline-block;
+        }
+        .ratingup {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .bucati {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 55px;
+        }
+        .but2 {
+            display: inline-block;
+            width: 100%;
+        }
+        #desc {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            padding-left: 8px;
+        }
+        input {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            padding-left: 8px;
+        }
+        .salemb {
+            width: 50%;
+            margin-left: 15px;
+            margin-top: 0;
+            line-height: 1.5;
+        }
+        .salemb:hover {
+            background-color: $cullachover;
+        }
+    }
+    .addsubmit:hover {
+        background-color: $cullachover;
+        @include tipografie(22px, 700, 27px, $alb);
+        &:after {
+            background-color: $cullachover;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    main {
+        #name,
+        #summ,
+        #desc {
+            border-radius: 20px;
+            width: 100%;
+            @include tipografie(16px, 400, 19px, $cultxtsupl);
+            text-align: left
+        }
+        .preturi2 {
+            padding: 0;
+            float: right;
+        }
+        .stele {
+            p {
+                @include tipografie(14px, 700, 18px, $cultitlu);
+                padding-left: 120px;
+                &.doi {
+                    max-width: 0%;
+                }
+                &.unu,
+                &.doi {
+                    letter-spacing: 0px;
+                    font-size: 18px;
+                }
+            }
+        }
+        .glide__arrow--left {
+            left: -20px
+        }
+        .glide__arrow--right {
+            right: 0px;
+        }
+        .hmpage {
+            padding: 48px 0 52px 0;
+        }
+        padding-bottom: 24px;
+        .container {
+            padding: 0 40px;
+        }
+        h1 {
+            @include tipografie(32px, 800, 36px, $cultitlu);
+            padding-bottom: 69px;
+            padding-top: 0px;
+        }
+        .detaliu {
+            @include tipografie(22px, 800, 36px, $cultitlu);
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+        .detaliifructe {
+            display: inline-block;
+            width: 100%;
+            padding: 50px 0 50px 0;
+            p {
+                @include tipografie(22px, 800, 36px, $cultitlu);
+            }
+            h3 {
+                @include tipografie(22px, 800, 36px, $culpretred);
+                background-color: $backfot;
+                border: 1px solid black;
+                padding: 20px 30px;
+            }
+            h3:hover,
+            h3:active {
+                color: $culbacklact;
+            }
+            .navnutritional {
+                list-style: none;
+                padding: 0;
+                display: inline-block;
+                width: 100%;
+                .dateformprincipal {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                }
+                .dateform {
+                    width: 45%;
+                }
+                .namesirew {
+                    display: flex;
+                }
+                #titleReview {
+                    padding-top: 5px;
+                }
+                #desc {
+                    height: 150px;
+                    border-radius: 20px;
+                    width: 100%;
+                    @include tipografie(16px, 400, 19px, $cultxtsupl);
+                    text-align: left
+                }
+                .showdetails {
+                    display: block;
+                    left: -1px;
+                    position: relative;
+                    background-color: $backfot;
+                    padding: 15px;
+                    @include tipografie(24px, 800, 28px, $culpretred);
+                }
+                #ingredientetitle {
+                    border-left: 1px solid black;
+                }
+                .titledetails {
+                    border: 1px solid black;
+                    display: inline-block;
+                    padding-top: 0;
+                    float: left;
+                    width: auto;
+                    left: -1px;
+                    position: relative;
+                }
+                .showsub-menu .showdetails {
+                    color: $culbacklact;
+                    background-color: $alb;
+                    border-bottom: none;
+                    border-left: 1px solid black;
+                }
+                .showsub-menu {
+                    border-bottom: 1px solid white;
+                    z-index: 2;
+                }
+                .texttabel {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .plusicon {
+                    display: none;
+                }
+                .plus {
+                    font-family: "Font Awesome 5 Free";
+                    -webkit-font-smoothing: antialiased;
+                    display: none;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 1;
+                    font-size: 35px;
+                    font-weight: 900;
+                    padding: 0;
+                    text-align: center;
+                    overflow-wrap: unset;
+                    position: absolute;
+                    z-index: 0;
+                    padding-left: 10px;
+                    text-decoration: none;
+                    &:after {
+                        content: "\2b";
+                        color: $culbacklact;
+                    }
+                }
+                .detaliinutritionale {
+                    display: flex;
+                    align-items: center;
+                }
+                .showdetailsplus {
+                    text-decoration: none;
+                    @include tipografie(24px, 800, 28px, $culbacklact);
+                    padding-left: 10px;
+                }
+                .showdetailsminus {
+                    text-decoration: none;
+                    @include tipografie(24px, 800, 28px, $culbacklact);
+                    padding-left: 10px;
+                }
+                .sub-menu {
+                    display: none;
+                    float: right;
+                    width: 100%;
+                    margin-left: -100%;
+                    margin-top: 59px;
+                }
+                .showsub-menu {
+                    .plusicon {
+                        display: none;
+                    }
+                    .plus {
+                        font-family: "Font Awesome 5 Free";
+                        -webkit-font-smoothing: antialiased;
+                        display: none;
+                        font-style: normal;
+                        font-variant: normal;
+                        text-rendering: auto;
+                        line-height: 1;
+                        font-size: 35px;
+                        font-weight: 900;
+                        padding: 0;
+                        text-align: center;
+                        overflow-wrap: unset;
+                        position: absolute;
+                        z-index: 0;
+                        padding-left: 10px;
+                        text-decoration: none;
+                        &:after {
+                            content: "\f068";
+                            display: none;
+                            color: $culbacklact;
+                        }
+                    }
+                    &+.sub-menu {
+                        display: block;
+                        width: 100%;
+                        background-color: $alb;
+                        z-index: 1;
+                        border: 1px solid black;
+                        padding: 30px 30px 85px 30px;
+                        list-style-position: inside;
+                        @include tipografie(22px, 800, 36px, $cultitlu);
+                        list-style-type: disc;
+                        float: right;
+                        left: -1px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+        .related {
+            @include tipografie(22px, 800, 36px, $culbacklact);
+        }
+        .stele {
+            p {
+                .doi {
+                    max-width: 0%;
+                }
+            }
+        }
+        .card1:hover {
+            border: 1px solid $culsale;
+            .detalii {
+                .salemb {
+                    background-color: $cullachover;
+                }
+            }
+        }
+        .card1 {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-radius: 0;
+            border: 1px solid $culsale;
+            background-color: $alb;
+            justify-content: space-between;
+            padding: 16px 0;
+            margin-bottom: 16px;
+            margin-top: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            img {
+                border: none;
+            }
+            .fruct {
+                padding-bottom: 85%;
+                width: 85%;
+                float: left;
+                height: 0;
+                .oferte {
+                    @include tipografie(16px, normal, 20.8px, $culsubtitlu);
+                    padding: 4px 11px;
+                    background-color: $bcksale;
+                    border: 1px solid $bcksale;
+                    margin: 0;
+                    position: absolute;
+                    z-index: 1;
+                    left: 42px;
+                    top: 30px;
+                    border-radius: 10px;
+                    padding: 4px 8px;
+                }
+            }
+            .detalii {
+                width: 90%;
+                display: inline-block;
+                .nume {
+                    @include tipografie(22px, 700, 22px, $cultitlu);
+                    margin: 0;
+                    padding: 0;
+                    text-decoration: none;
+                }
+                .gramaj {
+                    @include tipografie(14px, 600, 18px, $culsubtitlu);
+                    margin: 0;
+                    padding-bottom: 12px;
+                    letter-spacing: 0.03em;
+                    padding-top: 15px;
+                }
+                .detalii2 {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: flex-start;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                .pret {
+                    padding-top: 9.5px;
+                    padding-bottom: 16px;
+                    @include tipografie(20px, 700, 27px, $cultitlu);
+                    margin: 0;
+                }
+                .stele {
+                    display: inline-block;
+                    width: 100px;
+                    padding-top: 14.5px;
+                    position: relative;
+                    padding-bottom: 16px;
+                    p {
+                        margin: 0;
+                        &.unu,
+                        &.doi {
+                            span {
+                                display: none;
+                            }
+                            font-family: "Font Awesome 5 Free";
+                            -webkit-font-smoothing: antialiased;
+                            display: inline-block;
+                            font-style: normal;
+                            font-variant: normal;
+                            text-rendering: auto;
+                            line-height: 1;
+                            font-size: 15px;
+                            font-weight: 900;
+                            padding: 0;
+                            letter-spacing: 4px;
+                            text-align: center;
+                            overflow-wrap: unset;
+                            position: absolute;
+                            z-index: 0;
+                            &:after {
+                                content: "\f005 \f005 \f005 \f005 \f005";
+                                color: $culsale;
+                            }
+                        }
+                        &.doi {
+                            max-width: 0%;
+                            overflow: hidden;
+                            position: absolute;
+                            z-index: 1;
+                            width: 100%;
+                            &:after {
+                                color: $steagalbena;
+                            }
+                            &.unu {
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+                .stele2 {
+                    display: inline-block;
+                    width: 116px;
+                    padding-top: 14.5px;
+                    position: relative;
+                    overflow-wrap: unset;
+                    letter-spacing: 8px;
+                    padding-bottom: 16px;
+                    p {
+                        margin: 0;
+                        &.unu,
+                        &.doi {
+                            span {
+                                display: none;
+                            }
+                            font-family: "Font Awesome 5 Free";
+                            -webkit-font-smoothing: antialiased;
+                            display: inline-block;
+                            font-style: normal;
+                            font-variant: normal;
+                            text-rendering: auto;
+                            line-height: 1;
+                            font-size: 15px;
+                            font-weight: 900;
+                            padding: 0;
+                            text-align: center;
+                            overflow-wrap: unset;
+                            position: absolute;
+                            z-index: 0;
+                            &:after {
+                                content: "\f005 \f005 \f005 \f005 \f005";
+                                color: $culsale;
+                            }
+                        }
+                        &.doi {
+                            max-width: 60%;
+                            overflow: hidden;
+                            position: absolute;
+                            z-index: 1;
+                            width: 100%;
+                            &:after {
+                                color: $steagalbena;
+                            }
+                            &.unu {
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+                .stele3 {
+                    display: inline-block;
+                    width: 116px;
+                    padding-top: 14.5px;
+                    position: relative;
+                    letter-spacing: 8px;
+                    padding-bottom: 16px;
+                    p {
+                        margin: 0;
+                        &.unu,
+                        &.doi {
+                            span {
+                                display: none;
+                            }
+                            font-family: "Font Awesome 5 Free";
+                            -webkit-font-smoothing: antialiased;
+                            display: inline-block;
+                            font-style: normal;
+                            font-variant: normal;
+                            text-rendering: auto;
+                            line-height: 1;
+                            font-size: 15px;
+                            font-weight: 900;
+                            padding: 0;
+                            text-align: center;
+                            overflow-wrap: unset;
+                            position: absolute;
+                            z-index: 0;
+                            &:after {
+                                content: "\f005 \f005 \f005 \f005 \f005";
+                                color: $culsale;
+                            }
+                        }
+                        &.doi {
+                            max-width: 100%;
+                            overflow: hidden;
+                            position: absolute;
+                            z-index: 1;
+                            width: 100%;
+                            &:after {
+                                color: $steagalbena;
+                            }
+                            &.unu {
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+                .salemb {
+                    border-radius: 16px;
+                    background-color: $culbacklact;
+                    font-family: "Font Awesome 5 Free";
+                    -webkit-font-smoothing: antialiased;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 1;
+                    font-size: 18px;
+                    color: $cultitlu;
+                    font-weight: 900;
+                    padding: 0;
+                    width: 100%;
+                    text-align: center;
+                    padding: 15px 0;
+                    display: flex;
+                    align-items: baseline;
+                    justify-content: center;
+                    display: flex;
+                    margin: 0;
+                    &:after {
+                        content: "\f290";
+                        color: white;
+                        font-size: 20px;
+                        border: 0;
+                    }
+                }
+                .mbbuy {
+                    @include tipografie(14px, 700, 16px, $alb);
+                    display: block;
+                    padding-right: 17px;
+                }
+            }
+            .pretred {
+                float: right;
+                padding-top: 8px;
+            }
+            .preturi2 {
+                padding-bottom: 16px;
+                width: 100%;
+                .pret1 {
+                    @include tipografie(20px, 700, 27px, $culpretred);
+                    margin: 0;
+                    padding: 0;
+                    display: inline-block;
+                }
+                .pret3 {
+                    text-decoration: line-through;
+                    margin: 0 0 0 10px;
+                    @include tipografie(16px, 700, 20px, $cultitlu)
+                }
+            }
+        }
+        .glide {
+            padding: 0 10px;
+        }
+        .glide__slide {
+            margin: 0;
+        }
+        .glide__track {
+            margin: 0 -10px;
+            width: 100%;
+            padding: 0;
+        }
+    }
+}

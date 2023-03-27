@@ -1,0 +1,40 @@
+@import "mixinuri";
+@import "culori";
+@import "detaliimain";
+@import "footer";
+@import "header";
+body {
+    font-family: $font-family;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}

@@ -1,0 +1,46 @@
+@import "culori";
+@import "mixinuri";
+@import "footer";
+@import "header";
+@media (min-width: 320px) {
+    body {
+        margin: 0;
+    }
+    .container {
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+    main {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        h1 {
+            @include tipografie(100px, 800, 98px, $fottitlu);
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+        }
+        h2 {
+            @include tipografie(60px, 800, 58px, $fottitlu);
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+        }
+        p {
+            @include tipografie(30px, 400, 28px, $fottitlu);
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+        }
+    }
+}
+
+@media( min-width:1024px) {
+    .navbar {
+        margin: 0;
+    }
+    .arrowup {
+        display: none;
+    }
+}

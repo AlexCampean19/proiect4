@@ -1,0 +1,2456 @@
+@charset "UTF-8";
+body {
+  font-family: "Nunito Sans";
+  line-height: 1.5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (min-width: 320px) {
+  .scrollblock {
+    overflow: hidden;
+  }
+
+  main .saleoferte {
+    background-color: #F0FEE2;
+    border: 1px solid #F0FEE2;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    top: 150px;
+    left: 29px;
+    border-radius: 10px;
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20.8px;
+    color: #77757F;
+    padding: 4px 11px;
+  }
+  main ul {
+    padding: 0;
+  }
+  main li,
+main ul {
+    list-style-type: disc;
+  }
+  main .titledetails {
+    list-style-type: none;
+  }
+  main .containerf {
+    padding: 0 16px;
+  }
+  main .container {
+    padding: 0 16px;
+  }
+  main .detaliu {
+    padding: 40px 0 20px 0;
+    margin: 0;
+  }
+  main .hmpage {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 11px;
+  }
+  main .hmpage span {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 18px;
+    color: #1D1929;
+    padding-left: 10px;
+  }
+  main .hmpage a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #646464;
+  }
+  main img {
+    border: 1px solid #646464;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  main h1 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 26px;
+    color: #1D1929;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 23px;
+  }
+  main .stele {
+    line-height: 1;
+  }
+  main .stele p {
+    margin: 0;
+    padding-left: 5.5px;
+    display: inline-block;
+    padding-left: 103px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #1D1929;
+  }
+  main .stele p.unu, main .stele p.doi {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    letter-spacing: 3.5px;
+    position: absolute;
+  }
+  main .stele p.unu span, main .stele p.doi span {
+    display: none;
+  }
+  main .stele p.unu:after, main .stele p.doi:after {
+    content: "\f005\f005\f005\f005\f005";
+    color: #646464;
+  }
+  main .stele p.doi {
+    max-width: 0%;
+    overflow: hidden;
+    position: absolute;
+  }
+  main .stele p.doi:after {
+    color: #FFDE54;
+  }
+  main .stele p.doi.unu {
+    position: relative;
+  }
+  main .instock {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24.3px;
+    color: #059E67;
+    padding-bottom: 10px;
+  }
+  main .outstock {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24.3px;
+    color: red;
+    padding-bottom: 10px;
+  }
+  main .preturi2 {
+    padding-top: 6px;
+  }
+  main .preturi2 p {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24.3px;
+    color: #CA8383;
+    margin: 0;
+    padding: 0;
+    padding-right: 10px;
+    display: inline-block;
+  }
+  main .preturi2 #pretnormal {
+    color: #000000;
+  }
+  main .preturi2 span {
+    text-decoration: line-through;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.3px;
+    color: #000000;
+  }
+  main .detaliu {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #1D1929;
+  }
+  main h4 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #77757F;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  main .salemb {
+    border-radius: 16px;
+    background-color: #059E67;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 18px;
+    color: #1D1929;
+    font-weight: 900;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    padding: 11.5px 0;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+  main .salemb:after {
+    content: "\f290";
+    color: white;
+  }
+  main .salemb span {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #FFFFFF;
+  }
+  main .related {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    color: #059E67;
+  }
+  main .detaliifructe {
+    padding-bottom: 16px;
+    padding-top: 18px;
+  }
+  main .detaliifructe .star-rating {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  main .detaliifructe .star-rating input {
+    display: none;
+  }
+  main .detaliifructe .star-rating > label {
+    width: 30px;
+    height: 30px;
+    font-family: Arial;
+    font-size: 30px;
+    transition: 0.2s ease;
+    color: #FFDE54;
+  }
+  main .detaliifructe .star-rating label:hover {
+    color: #FFDE54;
+    transition: 0.2s ease;
+  }
+  main .detaliifructe .star-rating label:active::before {
+    transform: scale(1.1);
+  }
+  main .detaliifructe .star-rating label::before {
+    content: "☆";
+    position: absolute;
+    top: 0px;
+    line-height: 26px;
+  }
+  main .detaliifructe .star-rating input:checked ~ label:before {
+    content: "★";
+  }
+  main h3 {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    color: #059E67;
+    margin: 0;
+  }
+  main p {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    color: #1D1929;
+    margin: 0;
+    padding: 0;
+  }
+  main .sub-menu {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    color: #1D1929;
+    margin: 0;
+    padding-left: 10px;
+    list-style-position: inside;
+  }
+  main .navnutritional {
+    list-style: none;
+    padding: 0;
+  }
+  main .navnutritional #ingrediente {
+    list-style-type: none;
+  }
+  main .navnutritional .titledetails {
+    padding-top: 20px;
+  }
+  main .navnutritional .plusicon {
+    display: none;
+  }
+  main .navnutritional .plus {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 0.5;
+    font-size: 35px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+    padding-left: 10px;
+    text-decoration: none;
+  }
+  main .navnutritional .plus:after {
+    content: "+";
+    color: #059E67;
+    font-size: 25px;
+  }
+  main .navnutritional .detaliinutritionale {
+    display: flex;
+    align-items: center;
+  }
+  main .navnutritional .showdetailsplus {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    color: #059E67;
+    padding-left: 10px;
+  }
+  main .navnutritional .showdetailsminus {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    color: #059E67;
+    padding-left: 10px;
+  }
+  main .navnutritional .showdetails {
+    display: inline-block;
+  }
+  main .navnutritional .sub-menu {
+    display: none;
+  }
+  main .navnutritional .showsub-menu + .sub-menu {
+    display: block;
+    margin: 0;
+    padding-left: 10px;
+    list-style-position: inside;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    color: #1D1929;
+    list-style-type: disc;
+  }
+  main .navnutritional .showsub-menu .plusicon {
+    display: none;
+  }
+  main .navnutritional .showsub-menu .plus {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 0.5;
+    font-size: 35px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+    padding-left: 10px;
+    text-decoration: none;
+  }
+  main .navnutritional .showsub-menu .plus:after {
+    content: "\f068";
+    color: #059E67;
+  }
+
+  .addsubmit {
+    text-decoration: none;
+    background-color: #059E67;
+    border-radius: 15px;
+    padding: 10px 55px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #FFFFFF;
+  }
+
+  .rating {
+    display: inline-block;
+    unicode-bidi: bidi-override;
+    color: #646464;
+    font-size: 20px;
+    height: 25px;
+    width: auto;
+    margin: 0;
+    position: relative;
+    padding: 0;
+  }
+
+  .rating-upper {
+    color: #FFDE54;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  .rating-lower {
+    padding: 0;
+    display: flex;
+    z-index: 0;
+  }
+
+  .stele p .doi {
+    max-width: 0%;
+  }
+
+  .card1:hover {
+    border: 1px solid #646464;
+  }
+  .card1:hover .detalii .salemb {
+    background-color: #00774C;
+  }
+
+  .card1 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 0;
+    border: 1px solid #646464;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    padding: 16px 0;
+    margin-bottom: 16px;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .card1 img {
+    border: none;
+  }
+  .card1 .fruct {
+    padding-bottom: 85%;
+    width: 85%;
+    float: left;
+    height: 0;
+  }
+  .card1 .fruct .oferte {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20.8px;
+    color: #77757F;
+    padding: 4px 11px;
+    background-color: #F0FEE2;
+    border: 1px solid #F0FEE2;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    left: 42px;
+    top: 30px;
+    border-radius: 10px;
+    padding: 4px 8px;
+  }
+  .card1 .detalii {
+    width: 90%;
+    display: inline-block;
+  }
+  .card1 .detalii .nume {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #1D1929;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  .card1 .detalii .gramaj {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #77757F;
+    margin: 0;
+    padding-bottom: 12px;
+    letter-spacing: 0.03em;
+    padding-top: 15px;
+  }
+  .card1 .detalii .detalii2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .card1 .detalii .pret {
+    padding-top: 9.5px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #1D1929;
+    margin: 0;
+  }
+  .card1 .detalii .stele {
+    display: inline-block;
+    width: 100px;
+    padding-top: 14.5px;
+    position: relative;
+    padding-bottom: 16px;
+  }
+  .card1 .detalii .stele p {
+    margin: 0;
+  }
+  .card1 .detalii .stele p.unu, .card1 .detalii .stele p.doi {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+  }
+  .card1 .detalii .stele p.unu span, .card1 .detalii .stele p.doi span {
+    display: none;
+  }
+  .card1 .detalii .stele p.unu:after, .card1 .detalii .stele p.doi:after {
+    content: "\f005\f005\f005\f005\f005";
+    color: #646464;
+  }
+  .card1 .detalii .stele p.doi {
+    max-width: 0%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+  .card1 .detalii .stele p.doi:after {
+    color: #FFDE54;
+  }
+  .card1 .detalii .stele p.doi.unu {
+    position: relative;
+  }
+  .card1 .detalii .stele2 {
+    display: inline-block;
+    width: 116px;
+    padding-top: 14.5px;
+    position: relative;
+    overflow-wrap: unset;
+    letter-spacing: 8px;
+    padding-bottom: 16px;
+  }
+  .card1 .detalii .stele2 p {
+    margin: 0;
+  }
+  .card1 .detalii .stele2 p.unu, .card1 .detalii .stele2 p.doi {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+  }
+  .card1 .detalii .stele2 p.unu span, .card1 .detalii .stele2 p.doi span {
+    display: none;
+  }
+  .card1 .detalii .stele2 p.unu:after, .card1 .detalii .stele2 p.doi:after {
+    content: "\f005\f005\f005\f005\f005";
+    color: #646464;
+  }
+  .card1 .detalii .stele2 p.doi {
+    max-width: 60%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+  .card1 .detalii .stele2 p.doi:after {
+    color: #FFDE54;
+  }
+  .card1 .detalii .stele2 p.doi.unu {
+    position: relative;
+  }
+  .card1 .detalii .stele3 {
+    display: inline-block;
+    width: 116px;
+    padding-top: 14.5px;
+    position: relative;
+    letter-spacing: 8px;
+    padding-bottom: 16px;
+  }
+  .card1 .detalii .stele3 p {
+    margin: 0;
+  }
+  .card1 .detalii .stele3 p.unu, .card1 .detalii .stele3 p.doi {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+  }
+  .card1 .detalii .stele3 p.unu span, .card1 .detalii .stele3 p.doi span {
+    display: none;
+  }
+  .card1 .detalii .stele3 p.unu:after, .card1 .detalii .stele3 p.doi:after {
+    content: "\f005\f005\f005\f005\f005";
+    color: #646464;
+  }
+  .card1 .detalii .stele3 p.doi {
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+  .card1 .detalii .stele3 p.doi:after {
+    color: #FFDE54;
+  }
+  .card1 .detalii .stele3 p.doi.unu {
+    position: relative;
+  }
+  .card1 .detalii .salemb {
+    border-radius: 16px;
+    background-color: #059E67;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 18px;
+    color: #1D1929;
+    font-weight: 900;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+  }
+  .card1 .detalii .salemb:after {
+    content: "\f290";
+    color: white;
+    font-size: 20px;
+    border: 0;
+  }
+  .card1 .detalii .mbbuy {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #FFFFFF;
+    display: block;
+    padding-right: 17px;
+  }
+  .card1 .pretred {
+    float: right;
+    padding-top: 8px;
+  }
+  .card1 .preturi2 {
+    padding-bottom: 16px;
+    padding-top: 0;
+    width: 100%;
+  }
+  .card1 .preturi2 .pret1 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #CA8383;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  .card1 .preturi2 .pret3 {
+    text-decoration: line-through;
+    margin: 0 0 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1D1929;
+  }
+
+  .glide {
+    padding: 0 10px;
+  }
+
+  .glide__track {
+    margin: 0 -10px;
+  }
+
+  .glide__arrow {
+    box-shadow: none;
+  }
+
+  .glide__arrow--left {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 30px;
+    color: #1D1929;
+    font-weight: 900;
+    position: absolute;
+    left: -15px;
+  }
+  .glide__arrow--left:after {
+    content: "\f0d9";
+    color: #059E67;
+  }
+  .glide__arrow--left .arrowslide {
+    display: none;
+  }
+
+  .glide__arrow--right {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 30px;
+    color: #1D1929;
+    font-weight: 900;
+    position: absolute;
+    right: -15px;
+  }
+  .glide__arrow--right:after {
+    content: "\f0da";
+    color: #059E67;
+  }
+  .glide__arrow--right .arrowslide {
+    display: none;
+  }
+
+  .glide__slide {
+    margin: 0;
+  }
+
+  input {
+    border: 2px solid;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .butoane {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+  }
+  .butoane span {
+    display: none;
+  }
+  .butoane .plus {
+    border: 0;
+    background-color: transparent;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 25px;
+    color: #1D1929;
+    font-weight: 900;
+    padding: 0;
+    top: 16px;
+    right: 5px;
+    position: absolute;
+  }
+  .butoane .plus:after {
+    content: "\f067";
+    color: #D9D9D9;
+  }
+  .butoane .minus {
+    border: 0;
+    background-color: transparent;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 25px;
+    color: #1D1929;
+    font-weight: 900;
+    padding: 0;
+    position: absolute;
+    top: 16px;
+    left: 5px;
+  }
+  .butoane .minus:before {
+    content: "\f068";
+    color: #D9D9D9;
+  }
+}
+form input {
+  border-radius: 20px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #A5A3A9;
+  text-align: center;
+}
+
+.dateform {
+  padding-top: 15px;
+}
+.dateform label {
+  padding-bottom: 10px;
+}
+
+form {
+  padding-top: 10px;
+  border-top: 2px solid #E5E5E5;
+}
+
+form h2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #000000;
+}
+
+#nameReview {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 18px;
+  color: #000000;
+  display: inline-block;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+#titleReview {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 18px;
+  color: #059E67;
+}
+
+#descReview {
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 18px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+
+#desc {
+  border-radius: 20px;
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #A5A3A9;
+  text-align: center;
+}
+
+#rating {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+  main .saleoferte {
+    background-color: #F0FEE2;
+    border: 1px solid #F0FEE2;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    top: 150px;
+    left: 45px;
+    border-radius: 10px;
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20.8px;
+    color: #77757F;
+    padding: 4px 11px;
+  }
+  main .but2 {
+    width: 100%;
+  }
+  main .butoane {
+    width: 30%;
+  }
+  main .salemb {
+    width: 60%;
+    margin-top: 0;
+    margin-left: 15px;
+  }
+}
+@media (min-width: 800px) {
+  .arrowup {
+    display: none;
+  }
+
+  main .instock {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24.3px;
+    color: #059E67;
+    display: flex;
+    justify-content: flex-end;
+  }
+  main .outstock {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24.3px;
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+  }
+  main .saleoferte {
+    background-color: #F0FEE2;
+    border: 1px solid #F0FEE2;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    top: 235px;
+    left: 50px;
+    border-radius: 10px;
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20.8px;
+    color: #77757F;
+    padding: 4px 11px;
+  }
+  main .preturi2 {
+    padding-top: 24px;
+  }
+  main .hmpage {
+    padding-bottom: 52px;
+    padding-top: 48px;
+  }
+  main .rating {
+    font-size: 20px;
+    width: auto;
+  }
+  main .butoane {
+    display: inline-block;
+    width: 30%;
+  }
+  main .butoane .minus {
+    top: 15px;
+    left: 6px;
+    position: absolute;
+  }
+  main .butoane .plus {
+    top: 15px;
+    right: 7px;
+    position: absolute;
+  }
+  main .rating {
+    display: inline-block;
+  }
+  main .ratingup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  main .bucati {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 55px;
+  }
+  main .but2 {
+    display: inline-block;
+    width: 100%;
+  }
+  main #desc {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 8px;
+  }
+  main input {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 8px;
+  }
+  main .salemb {
+    width: 50%;
+    margin-left: 15px;
+    margin-top: 0;
+    line-height: 1.5;
+  }
+  main .salemb:hover {
+    background-color: #00774C;
+  }
+
+  .addsubmit:hover {
+    background-color: #00774C;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #FFFFFF;
+  }
+  .addsubmit:hover:after {
+    background-color: #00774C;
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    padding-bottom: 24px;
+  }
+  main #name,
+main #summ,
+main #desc {
+    border-radius: 20px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #A5A3A9;
+    text-align: left;
+  }
+  main .preturi2 {
+    padding: 0;
+    float: right;
+  }
+  main .stele p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #1D1929;
+    padding-left: 120px;
+  }
+  main .stele p.doi {
+    max-width: 0%;
+  }
+  main .stele p.unu, main .stele p.doi {
+    letter-spacing: 0px;
+    font-size: 18px;
+  }
+  main .glide__arrow--left {
+    left: -20px;
+  }
+  main .glide__arrow--right {
+    right: 0px;
+  }
+  main .hmpage {
+    padding: 48px 0 52px 0;
+  }
+  main .container {
+    padding: 0 40px;
+  }
+  main h1 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 36px;
+    color: #1D1929;
+    padding-bottom: 69px;
+    padding-top: 0px;
+  }
+  main .detaliu {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 36px;
+    color: #1D1929;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  main .detaliifructe {
+    display: inline-block;
+    width: 100%;
+    padding: 50px 0 50px 0;
+  }
+  main .detaliifructe p {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 36px;
+    color: #1D1929;
+  }
+  main .detaliifructe h3 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 36px;
+    color: #CA8383;
+    background-color: #D9D9D9;
+    border: 1px solid black;
+    padding: 20px 30px;
+  }
+  main .detaliifructe h3:hover,
+main .detaliifructe h3:active {
+    color: #059E67;
+  }
+  main .detaliifructe .navnutritional {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+  }
+  main .detaliifructe .navnutritional .dateformprincipal {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  main .detaliifructe .navnutritional .dateform {
+    width: 45%;
+  }
+  main .detaliifructe .navnutritional .namesirew {
+    display: flex;
+  }
+  main .detaliifructe .navnutritional #titleReview {
+    padding-top: 5px;
+  }
+  main .detaliifructe .navnutritional #desc {
+    height: 150px;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #A5A3A9;
+    text-align: left;
+  }
+  main .detaliifructe .navnutritional .showdetails {
+    display: block;
+    left: -1px;
+    position: relative;
+    background-color: #D9D9D9;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    color: #CA8383;
+  }
+  main .detaliifructe .navnutritional #ingredientetitle {
+    border-left: 1px solid black;
+  }
+  main .detaliifructe .navnutritional .titledetails {
+    border: 1px solid black;
+    display: inline-block;
+    padding-top: 0;
+    float: left;
+    width: auto;
+    left: -1px;
+    position: relative;
+  }
+  main .detaliifructe .navnutritional .showsub-menu .showdetails {
+    color: #059E67;
+    background-color: #FFFFFF;
+    border-bottom: none;
+    border-left: 1px solid black;
+  }
+  main .detaliifructe .navnutritional .showsub-menu {
+    border-bottom: 1px solid white;
+    z-index: 2;
+  }
+  main .detaliifructe .navnutritional .texttabel {
+    display: flex;
+    flex-direction: column;
+  }
+  main .detaliifructe .navnutritional .plusicon {
+    display: none;
+  }
+  main .detaliifructe .navnutritional .plus {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: none;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 35px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+    padding-left: 10px;
+    text-decoration: none;
+  }
+  main .detaliifructe .navnutritional .plus:after {
+    content: "+";
+    color: #059E67;
+  }
+  main .detaliifructe .navnutritional .detaliinutritionale {
+    display: flex;
+    align-items: center;
+  }
+  main .detaliifructe .navnutritional .showdetailsplus {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    color: #059E67;
+    padding-left: 10px;
+  }
+  main .detaliifructe .navnutritional .showdetailsminus {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    color: #059E67;
+    padding-left: 10px;
+  }
+  main .detaliifructe .navnutritional .sub-menu {
+    display: none;
+    float: right;
+    width: 100%;
+    margin-left: -100%;
+    margin-top: 59px;
+  }
+  main .detaliifructe .navnutritional .showsub-menu .plusicon {
+    display: none;
+  }
+  main .detaliifructe .navnutritional .showsub-menu .plus {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: none;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 35px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+    padding-left: 10px;
+    text-decoration: none;
+  }
+  main .detaliifructe .navnutritional .showsub-menu .plus:after {
+    content: "\f068";
+    display: none;
+    color: #059E67;
+  }
+  main .detaliifructe .navnutritional .showsub-menu + .sub-menu {
+    display: block;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 1;
+    border: 1px solid black;
+    padding: 30px 30px 85px 30px;
+    list-style-position: inside;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 36px;
+    color: #1D1929;
+    list-style-type: disc;
+    float: right;
+    left: -1px;
+    position: relative;
+  }
+  main .related {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 36px;
+    color: #059E67;
+  }
+  main .stele p .doi {
+    max-width: 0%;
+  }
+  main .card1:hover {
+    border: 1px solid #646464;
+  }
+  main .card1:hover .detalii .salemb {
+    background-color: #00774C;
+  }
+  main .card1 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 0;
+    border: 1px solid #646464;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    padding: 16px 0;
+    margin-bottom: 16px;
+    margin-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  main .card1 img {
+    border: none;
+  }
+  main .card1 .fruct {
+    padding-bottom: 85%;
+    width: 85%;
+    float: left;
+    height: 0;
+  }
+  main .card1 .fruct .oferte {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20.8px;
+    color: #77757F;
+    padding: 4px 11px;
+    background-color: #F0FEE2;
+    border: 1px solid #F0FEE2;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    left: 42px;
+    top: 30px;
+    border-radius: 10px;
+    padding: 4px 8px;
+  }
+  main .card1 .detalii {
+    width: 90%;
+    display: inline-block;
+  }
+  main .card1 .detalii .nume {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #1D1929;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  main .card1 .detalii .gramaj {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #77757F;
+    margin: 0;
+    padding-bottom: 12px;
+    letter-spacing: 0.03em;
+    padding-top: 15px;
+  }
+  main .card1 .detalii .detalii2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  main .card1 .detalii .pret {
+    padding-top: 9.5px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #1D1929;
+    margin: 0;
+  }
+  main .card1 .detalii .stele {
+    display: inline-block;
+    width: 100px;
+    padding-top: 14.5px;
+    position: relative;
+    padding-bottom: 16px;
+  }
+  main .card1 .detalii .stele p {
+    margin: 0;
+  }
+  main .card1 .detalii .stele p.unu, main .card1 .detalii .stele p.doi {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    letter-spacing: 4px;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+  }
+  main .card1 .detalii .stele p.unu span, main .card1 .detalii .stele p.doi span {
+    display: none;
+  }
+  main .card1 .detalii .stele p.unu:after, main .card1 .detalii .stele p.doi:after {
+    content: "\f005\f005\f005\f005\f005";
+    color: #646464;
+  }
+  main .card1 .detalii .stele p.doi {
+    max-width: 0%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+  main .card1 .detalii .stele p.doi:after {
+    color: #FFDE54;
+  }
+  main .card1 .detalii .stele p.doi.unu {
+    position: relative;
+  }
+  main .card1 .detalii .stele2 {
+    display: inline-block;
+    width: 116px;
+    padding-top: 14.5px;
+    position: relative;
+    overflow-wrap: unset;
+    letter-spacing: 8px;
+    padding-bottom: 16px;
+  }
+  main .card1 .detalii .stele2 p {
+    margin: 0;
+  }
+  main .card1 .detalii .stele2 p.unu, main .card1 .detalii .stele2 p.doi {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+  }
+  main .card1 .detalii .stele2 p.unu span, main .card1 .detalii .stele2 p.doi span {
+    display: none;
+  }
+  main .card1 .detalii .stele2 p.unu:after, main .card1 .detalii .stele2 p.doi:after {
+    content: "\f005\f005\f005\f005\f005";
+    color: #646464;
+  }
+  main .card1 .detalii .stele2 p.doi {
+    max-width: 60%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+  main .card1 .detalii .stele2 p.doi:after {
+    color: #FFDE54;
+  }
+  main .card1 .detalii .stele2 p.doi.unu {
+    position: relative;
+  }
+  main .card1 .detalii .stele3 {
+    display: inline-block;
+    width: 116px;
+    padding-top: 14.5px;
+    position: relative;
+    letter-spacing: 8px;
+    padding-bottom: 16px;
+  }
+  main .card1 .detalii .stele3 p {
+    margin: 0;
+  }
+  main .card1 .detalii .stele3 p.unu, main .card1 .detalii .stele3 p.doi {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+  }
+  main .card1 .detalii .stele3 p.unu span, main .card1 .detalii .stele3 p.doi span {
+    display: none;
+  }
+  main .card1 .detalii .stele3 p.unu:after, main .card1 .detalii .stele3 p.doi:after {
+    content: "\f005\f005\f005\f005\f005";
+    color: #646464;
+  }
+  main .card1 .detalii .stele3 p.doi {
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+  main .card1 .detalii .stele3 p.doi:after {
+    color: #FFDE54;
+  }
+  main .card1 .detalii .stele3 p.doi.unu {
+    position: relative;
+  }
+  main .card1 .detalii .salemb {
+    border-radius: 16px;
+    background-color: #059E67;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 18px;
+    color: #1D1929;
+    font-weight: 900;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+  }
+  main .card1 .detalii .salemb:after {
+    content: "\f290";
+    color: white;
+    font-size: 20px;
+    border: 0;
+  }
+  main .card1 .detalii .mbbuy {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #FFFFFF;
+    display: block;
+    padding-right: 17px;
+  }
+  main .card1 .pretred {
+    float: right;
+    padding-top: 8px;
+  }
+  main .card1 .preturi2 {
+    padding-bottom: 16px;
+    width: 100%;
+  }
+  main .card1 .preturi2 .pret1 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #CA8383;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  main .card1 .preturi2 .pret3 {
+    text-decoration: line-through;
+    margin: 0 0 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1D1929;
+  }
+  main .glide {
+    padding: 0 10px;
+  }
+  main .glide__slide {
+    margin: 0;
+  }
+  main .glide__track {
+    margin: 0 -10px;
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (min-width: 320px) {
+  body {
+    margin: 0;
+  }
+
+  footer {
+    background-color: #F9F9F9;
+  }
+  footer a.poza {
+    display: none;
+  }
+  footer h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #000000;
+  }
+  footer li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #1D1929;
+  }
+  footer p {
+    margin: 0;
+    padding: 30px 0 23px 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #000000;
+  }
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  footer .c1 {
+    margin: 0;
+    padding: 10px 0 0 0;
+  }
+  footer h3 {
+    padding: 16px 0 0 0;
+    margin: 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .containerf {
+    padding: 0 16px;
+  }
+}
+@media (min-width: 1024px) {
+  footer {
+    background-color: #D9D9D9;
+  }
+  footer a.poza {
+    display: inline-block;
+    padding: 40px 0px;
+  }
+  footer a.poza img {
+    width: 211px;
+    height: auto;
+  }
+  footer .foter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  footer h3 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #000000;
+  }
+  footer li a {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #1D1929;
+  }
+  footer p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #1D1929;
+    text-align: left;
+  }
+  footer .c1 {
+    padding: 20px 0 0 0;
+  }
+
+  .containerf {
+    padding: 0 40px;
+    text-align: center;
+  }
+}
+@media (min-width: 320px) {
+  header {
+    text-align: center;
+    padding: 25px 54px;
+    margin: 0;
+    background-color: #D9D9D9;
+  }
+  header #succes {
+    background-color: #059E67;
+  }
+  header #fail {
+    background-color: red;
+  }
+  header #succes,
+header #fail {
+    display: none;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    color: #FFFFFF;
+    position: fixed;
+    padding: 15px;
+    border-radius: 15px;
+    z-index: 3;
+    right: 0;
+  }
+  header #imgsh {
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+  }
+  header .itmshop {
+    overflow: auto;
+    height: 75%;
+  }
+  header .numarcumparaturi {
+    background-color: #059E67;
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  header .cumparaturi {
+    padding-right: 15px;
+    border-bottom: 1px solid #D9D9D9;
+    display: flex;
+    padding-top: 15px;
+    width: 100%;
+  }
+  header #plus {
+    border: 0;
+    background-color: transparent;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 15px;
+    color: #1D1929;
+    font-weight: 600;
+    padding: 5px;
+    position: relative;
+    top: 27px;
+    right: 30px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+  }
+  header #plus:after {
+    content: "\f067";
+    color: #000000;
+  }
+  header #plus span {
+    display: none;
+  }
+  header #minus {
+    border: 0;
+    background-color: transparent;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 15px;
+    color: #1D1929;
+    font-weight: 600;
+    padding: 5px;
+    top: 27px;
+    right: 85px;
+    position: relative;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+  }
+  header #minus:before {
+    content: "\f068";
+    color: #000000;
+  }
+  header #minus span {
+    display: none;
+  }
+  header .detfruct {
+    display: inline-block;
+    width: 85%;
+    text-align: left;
+  }
+  header a.rmvitm {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: row-reverse;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+    right: 30px;
+    top: 30px;
+    text-decoration: none;
+  }
+  header a.rmvitm:after {
+    content: "X";
+    color: black;
+  }
+  header a.rmvitm span {
+    display: none;
+  }
+  header .mobilebtn {
+    border: 0;
+    background-color: transparent;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 30px;
+    color: #1D1929;
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    padding-left: 10px;
+  }
+  header .mobilebtn:after {
+    content: "\f0c9";
+    color: #059E67;
+  }
+  header .mobilebtn .iconmob {
+    display: none;
+  }
+  header .navbar {
+    background-color: #FFFFFF;
+    display: none;
+    position: absolute;
+    width: 50%;
+    padding: 0;
+    background-color: #D9D9D9;
+    position: absolute;
+  }
+  header .navbar .navbuton {
+    display: inline-block;
+  }
+  header .cart {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: row-reverse;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 3;
+    right: 30px;
+    top: 30px;
+    text-decoration: none;
+  }
+  header .cart:after {
+    content: "\f07a";
+    color: black;
+  }
+  header .cart span {
+    display: none;
+  }
+  header .showshop + .shop {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    list-style: none;
+    width: 100%;
+    left: 0;
+    overflow: auto;
+    height: 100%;
+    top: 0;
+    padding-left: 0;
+    background-color: #FFFFFF;
+  }
+  header .showshop + .shop p {
+    margin-bottom: 0;
+  }
+  header .shopitems {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+  }
+  header .numeFruct {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    color: #000000;
+    padding-bottom: 10px;
+  }
+  header #value {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    color: #000000;
+  }
+  header #quantyy {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #000000;
+  }
+  header .valuequanty {
+    width: 50px;
+    padding: 0;
+    margin-left: 10px;
+    border: 0.5px solid #E8E8EA;
+    text-align: center;
+    display: inline-block;
+    border-radius: 25px;
+  }
+  header .pricebut {
+    position: relative;
+    top: 30px;
+    padding: 0;
+  }
+  header .price {
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #000000;
+  }
+  header #delitm {
+    top: -20px;
+    position: relative;
+    border: 0;
+    border-radius: 10px;
+    float: right;
+    background-color: #D9D9D9;
+  }
+  header #btnshop {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  header .checkout {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    margin: 13px;
+    display: block;
+    padding: 15px 40px;
+    background-color: #059E67;
+  }
+  header .checkout:hover {
+    background-color: #00774C;
+    color: white;
+  }
+  header .itmcart,
+header .subtotal {
+    display: inline-block;
+    float: right;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #000000;
+  }
+  header .topshop {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 10px;
+    border-bottom: 2px solid #D9D9D9;
+  }
+  header .butonclose {
+    display: block;
+    margin-bottom: 50px;
+  }
+  header .close {
+    float: right;
+    background: white;
+    border: none;
+    font-size: 30px;
+    bottom: 45px;
+    position: relative;
+  }
+  header .shop {
+    display: none;
+  }
+  header .navigation-active {
+    height: 100%;
+    overflow-x: hidden;
+    z-index: 3;
+    padding-left: 10px;
+  }
+  header .navigation-active + .navbar {
+    justify-content: flex-start;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    list-style: none;
+    width: 100%;
+    left: 0;
+    overflow: auto;
+    height: 100%;
+    padding-top: 54px;
+    top: 0;
+  }
+  header .navigation-active + .navbar .navbuton {
+    display: inline-block;
+  }
+  header .navigation-active + .navbar .navbuton .arrowuplink {
+    border: 0;
+    background-color: transparent;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 30px;
+    color: #1D1929;
+    font-weight: 900;
+    position: absolute;
+    text-decoration: none;
+    top: 50px;
+    padding-left: 10px;
+  }
+  header .navigation-active + .navbar .navbuton .arrowuplink:after {
+    content: "\f106";
+    color: #059E67;
+  }
+  header .navigation-active + .navbar .navbuton .arrowup {
+    display: none;
+  }
+  header .navigation-active + .navbar .dropbtn {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #1D1929;
+  }
+  header .navigation-active + .navbar .dropbtn2 {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #CA8383;
+  }
+  header .navigation-active + .navbar .menu {
+    display: none;
+    list-style-type: none;
+  }
+  header .navigation-active + .navbar .menu a {
+    text-transform: none;
+    display: block;
+    text-decoration: none;
+  }
+  header .navigation-active + .navbar .showmenu .arrowuplink {
+    transform: rotate(180deg);
+    padding-right: 10px;
+  }
+  header .navigation-active + .navbar .showmenu + .menu {
+    display: inline;
+    padding: 0;
+    margin-top: 25px;
+    padding: 25px 0;
+    z-index: 1;
+    background-color: #D9D9D9;
+  }
+  header .navigation-active + .navbar .showmenu + .menu .partea1 {
+    text-align: center;
+  }
+  header .navigation-active + .navbar .showmenu + .menu .aditionaltext {
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #1D1929;
+    padding: 25px;
+    display: none;
+  }
+  header .navigation-active + .navbar .showmenu + .menu .aditionaltext2 {
+    position: absolute;
+    z-index: 1;
+    top: 65px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #A5A3A9;
+    padding: 25px;
+    max-width: 30%;
+    display: none;
+  }
+  header .navigation-active + .navbar .showmenu + .menu .aditionaltext3 {
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 28px;
+    color: #1D1929;
+    padding: 25px;
+    display: none;
+  }
+  header .navigation-active + .navbar .showmenu + .menu img {
+    height: auto;
+    width: auto;
+    position: relative;
+    z-index: 0;
+    display: none;
+  }
+  header .navigation-active + .navbar .showmenu + .menu li {
+    z-index: 1;
+  }
+  header .navigation-active + .navbar .showmenu + .menu li a {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1D1929;
+    padding-top: 9px;
+  }
+  header img {
+    height: auto;
+    width: 211px;
+  }
+  header a {
+    display: inline-block;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    padding: 25px 0px 25px 40px;
+    margin: 0;
+    background-color: #D9D9D9;
+    text-align: left;
+  }
+  header .navigation {
+    display: inline;
+  }
+  header .close {
+    bottom: 0px;
+  }
+  header .mobilebtn {
+    display: none;
+  }
+  header .dropmenumob {
+    display: none;
+  }
+  header .dropmenumob .iconmob {
+    display: none;
+  }
+  header .navbar {
+    background-color: #D9D9D9;
+    position: absolute;
+    display: inline-block;
+    padding-left: 50px;
+    list-style: none;
+    width: 75%;
+  }
+  header .navbar .navbuton {
+    display: inline-block;
+  }
+  header .navbar .dropbtn {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #1D1929;
+    margin-left: 15px;
+  }
+  header .navbar .dropbtn2 {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #CA8383;
+    margin-left: 15px;
+  }
+  header .navbar .dropbtn:hover,
+header .navbar .dropbtn2:hover {
+    color: #059E67;
+  }
+  header .navbar .menu {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+  }
+  header .navbar .menu a {
+    text-transform: none;
+    display: block;
+    text-decoration: none;
+  }
+  header .navbar .showmenu + .menu {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 0;
+    margin-top: 25px;
+    background-color: #FFFFFF;
+    padding: 25px;
+    box-shadow: 0px 0px 2px 0.5px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+  header .navbar .showmenu + .menu .aditionaltext {
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #1D1929;
+    padding: 25px;
+  }
+  header .navbar .showmenu + .menu .aditionaltext2 {
+    position: absolute;
+    z-index: 1;
+    top: 65px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #A5A3A9;
+    padding: 25px;
+    max-width: 30%;
+  }
+  header .navbar .showmenu + .menu .aditionaltext3 {
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 28px;
+    color: #1D1929;
+    padding: 25px;
+  }
+  header .navbar .showmenu + .menu img {
+    height: auto;
+    width: auto;
+    position: relative;
+    z-index: 0;
+  }
+  header .navbar .showmenu + .menu li {
+    z-index: 1;
+    background-color: #FFFFFF;
+  }
+  header .navbar .showmenu + .menu li a {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1D1929;
+    padding-top: 9px;
+    padding-left: 30px;
+  }
+  header .navbar .showmenu + .menu li a:hover {
+    color: #059E67;
+  }
+  header .cart {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: row-reverse;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 0;
+    top: 30px;
+    right: 90px;
+    text-decoration: none;
+  }
+  header .cart:after {
+    content: "\f07a";
+    color: black;
+  }
+  header .cart span {
+    display: none;
+  }
+  header .showshop + .shop {
+    display: block;
+    padding: 0;
+    left: unset;
+    overflow: inherit;
+    z-index: 3;
+    background-color: transparent;
+  }
+  header #btnshop {
+    width: 40%;
+  }
+  header #cart {
+    position: absolute;
+    float: left;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+  }
+  header #cartshop {
+    background-color: #FFFFFF;
+    float: right;
+    width: 40%;
+    height: 100%;
+  }
+  header .shop {
+    display: none;
+    right: 0px;
+  }
+  header .shopitems {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+  }
+  header .cumparaturi {
+    border-bottom: 1px solid #D9D9D9;
+  }
+  header .detfruct {
+    display: inline-block;
+    width: 60%;
+  }
+  header img {
+    height: auto;
+    width: 211px;
+  }
+}
+@media (min-width: 1200px) {
+  header .detfruct {
+    width: 68%;
+  }
+}
+@media (min-width: 1500px) {
+  header .detfruct {
+    width: 72%;
+  }
+}
+@media (min-width: 1600px) {
+  header .detfruct {
+    width: 75%;
+  }
+  header .navbar .shop {
+    right: -107px;
+  }
+}
+@media (min-width: 1700px) {
+  header .navbar .shop {
+    right: -129px;
+  }
+}
+@media (min-width: 1800px) {
+  header .detfruct {
+    width: 78%;
+  }
+}
+body {
+  font-family: "Nunito Sans";
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*# sourceMappingURL=detalii.css.map */

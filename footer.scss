@@ -1,0 +1,86 @@
+                    @import "culori";
+                    @import "mixinuri";
+                    @media (min-width: 320px) {
+                        body {
+                            margin: 0;
+                        }
+                        footer {
+                            a.poza {
+                                display: none;
+                            }
+                            background-color: $background;
+                            h3 {
+                                margin: 0;
+                                @include tipografie( 16px, 600, 18px, $fottitlu);
+                            }
+                            li {
+                                a {
+                                    text-decoration: none;
+                                    @include tipografie(14px, 400, 16px, $fotsubt);
+                                }
+                            }
+                            p {
+                                margin: 0;
+                                padding: 30px 0 23px 0;
+                                @include tipografie(14px, 400, 16px, $fottitlu);
+                            }
+                            ul {
+                                list-style-type: none;
+                                padding: 0;
+                            }
+                            .c1 {
+                                margin: 0;
+                                padding: 10px 0 0 0;
+                            }
+                            h3 {
+                                padding: 16px 0 0 0;
+                                margin: 0;
+                            }
+                        }
+                        .container {
+                            padding: 0 16px;
+                        }
+                        .containerf {
+                            padding: 0 16px;
+                        }
+                    }
+                    
+                    @media (min-width: 1024px) {
+                        footer {
+                            background-color: $backfot;
+                            a.poza {
+                                display: inline-block;
+                                padding: 40px 0px;
+                                img {
+                                    width: 211px;
+                                    height: auto;
+                                }
+                            }
+                            .foter {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                text-align: left;
+                            }
+                            h3 {
+                                @include tipografie(22px, 600, 24px, $fottitlu)
+                            }
+                            li {
+                                a {
+                                    @include tipografie(18px, 400, 22px, $fotsubt)
+                                }
+                            }
+                            p {
+                                @include tipografie(18px, 400, 22px, $fotsubt);
+                                text-align: left;
+                            }
+                            .c1 {
+                                padding: 20px 0 0 0;
+                            }
+                        }
+                        .containerf {
+                            padding: 0 40px;
+                            text-align: center;
+                        }
+                    }
