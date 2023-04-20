@@ -316,10 +316,22 @@
             display: block;
             padding: 15px 40px;
             background-color: $culbacklact;
+            pointer-events: auto;
         }
         .checkout:hover {
             background-color: $cullachover;
             color: white;
+        }
+        .checkoutof {
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            margin: 13px;
+            display: block;
+            padding: 15px 40px;
+            background-color: $backfot;
+            pointer-events: none;
         }
         .itmcart,
         .subtotal {

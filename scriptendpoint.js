@@ -178,7 +178,6 @@ function addCart(target) {
         randareCart()
         $(".msj").text(response.name + ' was added to the cart').attr('id', 'succes').show();
         jQuery(".salemb").addClass('salembof')
-
         $(".salemb").css("pointer-events", "none");
         setTimeout(function() {
             $("#succes").hide();

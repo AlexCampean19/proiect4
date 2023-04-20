@@ -1,5 +1,6 @@
 
 
+
 function Form(){
 const {useState}=React
 const [email,setEmail]=useState("")
@@ -18,12 +19,20 @@ function Submit(e){
       'Content-Type': 'application/json'
     },
       body:JSON.stringify(data)
-    }).then(response=> response.text()).then((response)=>{
-      console.log(response),
+    }).then(response=> response.text())
+    .then((response)=>{ 
+      console.log(response.includes("error"));
+      if(response.includes("error")){
+        $(".msj").text('Try again').attr('id', 'fail').show();
+        setTimeout(function() { $("#fail").hide(); 
+      }, 5000);
+      }else{
       sessionStorage.setItem('users',response.replace(/['"]+/g, '')),
       $(".msj").text('You have logged in').attr('id', 'succes').show();
-      setTimeout(function() { $("#succes").hide(); }, 5000);
-      window.location.reload(false)
+      setTimeout(function() { $("#succes").hide(); 
+window.location.reload(false)
+    }, 5000);
+  }
     }
     )
 }

@@ -332,10 +332,22 @@
     display: block;
     padding: 15px 40px;
     background-color: #059E67;
+    pointer-events: auto;
   }
   header .checkout:hover {
     background-color: #00774C;
     color: white;
+  }
+  header .checkoutof {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    margin: 13px;
+    display: block;
+    padding: 15px 40px;
+    background-color: #D9D9D9;
+    pointer-events: none;
   }
   header .itmcart,
   header .subtotal {

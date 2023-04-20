@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (sessionStorage.getItem('users')) {
         document.querySelector('#userLogin').setAttribute("style", "color:#059E67;");
         document.querySelector('#userLogin').setAttribute("href", "#");
+
         let dropDownUsers = document.querySelector('#userLogin');
         dropDownUsers.addEventListener('click', () => {
             dropDownUsers.classList.toggle('showusersmenu');
         });
     } else {
+
         document.querySelector('#userLogin').setAttribute("style", "color:black;");
         document.querySelector('#userLogin').setAttribute("href", "https://alexcampean19.github.io/proiect4/login.html");
     }
@@ -46,7 +48,13 @@ jQuery('#cart').click(function() {
     jQuery('body').removeClass('scrollblock');
     jQuery('.cart.buttoncart').removeClass('showshop')
 })
-
+if (sessionStorage.getItem('users')) {
+    jQuery('#checkoutbtn').removeClass('checkoutof')
+    jQuery('#checkoutbtn').addClass('checkout')
+} else {
+    jQuery('#checkoutbtn').addClass('checkoutof')
+    jQuery('#checkoutbtn').removeClass('checkout')
+}
 
 
 function WindowResize() {
