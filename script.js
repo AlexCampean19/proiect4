@@ -4,6 +4,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         dropDown.classList.toggle('showmenu');
 
     });
+    if (sessionStorage.getItem('users')) {
+        document.querySelector('#userLogin').setAttribute("style", "color:#059E67;");
+        document.querySelector('#userLogin').setAttribute("href", "#");
+        let dropDownUsers = document.querySelector('#userLogin');
+        dropDownUsers.addEventListener('click', () => {
+            dropDownUsers.classList.toggle('showusersmenu');
+        });
+    } else {
+        document.querySelector('#userLogin').setAttribute("style", "color:black;");
+        document.querySelector('#userLogin').setAttribute("href", "https://alexcampean19.github.io/proiect4/login.html");
+    }
 
     let dropDownMobile = document.querySelector('.mobilebtn');
     let dropDownMenuMobile = document.querySelector('.navigation');
@@ -17,6 +28,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
             document.body.classList.remove('scrollblock')
         }
     })
+})
+jQuery('#btnlogout').click(function() {
+    sessionStorage.removeItem('users');
+    window.location.reload(false)
+
 })
 jQuery('.cart.buttoncart').click(function() {
     jQuery("body").addClass('scrollblock');

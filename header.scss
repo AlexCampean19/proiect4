@@ -167,6 +167,33 @@
                 display: inline-block;
             }
         }
+        #userLogin {
+            font-family: "Font Awesome 5 Free";
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: row-reverse;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1.5;
+            font-size: 15px;
+            font-weight: 900;
+            padding: 0;
+            text-align: center;
+            overflow-wrap: unset;
+            position: absolute;
+            z-index: 3;
+            right: 90px;
+            top: 30px;
+            color: black;
+            text-decoration: none;
+            &:after {
+                content: "\f007";
+            }
+            span {
+                display: none;
+            }
+        }
         .cart {
             font-family: "Font Awesome 5 Free";
             -webkit-font-smoothing: antialiased;
@@ -209,6 +236,25 @@
                 background-color: $alb;
                 p {
                     margin-bottom: 0;
+                }
+            }
+        }
+        .usersmenu {
+            display: none;
+        }
+        .showusersmenu {
+            &+.usersmenu {
+                display: inline-block;
+                position: absolute;
+                right: 20px;
+                background: $backfot;
+                top: 80px;
+                padding: 25px;
+                #infopage {
+                    padding-right: 20px;
+                    @include tipografie(16px, 600, 20px, $cultitlu);
+                    cursor: pointer;
+                    text-decoration: none;
                 }
             }
         }
@@ -435,6 +481,12 @@
 
 @media (min-width: 1024px) {
     header {
+        #user {
+            right: 150px;
+        }
+        .arrowup {
+            display: none;
+        }
         padding: 25px 0px 25px 40px;
         margin: 0;
         background-color: $backfot;
@@ -455,6 +507,7 @@
             }
         }
         .navbar {
+            margin: 0;
             background-color: $backfot;
             position: absolute;
             .navbuton {
@@ -541,6 +594,9 @@
                     }
                 }
             }
+        }
+        #userLogin {
+            right: 150px;
         }
         .cart {
             font-family: "Font Awesome 5 Free";

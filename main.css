@@ -2,7 +2,6 @@
   .scrollblock {
     overflow: hidden;
   }
-
   main {
     width: 100%;
     width: 100%;
@@ -84,7 +83,6 @@
   main .cutia1 #searchclose {
     border: 0;
     background-color: transparent;
-    font-family: "Font Awesome 5 Free";
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-style: normal;
@@ -95,7 +93,7 @@
     color: #1D1929;
     font-weight: 900;
     position: absolute;
-    right: 10px;
+    right: 45px;
     top: 37px;
     height: 32px;
   }
@@ -103,10 +101,10 @@
     padding-bottom: 11px;
   }
   main .fructe .det1,
-main .fructe .det2,
-main .fructe .det3,
-main .fructe .det4,
-main .fructe .detfruct {
+  main .fructe .det2,
+  main .fructe .det3,
+  main .fructe .det4,
+  main .fructe .detfruct {
     display: none;
   }
   main .fructe #noitems {
@@ -270,6 +268,30 @@ main .fructe .detfruct {
     border-radius: 12px;
     color: white;
     border: 7px solid #059E67;
+    background: #059E67;
+  }
+  main .fructe .card1 .detalii .salembof {
+    border: 0;
+    background-color: transparent;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 18px;
+    color: #1D1929;
+    font-weight: 900;
+    padding: 0;
+    display: block;
+  }
+  main .fructe .card1 .detalii .salembof:after {
+    content: "\f290";
+    border-radius: 12px;
+    color: white;
+    border: 7px solid #D9D9D9;
+    background: #D9D9D9;
   }
   main .fructe .cardfructe {
     display: flex;
@@ -279,7 +301,7 @@ main .fructe .detfruct {
     display: none;
   }
   main .categori .glide_slide,
-main .categori .glide_slide--clone {
+  main .categori .glide_slide--clone {
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -294,6 +316,7 @@ main .categori .glide_slide--clone {
   }
   main .categori .glide__arrow--left {
     border: 0;
+    padding: 0;
     background-color: transparent;
     font-family: "Font Awesome 5 Free";
     -webkit-font-smoothing: antialiased;
@@ -306,7 +329,7 @@ main .categori .glide_slide--clone {
     color: #1D1929;
     font-weight: 900;
     position: absolute;
-    left: -25px;
+    left: -15px;
   }
   main .categori .glide__arrow--left:after {
     content: "\f0d9";
@@ -317,6 +340,7 @@ main .categori .glide_slide--clone {
   }
   main .categori .glide__arrow--right {
     border: 0;
+    padding: 0;
     background-color: transparent;
     font-family: "Font Awesome 5 Free";
     -webkit-font-smoothing: antialiased;
@@ -329,7 +353,7 @@ main .categori .glide_slide--clone {
     color: #1D1929;
     font-weight: 900;
     position: absolute;
-    right: -25px;
+    right: -15px;
   }
   main .categori .glide__arrow--right:after {
     content: "\f0da";
@@ -651,7 +675,6 @@ main .categori .glide_slide--clone {
     display: inline-block;
     padding-top: 6px;
   }
-
   .categori .cutia2 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto;
@@ -662,7 +685,6 @@ main .categori .glide_slide--clone {
   .arrowup {
     display: none;
   }
-
   main .container {
     padding: 0 40px;
   }
@@ -716,6 +738,10 @@ main .categori .glide_slide--clone {
     border: none;
     background: none;
     display: none;
+  }
+  main .cutia1 #searchclose a {
+    text-decoration: none;
+    color: #000000;
   }
   main .cutia1 .buton {
     border: 0;
@@ -804,7 +830,7 @@ main .categori .glide_slide--clone {
     display: block;
   }
   main .categori .glide_slide,
-main .categori .glide_slide--clone {
+  main .categori .glide_slide--clone {
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -867,7 +893,6 @@ main .categori .glide_slide--clone {
     z-index: 100;
     background-color: rgba(255, 255, 255, 0.7);
   }
-
   header .navbar {
     position: relative;
     display: inline-block;
@@ -895,7 +920,7 @@ main .categori .glide_slide--clone {
     margin-left: 15px;
   }
   header .navbar .dropbtn:hover,
-header .navbar .dropbtn2:hover {
+  header .navbar .dropbtn2:hover {
     color: #059E67;
   }
   header .navbar .menu {
@@ -980,8 +1005,8 @@ header .navbar .dropbtn2:hover {
     width: calc((100% - 93px) / 4);
   }
   main .fructe .card1 .detalii .stele,
-main .fructe .card1 .detalii .stele2,
-main .fructe .card1 .detalii .stele3 {
+  main .fructe .card1 .detalii .stele2,
+  main .fructe .card1 .detalii .stele3 {
     padding-bottom: 0;
     width: 120px;
     letter-spacing: 8px;
@@ -997,7 +1022,7 @@ main .fructe .card1 .detalii .stele3 {
     background-color: #00774C;
   }
   main .fructe .det1,
-main .fructe .det2 {
+  main .fructe .det2 {
     display: inline-block;
     font-size: 12px;
     font-weight: 600;
@@ -1005,7 +1030,7 @@ main .fructe .det2 {
     color: #A5A3A9;
   }
   main .fructe .simbolpret,
-main .fructe .simbolgramaj {
+  main .fructe .simbolgramaj {
     display: inline-block;
     font-size: 12px;
     font-weight: 600;

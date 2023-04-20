@@ -18,7 +18,6 @@ input[type=number] {
   .scrollblock {
     overflow: hidden;
   }
-
   main .saleoferte {
     background-color: #F0FEE2;
     border: 1px solid #F0FEE2;
@@ -39,7 +38,7 @@ input[type=number] {
     padding: 0;
   }
   main li,
-main ul {
+  main ul {
     list-style-type: disc;
   }
   main .titledetails {
@@ -390,7 +389,6 @@ main ul {
     content: "\f068";
     color: #059E67;
   }
-
   .addsubmit {
     text-decoration: none;
     background-color: #059E67;
@@ -401,7 +399,6 @@ main ul {
     line-height: 27px;
     color: #FFFFFF;
   }
-
   .rating {
     display: inline-block;
     unicode-bidi: bidi-override;
@@ -413,7 +410,6 @@ main ul {
     position: relative;
     padding: 0;
   }
-
   .rating-upper {
     color: #FFDE54;
     padding: 0;
@@ -424,24 +420,20 @@ main ul {
     left: 0;
     overflow: hidden;
   }
-
   .rating-lower {
     padding: 0;
     display: flex;
     z-index: 0;
   }
-
   .stele p .doi {
     max-width: 0%;
   }
-
   .card1:hover {
     border: 1px solid #646464;
   }
   .card1:hover .detalii .salemb {
     background-color: #00774C;
   }
-
   .card1 {
     flex-direction: column;
     display: flex;
@@ -724,19 +716,15 @@ main ul {
     line-height: 20px;
     color: #1D1929;
   }
-
   .glide {
     padding: 0 10px;
   }
-
   .glide__track {
     margin: 0 -10px;
   }
-
   .glide__arrow {
     box-shadow: none;
   }
-
   .glide__arrow--left {
     border: 0;
     padding: 0;
@@ -761,7 +749,6 @@ main ul {
   .glide__arrow--left .arrowslide {
     display: none;
   }
-
   .glide__arrow--right {
     border: 0;
     padding: 0;
@@ -786,18 +773,15 @@ main ul {
   .glide__arrow--right .arrowslide {
     display: none;
   }
-
   .glide__slide {
     margin: 0;
   }
-
   input {
     border: 2px solid;
     width: 100%;
     text-align: center;
     padding: 15px 0;
   }
-
   .butoane {
     position: relative;
     display: inline-block;
@@ -955,7 +939,6 @@ form h2 {
   .arrowup {
     display: none;
   }
-
   main .instock {
     font-size: 24px;
     font-weight: 700;
@@ -1053,7 +1036,6 @@ form h2 {
   main .salemb:hover {
     background-color: #00774C;
   }
-
   .addsubmit:hover {
     background-color: #00774C;
     font-size: 22px;
@@ -1070,8 +1052,8 @@ form h2 {
     padding-bottom: 24px;
   }
   main #name,
-main #summ,
-main #desc {
+  main #summ,
+  main #desc {
     border-radius: 20px;
     width: 100%;
     font-size: 16px;
@@ -1147,7 +1129,7 @@ main #desc {
     padding: 20px 30px;
   }
   main .detaliifructe h3:hover,
-main .detaliifructe h3:active {
+  main .detaliifructe h3:active {
     color: #059E67;
   }
   main .detaliifructe .navnutritional {
@@ -1626,7 +1608,6 @@ main .detaliifructe h3:active {
   body {
     margin: 0;
   }
-
   footer {
     background-color: #F9F9F9;
   }
@@ -1667,11 +1648,9 @@ main .detaliifructe h3:active {
     padding: 16px 0 0 0;
     margin: 0;
   }
-
   .container {
     padding: 0 16px;
   }
-
   .containerf {
     padding: 0 16px;
   }
@@ -1717,7 +1696,6 @@ main .detaliifructe h3:active {
   footer .c1 {
     padding: 20px 0 0 0;
   }
-
   .containerf {
     padding: 0 40px;
     text-align: center;
@@ -1737,7 +1715,7 @@ main .detaliifructe h3:active {
     background-color: red;
   }
   header #succes,
-header #fail {
+  header #fail {
     display: none;
     font-size: 16px;
     font-weight: 800;
@@ -1791,8 +1769,7 @@ header #fail {
     font-weight: 600;
     padding: 5px;
     position: relative;
-    top: 27px;
-    right: 30px;
+    right: 0px;
     background-color: #D9D9D9;
     border-radius: 50%;
   }
@@ -1817,8 +1794,7 @@ header #fail {
     color: #1D1929;
     font-weight: 600;
     padding: 5px;
-    top: 27px;
-    right: 85px;
+    right: 47px;
     position: relative;
     background-color: #D9D9D9;
     border-radius: 50%;
@@ -1899,6 +1875,33 @@ header #fail {
   header .navbar .navbuton {
     display: inline-block;
   }
+  header #userLogin {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: row-reverse;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 3;
+    right: 90px;
+    top: 30px;
+    color: black;
+    text-decoration: none;
+  }
+  header #userLogin:after {
+    content: "\f007";
+  }
+  header #userLogin span {
+    display: none;
+  }
   header .cart {
     font-family: "Font Awesome 5 Free";
     -webkit-font-smoothing: antialiased;
@@ -1942,6 +1945,26 @@ header #fail {
   header .showshop + .shop p {
     margin-bottom: 0;
   }
+  header .usersmenu {
+    display: none;
+  }
+  header .showusersmenu + .usersmenu {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    background: #D9D9D9;
+    top: 80px;
+    padding: 25px;
+  }
+  header .showusersmenu + .usersmenu #infopage {
+    padding-right: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #1D1929;
+    cursor: pointer;
+    text-decoration: none;
+  }
   header .shopitems {
     position: absolute;
     z-index: 1;
@@ -1971,7 +1994,8 @@ header #fail {
   header .valuequanty {
     width: 50px;
     padding: 0;
-    margin-left: 10px;
+    position: relative;
+    right: -25px;
     border: 0.5px solid #E8E8EA;
     text-align: center;
     display: inline-block;
@@ -2017,7 +2041,7 @@ header #fail {
     color: white;
   }
   header .itmcart,
-header .subtotal {
+  header .subtotal {
     display: inline-block;
     float: right;
     font-size: 16px;
@@ -2198,6 +2222,12 @@ header .subtotal {
     background-color: #D9D9D9;
     text-align: left;
   }
+  header #user {
+    right: 150px;
+  }
+  header .arrowup {
+    display: none;
+  }
   header .navigation {
     display: inline;
   }
@@ -2214,6 +2244,7 @@ header .subtotal {
     display: none;
   }
   header .navbar {
+    margin: 0;
     background-color: #D9D9D9;
     position: absolute;
     display: inline-block;
@@ -2241,7 +2272,7 @@ header .subtotal {
     margin-left: 15px;
   }
   header .navbar .dropbtn:hover,
-header .navbar .dropbtn2:hover {
+  header .navbar .dropbtn2:hover {
     color: #059E67;
   }
   header .navbar .menu {
@@ -2316,6 +2347,9 @@ header .navbar .dropbtn2:hover {
   }
   header .navbar .showmenu + .menu li a:hover {
     color: #059E67;
+  }
+  header #userLogin {
+    right: 150px;
   }
   header .cart {
     font-family: "Font Awesome 5 Free";

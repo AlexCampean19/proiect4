@@ -12,7 +12,7 @@
     background-color: red;
   }
   header #succes,
-header #fail {
+  header #fail {
     display: none;
     font-size: 16px;
     font-weight: 800;
@@ -172,6 +172,33 @@ header #fail {
   header .navbar .navbuton {
     display: inline-block;
   }
+  header #userLogin {
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: row-reverse;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    overflow-wrap: unset;
+    position: absolute;
+    z-index: 3;
+    right: 90px;
+    top: 30px;
+    color: black;
+    text-decoration: none;
+  }
+  header #userLogin:after {
+    content: "\f007";
+  }
+  header #userLogin span {
+    display: none;
+  }
   header .cart {
     font-family: "Font Awesome 5 Free";
     -webkit-font-smoothing: antialiased;
@@ -214,6 +241,26 @@ header #fail {
   }
   header .showshop + .shop p {
     margin-bottom: 0;
+  }
+  header .usersmenu {
+    display: none;
+  }
+  header .showusersmenu + .usersmenu {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    background: #D9D9D9;
+    top: 80px;
+    padding: 25px;
+  }
+  header .showusersmenu + .usersmenu #infopage {
+    padding-right: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #1D1929;
+    cursor: pointer;
+    text-decoration: none;
   }
   header .shopitems {
     position: absolute;
@@ -291,7 +338,7 @@ header #fail {
     color: white;
   }
   header .itmcart,
-header .subtotal {
+  header .subtotal {
     display: inline-block;
     float: right;
     font-size: 16px;
@@ -472,6 +519,12 @@ header .subtotal {
     background-color: #D9D9D9;
     text-align: left;
   }
+  header #user {
+    right: 150px;
+  }
+  header .arrowup {
+    display: none;
+  }
   header .navigation {
     display: inline;
   }
@@ -488,6 +541,7 @@ header .subtotal {
     display: none;
   }
   header .navbar {
+    margin: 0;
     background-color: #D9D9D9;
     position: absolute;
     display: inline-block;
@@ -515,7 +569,7 @@ header .subtotal {
     margin-left: 15px;
   }
   header .navbar .dropbtn:hover,
-header .navbar .dropbtn2:hover {
+  header .navbar .dropbtn2:hover {
     color: #059E67;
   }
   header .navbar .menu {
@@ -590,6 +644,9 @@ header .navbar .dropbtn2:hover {
   }
   header .navbar .showmenu + .menu li a:hover {
     color: #059E67;
+  }
+  header #userLogin {
+    right: 150px;
   }
   header .cart {
     font-family: "Font Awesome 5 Free";
@@ -695,7 +752,6 @@ header .navbar .dropbtn2:hover {
   body {
     margin: 0;
   }
-
   footer {
     background-color: #F9F9F9;
   }
@@ -736,11 +792,9 @@ header .navbar .dropbtn2:hover {
     padding: 16px 0 0 0;
     margin: 0;
   }
-
   .container {
     padding: 0 16px;
   }
-
   .containerf {
     padding: 0 16px;
   }
@@ -786,7 +840,6 @@ header .navbar .dropbtn2:hover {
   footer .c1 {
     padding: 20px 0 0 0;
   }
-
   .containerf {
     padding: 0 40px;
     text-align: center;
@@ -796,7 +849,6 @@ header .navbar .dropbtn2:hover {
   .scrollblock {
     overflow: hidden;
   }
-
   main {
     width: 100%;
     width: 100%;
@@ -896,10 +948,10 @@ header .navbar .dropbtn2:hover {
     padding-bottom: 11px;
   }
   main .fructe .det1,
-main .fructe .det2,
-main .fructe .det3,
-main .fructe .det4,
-main .fructe .detfruct {
+  main .fructe .det2,
+  main .fructe .det3,
+  main .fructe .det4,
+  main .fructe .detfruct {
     display: none;
   }
   main .fructe #noitems {
@@ -1096,7 +1148,7 @@ main .fructe .detfruct {
     display: none;
   }
   main .categori .glide_slide,
-main .categori .glide_slide--clone {
+  main .categori .glide_slide--clone {
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -1470,7 +1522,6 @@ main .categori .glide_slide--clone {
     display: inline-block;
     padding-top: 6px;
   }
-
   .categori .cutia2 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto;
@@ -1481,7 +1532,6 @@ main .categori .glide_slide--clone {
   .arrowup {
     display: none;
   }
-
   main .container {
     padding: 0 40px;
   }
@@ -1627,7 +1677,7 @@ main .categori .glide_slide--clone {
     display: block;
   }
   main .categori .glide_slide,
-main .categori .glide_slide--clone {
+  main .categori .glide_slide--clone {
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -1690,7 +1740,6 @@ main .categori .glide_slide--clone {
     z-index: 100;
     background-color: rgba(255, 255, 255, 0.7);
   }
-
   header .navbar {
     position: relative;
     display: inline-block;
@@ -1718,7 +1767,7 @@ main .categori .glide_slide--clone {
     margin-left: 15px;
   }
   header .navbar .dropbtn:hover,
-header .navbar .dropbtn2:hover {
+  header .navbar .dropbtn2:hover {
     color: #059E67;
   }
   header .navbar .menu {
@@ -1803,8 +1852,8 @@ header .navbar .dropbtn2:hover {
     width: calc((100% - 93px) / 4);
   }
   main .fructe .card1 .detalii .stele,
-main .fructe .card1 .detalii .stele2,
-main .fructe .card1 .detalii .stele3 {
+  main .fructe .card1 .detalii .stele2,
+  main .fructe .card1 .detalii .stele3 {
     padding-bottom: 0;
     width: 120px;
     letter-spacing: 8px;
@@ -1820,7 +1869,7 @@ main .fructe .card1 .detalii .stele3 {
     background-color: #00774C;
   }
   main .fructe .det1,
-main .fructe .det2 {
+  main .fructe .det2 {
     display: inline-block;
     font-size: 12px;
     font-weight: 600;
@@ -1828,7 +1877,7 @@ main .fructe .det2 {
     color: #A5A3A9;
   }
   main .fructe .simbolpret,
-main .fructe .simbolgramaj {
+  main .fructe .simbolgramaj {
     display: inline-block;
     font-size: 12px;
     font-weight: 600;

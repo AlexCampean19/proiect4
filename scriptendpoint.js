@@ -33,7 +33,7 @@ function getCategorii() {
     if (!sessionStorage.getItem('categorii')) {
         jQuery.ajax({
                 method: "GET",
-                contentType: "application/json; charset=utf-8",
+                contentType: "application/json",
                 dataType: "json",
                 url: url,
             })
@@ -100,13 +100,16 @@ jQuery(document).ready(function() {
 
 function createCart() {
     let verificareCart = sessionStorage.getItem('cartId');
+    if (sessionStorage.getItem('users')) {
+
+    }
     if (!verificareCart || verificareCart === 'null') {
         let interval = setInterval(() => {
             jQuery.ajax({
                 method: "POST",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                url: 'https://magento-demo.tk/rest/V1/guest-carts'
+                url: 'https://magento-demo.tk/rest/V1/guest-carts',
             }).done(function(response) {
                 sessionStorage.setItem('cartId', response)
                 cartId()
@@ -126,8 +129,9 @@ function cartId() {
         method: "GET",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        url: 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId')
+        url: 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId'),
     }).done(function(response) {
+        console.log(response)
         sessionStorage.setItem('quoteId', response.id);
     }).fail(function(response) {
 
@@ -138,6 +142,7 @@ function cartId() {
 
 
 function addCart(target) {
+    let url = '';
     let payload = '';
     if (target.closest('.card1').length > 0) {
         payload = JSON.stringify({
@@ -156,13 +161,20 @@ function addCart(target) {
             }
         })
     }
+    if (sessionStorage.getItem('users')) {
+        url = 'https://magento-demo.tk/rest/V1/carts/mine/items';
+    } else {
+        url = 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId') + '/items';
+    }
     jQuery.ajax({
         method: "POST",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        url: 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId') + '/items',
-        data: payload
+        url: url,
+        data: payload,
+        headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') },
     }).done(function(response) {
+        console.log(response)
         randareCart()
         $(".msj").text(response.name + ' was added to the cart').attr('id', 'succes').show();
         jQuery(".salemb").addClass('salembof')
@@ -183,12 +195,20 @@ function addCart(target) {
 
 function randareCart() {
     let template1 = '';
+    let url = '';
+    if (sessionStorage.getItem('users')) {
+        url = 'https://magento-demo.tk/rest/default/V1/carts/mine';
+    } else {
+        url = 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId');
+    }
     jQuery.ajax({
         method: "GET",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        url: 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId'),
+        url: url,
+        headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
     }).done(function(response) {
+        console.log(response)
         for (const [key, value] of Object.entries(response.items)) {
             template1 += '<div class="cumparaturi" data-id="' + value.item_id + '"><img id="imgsh" src="' + value.extension_attributes.image + '" /><div class="detfruct" ><p  class="numeFruct" >' + value.name + '</p><p id="quantyy">Qty:</p><input class="valuequanty" value="' + value.qty + '"><button type="button" id="minus"><span>minus</span></button><button type="button" id="plus"><span>plus</span></button><div class="pricebut"><p class="price">Price: ' + value.price + ' $</p><button id="delitm">X</button></div></div></div> '
         }
@@ -203,13 +223,22 @@ function randareCart() {
 }
 
 
-function modificareProdCos(target) {
 
+
+
+function modificareProdCos(target) {
+    let url = '';
+    if (sessionStorage.getItem('users')) {
+        url = 'https://magento-demo.tk/rest/V1/carts/mine/items/' + target.closest('.cumparaturi').attr('data-id');
+    } else {
+        url = 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId') + '/items/' + target.closest('.cumparaturi').attr('data-id');
+    }
     jQuery.ajax({
         method: "PUT",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        url: 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId') + '/items/' + target.closest('.cumparaturi').attr('data-id'),
+        url: url,
+        headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') },
         data: JSON.stringify({
             "cartItem": {
                 "item_id": target.closest('.cumparaturi').attr('data-id'),
@@ -234,11 +263,18 @@ function modificareProdCos(target) {
 
 function subTotal() {
     let pretinmultite = [];
+    let url = ''
+    if (sessionStorage.getItem('users')) {
+        url = 'https://magento-demo.tk/rest/default/V1/carts/mine';
+    } else {
+        url = 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId');
+    }
     jQuery.ajax({
         method: "GET",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        url: 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId'),
+        url: url,
+        headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
     }).done(function(result) {
         for (const [key, value] of Object.entries(result.items)) {
             pretinmultite.push(value.qty * value.price)
@@ -255,13 +291,18 @@ function subTotal() {
 
 function deleteItm(target) {
     let cartid = sessionStorage.getItem('cartId');
-    let token = sessionStorage.getItem('token')
+    let url = '';
+    if (sessionStorage.getItem('users')) {
+        url = 'https://magento-demo.tk/rest/V1/carts/mine/items/' + target.closest('.cumparaturi').attr('data-id');
+    } else {
+        url = 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId') + '/items/' + target.closest('.cumparaturi').attr('data-id');
+    }
     jQuery.ajax({
         method: "DELETE",
-        headers: { "Authorization": "Bearer " + token },
+        headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') },
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        url: 'https://magento-demo.tk/rest/V1/guest-carts/' + cartid + '/items/' + target.closest('.cumparaturi').attr('data-id'),
+        url: url,
         data: JSON.stringify({
             "cartItem": {
                 "item_id": target.closest('.cumparaturi').attr('data-id'),

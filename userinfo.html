@@ -5,21 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="eror404.css" />
+    <link rel="stylesheet" type="text/css" href="userinfo.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;700;800&display=swap" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="glide/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="glide/@glidejs/glide/dist/css/glide.theme.min.css">
     <script src="https://kit.fontawesome.com/b0f990c8c7.js" crossorigin="anonymous"></script>
-    <title>Error404</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Fresh&Delicious</title>
 </head>
+
 
 <body class="noscroll">
     <div class="stilizareloader">
         <div id="loader" class="position"></div>
     </div>
     <header class="mobile">
-        <a href="https://alexcampean19.github.io/proiect3/"> <img src="logo/logo.png" alt="logo" title="Fresh&Delicous" />
+        <a href="https://alexcampean19.github.io/proiect4/"> <img src="logo/logo.png" alt="logo" title="Fresh&Delicous" />
         </a>
         <nav class="navigation">
             <span class="mobilebtn"><span class="iconmob">icon</span></span>
@@ -47,6 +55,7 @@
             <button id="btnlogout">Log Out</button>
         </div>
         <a class="cart buttoncart" href="#">
+
             <span>Cart</span>
             <p id="nrprod"></p>
         </a>
@@ -71,18 +80,16 @@
         <p class="msj"></p>
 
     </header>
-
-
     <main>
-        <div class="container">
-            <h1>404</h1>
-            <h2>Not Found</h2>
-            <p>The resource requested could not found on this server!</p>
+        <h1>Your Profile</h1>
+
+        <div type="module" id="infouser">
+
         </div>
     </main>
     <footer>
         <div class="containerf ">
-            <a class="poza " href="https://alexcampean19.github.io/proiect3/ "> <img src="logo/logo.png " alt="logo " title="Fresh&Delicous " /></a>
+            <a class="poza " href="https://alexcampean19.github.io/proiect4/ "> <img src="logo/logo.png " alt="logo " title="Fresh&Delicous " /></a>
             <div class="foter ">
                 <div class="c2 ">
                     <h3>Our Company</h3>
@@ -114,7 +121,11 @@
             <p class="copyright ">© 2021 Fresh&Delicious - All Rights Reserved</p>
         </div>
     </footer>
+
+
     <script src="script.js"></script>
+    <script src="scriptendpoint.js"></script>
+    <script src="userinfo.js" type="text/babel"></script>
 </body>
 
 </html>

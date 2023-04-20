@@ -748,5 +748,281 @@
     width: 78%;
   }
 }
+@media (min-width: 320px) {
+  body {
+    margin: 0;
+  }
+  footer {
+    background-color: #F9F9F9;
+  }
+  footer a.poza {
+    display: none;
+  }
+  footer h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #000000;
+  }
+  footer li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #1D1929;
+  }
+  footer p {
+    margin: 0;
+    padding: 30px 0 23px 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #000000;
+  }
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  footer .c1 {
+    margin: 0;
+    padding: 10px 0 0 0;
+  }
+  footer h3 {
+    padding: 16px 0 0 0;
+    margin: 0;
+  }
+  .container {
+    padding: 0 16px;
+  }
+  .containerf {
+    padding: 0 16px;
+  }
+}
+@media (min-width: 1024px) {
+  footer {
+    background-color: #D9D9D9;
+  }
+  footer a.poza {
+    display: inline-block;
+    padding: 40px 0px;
+  }
+  footer a.poza img {
+    width: 211px;
+    height: auto;
+  }
+  footer .foter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  footer h3 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #000000;
+  }
+  footer li a {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #1D1929;
+  }
+  footer p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #1D1929;
+    text-align: left;
+  }
+  footer .c1 {
+    padding: 20px 0 0 0;
+  }
+  .containerf {
+    padding: 0 40px;
+    text-align: center;
+  }
+}
+body {
+  font-family: "Nunito Sans";
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
 
-/*# sourceMappingURL=header.css.map */
+* {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32px;
+  color: #1D1929;
+  text-align: center;
+  padding: 25px;
+  display: block;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 350px;
+  background-color: #D9D9D9;
+  box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.45);
+}
+form button {
+  border-radius: 16px;
+  border: none;
+  background-color: #059E67;
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: 900;
+  width: 50%;
+  text-align: center;
+  padding: 15px 0;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #1D1929;
+  margin: 0;
+  text-align: center;
+}
+
+input {
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #A5A3A9;
+  text-align: left;
+  padding: 15px 0;
+}
+
+#lgpagelogo {
+  border: 1px solid #E8E8EA;
+  border-radius: 50%;
+  padding: 20px;
+  background-color: #059E67;
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-size: 65px;
+  color: #D9D9D9;
+  font-weight: 900;
+  position: relative;
+  box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.45);
+  margin: 0;
+}
+#lgpagelogo:after {
+  content: "\f007";
+}
+#lgpagelogo span {
+  display: none;
+}
+
+#emailAdress {
+  border: 0;
+  border-radius: 20px;
+  background-color: #059E67;
+  padding: 5px;
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-size: 18px;
+  color: #D9D9D9;
+  font-weight: 900;
+  position: relative;
+  top: 2px;
+  right: 5px;
+}
+#emailAdress:after {
+  content: "\f007";
+}
+#emailAdress span {
+  display: none;
+}
+
+#pass {
+  border: 0;
+  border-radius: 20px;
+  background-color: #059E67;
+  padding: 5px;
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-size: 18px;
+  color: #D9D9D9;
+  font-weight: 900;
+  position: relative;
+  top: 2px;
+  right: 5px;
+}
+#pass:after {
+  content: "\f023";
+}
+#pass span {
+  display: none;
+}
+
+/*# sourceMappingURL=login.css.map */
