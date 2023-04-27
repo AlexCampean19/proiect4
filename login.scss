@@ -38,6 +38,10 @@
         overflow-wrap: break-word;
     }
     
+    main {
+        min-height: 600px;
+    }
+    
     h1 {
         @include tipografie(24px, 800, 32px, $cultitlu);
         text-align: center;
@@ -63,19 +67,17 @@
         background-color: $backfot;
         box-shadow: 0px 0px 8px 5px rgb(0 0 0 / 45%);
         button {
-            border-radius: 16px;
             border: none;
+            border-radius: 16px;
             background-color: #059E67;
-            font-family: "Font Awesome 5 Free";
-            -webkit-font-smoothing: antialiased;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
             line-height: 1;
             font-size: 18px;
-            color: $alb;
+            align-items: baseline;
+            justify-content: center;
+            display: flex;
+            color: #FFFFFF;
             font-weight: 900;
-            width: 50%;
+            width: 90%;
             text-align: center;
             padding: 15px 0;
         }
@@ -84,12 +86,12 @@
     label {
         @include tipografie(16px, 700, 24px, $cultitlu);
         margin: 0;
-        text-align: center;
+        text-align: left;
     }
     
     input {
-        border-radius: 20px;
-        border: none;
+        border-radius: 18px;
+        border: 1px solid $culborder;
         font-size: 16px;
         font-weight: 400;
         line-height: 19px;

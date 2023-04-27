@@ -252,9 +252,19 @@
     background: #D9D9D9;
     top: 80px;
     padding: 25px;
+    list-style: none;
+    z-index: 3;
   }
   header .showusersmenu + .usersmenu #infopage {
     padding-right: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #1D1929;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  header .showusersmenu + .usersmenu #btnlogout {
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
@@ -893,6 +903,10 @@ h6 {
   overflow-wrap: break-word;
 }
 
+main {
+  min-height: 600px;
+}
+
 h1 {
   font-size: 24px;
   font-weight: 800;
@@ -922,19 +936,17 @@ form {
   box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.45);
 }
 form button {
-  border-radius: 16px;
   border: none;
+  border-radius: 16px;
   background-color: #059E67;
-  font-family: "Font Awesome 5 Free";
-  -webkit-font-smoothing: antialiased;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
   line-height: 1;
   font-size: 18px;
+  align-items: baseline;
+  justify-content: center;
+  display: flex;
   color: #FFFFFF;
   font-weight: 900;
-  width: 50%;
+  width: 90%;
   text-align: center;
   padding: 15px 0;
 }
@@ -945,12 +957,12 @@ label {
   line-height: 24px;
   color: #1D1929;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 input {
-  border-radius: 20px;
-  border: none;
+  border-radius: 18px;
+  border: 1px solid #E8E8EA;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;

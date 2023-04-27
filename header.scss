@@ -250,8 +250,15 @@
                 background: $backfot;
                 top: 80px;
                 padding: 25px;
+                list-style: none;
+                z-index: 3;
                 #infopage {
                     padding-right: 20px;
+                    @include tipografie(16px, 600, 20px, $cultitlu);
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+                #btnlogout {
                     @include tipografie(16px, 600, 20px, $cultitlu);
                     cursor: pointer;
                     text-decoration: none;

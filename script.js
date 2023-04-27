@@ -33,8 +33,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 })
 jQuery('#btnlogout').click(function() {
     sessionStorage.removeItem('users');
-    window.location.reload(false)
-
+    if (window.location.origin.includes('github.io')) {
+        window.location.href = window.location.origin + '/proiect4/login.html';
+    } else {
+        window.location.href = window.location.origin + '/login.html'
+    }
 })
 jQuery('.cart.buttoncart').click(function() {
     jQuery("body").addClass('scrollblock');

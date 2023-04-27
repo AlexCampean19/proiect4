@@ -19,22 +19,33 @@ function Submit(e){
       'Content-Type': 'application/json'
     },
       body:JSON.stringify(data)
-    }).then(response=> response.text())
+    }).then(response=>response.json())
+
     .then((response)=>{ 
-      console.log(response.includes("error"));
-      if(response.includes("error")){
-        $(".msj").text('Try again').attr('id', 'fail').show();
+      console.log(response);
+      if(response.message==='The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.'){
+        $(".msj").text('Email/password are invalid!').attr('id', 'fail').show();
         setTimeout(function() { $("#fail").hide(); 
-      }, 5000);
-      }else{
-      sessionStorage.setItem('users',response.replace(/['"]+/g, '')),
+      }, 3000);
+      }else {
+      sessionStorage.setItem('users',response),
       $(".msj").text('You have logged in').attr('id', 'succes').show();
-      setTimeout(function() { $("#succes").hide(); 
-window.location.reload(false)
-    }, 5000);
+if(window.location.origin.includes('github.io')){
+  window.location.href=window.location.origin+'/proiect4/userinfo.html';
+}else{
+  window.location.href=window.location.origin+'/userinfo.html'
+}
+
+  
+    
   }
     }
-    )
+    ).catch(error=>{
+      console.log(error);
+      $(".msj").text('We experince tehnical error! Try again later.').attr('id', 'fail').show();
+      setTimeout(function() { $("#fail").hide(); 
+    }, 5000);
+    })
 }
 
 return(

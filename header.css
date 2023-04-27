@@ -261,6 +261,15 @@
     color: #1D1929;
     cursor: pointer;
     text-decoration: none;
+    list-style: none;
+  }
+  header .showusersmenu + .usersmenu #btnlogout {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #1D1929;
+    cursor: pointer;
+    text-decoration: none;
   }
   header .shopitems {
     position: absolute;
