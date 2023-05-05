@@ -39,6 +39,7 @@ jQuery('#btnlogout').click(function() {
         window.location.href = window.location.origin + '/login.html'
     }
 })
+
 jQuery('.cart.buttoncart').click(function() {
     jQuery("body").addClass('scrollblock');
     jQuery('.cart.buttoncart').addClass('showshop')

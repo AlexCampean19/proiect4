@@ -1,0 +1,137 @@
+@import "culori";
+@import "mixinuri";
+@import "header";
+@import "footer";
+body {
+    font-family: $font-family;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+@media (min-width: 320px) {
+    main {
+        padding: 20px;
+        min-height: 600px;
+        .active {
+            border: green($color: #000000);
+        }
+        h2 {
+            padding-bottom: 20px;
+            @include tipografie(32x, 800, 36px, $cultitlu);
+            display: inline-block;
+        }
+        #boxText {
+            padding-bottom: 20px;
+            #btnaccountinfo,
+            #btnorders,
+            #btnlogout {
+                @include tipografie(20px, 400, 24px, $cultitlu);
+                padding-top: 5px;
+                display: block;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            #btnorders {
+                color: $culbacklact
+            }
+        }
+        #boxAdress {
+            #orders {
+                #OrdersHeadTable {
+                    display: inline-block;
+                    padding-right: 20px;
+                    p {
+                        @include tipografie(16px, 800, 20px, $cultitlu)
+                    }
+                }
+                .comenzi {
+                    display: inline-block;
+                    padding: 10px;
+                    border: 1px solid $ordersbord;
+                    margin-right: 10px;
+                    .comanda {
+                        p {
+                            @include tipografie(16px, 400, 20px, $cultitlu);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 720px) {
+    main {
+        #boxText {
+            display: inline-block;
+            width: 20%;
+        }
+        #boxAdress {
+            display: flex;
+            #orders {
+                width: 80%;
+                #OrdersHeadTable {
+                    display: flex;
+                    flex-direction: row;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    justify-content: space-between;
+                    border-top: 1px solid $cultitlu;
+                    border-bottom: 1px solid $cultitlu;
+                    p {
+                        @include tipografie(18px, 800, 22px, $cultitlu)
+                    }
+                }
+                .comenzi {
+                    display: block;
+                    padding: 9px 0;
+                    border: none;
+                    margin: 0;
+                    border-bottom: 1px solid $ordersbord;
+                    .comanda {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        p {
+                            @include tipografie(18px, 400, 22px, $cultitlu);
+                            display: inline-block;
+                            padding-right: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {}

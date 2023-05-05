@@ -326,8 +326,46 @@ function deleteItm(target) {
         $(".msj").html(response.responseJSON.message).attr('id', 'fail').show();
         setTimeout(function() { $("#fail").hide; }, 5000);
     })
-
 }
+
+function Chekout() {
+    jQuery.ajax({
+        method: "POST",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        url: 'https://magento-demo.tk/rest/V1/carts/mine/estimate-shipping-methods',
+        headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') },
+        data: JSON.stringify({
+
+            "address": {
+                "region": 'Cluj',
+                "region_id": 291,
+                "region_code": "CJ",
+                "country_id": "RO",
+                "street": [
+                    "Avram Iancu 20"
+                ],
+                "postcode": "400001",
+                "city": "Cluj-Napoca",
+                "firstname": "Test",
+                "lastname": "Account",
+                "customer_id": 6,
+                "email": "test-user@magento-demo.tk",
+                "telephone": "+40745000000",
+                "same_as_billing": 1
+            }
+
+
+        }),
+    }).done(function(response) {
+        console.log(response)
+    }).fail(function(response) {
+        console.log(response)
+    })
+}
+$(document).on('click', '#checkoutbtn', function() {
+    Chekout()
+})
 $(document).on('keydown', '.valuequanty', function(e) {
     if (e.keyCode === 13) {
         modificareProdCos($(e.target))
