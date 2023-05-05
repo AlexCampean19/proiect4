@@ -105,23 +105,25 @@ h6 {
                     flex-direction: row;
                     padding-top: 12px;
                     padding-bottom: 12px;
-                    justify-content: space-between;
+                    justify-content: space-around;
                     border-top: 1px solid $cultitlu;
                     border-bottom: 1px solid $cultitlu;
+                    width: 98%;
                     p {
                         @include tipografie(18px, 800, 22px, $cultitlu)
                     }
                 }
                 .comenzi {
                     display: block;
-                    padding: 9px 0;
+                    padding: 0;
                     border: none;
                     margin: 0;
-                    border-bottom: 1px solid $ordersbord;
                     .comanda {
                         display: flex;
                         flex-direction: row;
-                        justify-content: space-between;
+                        justify-content: space-around;
+                        border-bottom: 1px solid $ordersbord;
+                        padding: 9px 0;
                         p {
                             @include tipografie(18px, 400, 22px, $cultitlu);
                             display: inline-block;

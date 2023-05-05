@@ -932,6 +932,7 @@ h6 {
     padding-top: 5px;
     display: block;
     cursor: pointer;
+    text-decoration: none;
   }
   main #boxText #btnorders {
     color: #059E67;
@@ -975,9 +976,10 @@ h6 {
     flex-direction: row;
     padding-top: 12px;
     padding-bottom: 12px;
-    justify-content: space-between;
+    justify-content: space-around;
     border-top: 1px solid #1D1929;
     border-bottom: 1px solid #1D1929;
+    width: 98%;
   }
   main #boxAdress #orders #OrdersHeadTable p {
     font-size: 18px;
@@ -987,15 +989,16 @@ h6 {
   }
   main #boxAdress #orders .comenzi {
     display: block;
-    padding: 9px 0;
+    padding: 0;
     border: none;
     margin: 0;
-    border-bottom: 1px solid #BCBCBC;
   }
   main #boxAdress #orders .comenzi .comanda {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    border-bottom: 1px solid #BCBCBC;
+    padding: 9px 0;
   }
   main #boxAdress #orders .comenzi .comanda p {
     font-size: 18px;
