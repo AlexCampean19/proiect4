@@ -67,21 +67,37 @@ h6 {
         }
         #boxAdress {
             #orders {
+                width: 100%;
+                overflow-x: auto;
                 #OrdersHeadTable {
-                    display: inline-block;
-                    padding-right: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    justify-content: space-around;
+                    border-top: 1px solid $cultitlu;
+                    border-bottom: 1px solid $cultitlu;
+                    width: 100%;
+                    border-collapse: collapse;
                     p {
                         @include tipografie(16px, 800, 20px, $cultitlu)
                     }
                 }
                 .comenzi {
-                    display: inline-block;
-                    padding: 10px;
-                    border: 1px solid $ordersbord;
-                    margin-right: 10px;
+                    display: block;
+                    padding: 0;
+                    border: none;
+                    margin: 0;
                     .comanda {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        border-bottom: 1px solid $ordersbord;
+                        padding: 9px 0;
+                        border-collapse: collapse;
                         p {
                             @include tipografie(16px, 400, 20px, $cultitlu);
+                            display: inline-block;
                         }
                     }
                 }
