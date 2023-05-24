@@ -32,7 +32,7 @@ let raspuns=JSON.parse(response)
 sessionStorage.setItem('customers',response)
 for (const [key, value] of Object.entries(raspuns.addresses)){
 console.log(value.city)
-template+='<div class="addresbx"><p class="adresstext">'+value.firstname+' '+value.lastname+'</p><p class="adresstext">'+value.postcode+' '+value.street+', '+value.city+' '+value.region.region_id+' '+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></div>';
+template+='<div class="addresbx"><p class="adresstext">'+value.firstname+'</p><p class="adresstext">'+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+' '+value.street+'</p><p class="adresstext">'+value.city+' '+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></div>';
 }
 jQuery("#addres").append(template)
 })

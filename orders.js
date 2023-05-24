@@ -31,16 +31,32 @@ function Orders(){
     console.log(JSON.parse(response))
     let raspuns=JSON.parse(response)
     for (const [key, value] of Object.entries(raspuns)){
-template+='<div class="comanda"><p>'+value.order_id.slice(-2)+'</p><p>'+value.order_items+'</p><p>'+value.order_date.slice(0,10)+'</p><p>'+value.order_status+'</p><p>'+value.order_subtotal+'</p><p>'+value.order_total+'</p></div>'
+template+='<div class="comanda"><div class="tableSmall"><p class="tableCell">Order #</p><p class="tableCell" data-label="OrderdId">'+value.order_id.slice(-2)+'</p></div><div class="tableSmall"><p class="tableCell" class="tableCell">Product Qty</p><p  class="tableCell" data-label="OrderItems">'+value.order_items+'</p></div><div class="tableSmall"><p class="tableCell">Order Date</p><p class="tableCell" data-label="OrderDate">'+value.order_date.slice(0,10)+'</p></div><div class="tableSmall"><p class="tableCell">Order Staus</p><p class="tableCell" data-label="OrderStatus">'+value.order_status+'</p></div><div class="tableSmall"><p class="tableCell">Order SubTotal</p><p class="tableCell" data-label="OrderSubtotal">'+value.order_subtotal+'</p></div><div class="tableSmall"><p class="tableCell">Order Total</p><p class="tableCell" data-label="OrderTotal">'+value.order_total+'</p></div></div>'
     }
-    jQuery('.comenzi').append(template)
+    jQuery('#orders').append(template)
 })
 return (<div>
 <div id="continut">
 <h2>My account</h2>
-    <div id="boxAdress"><div id="boxText"><a id="btnaccountinfo" onClick={userinfolink} >Account Info</a><a id="btnorders" onClick={userOrders} >Orders</a><a id="btnlogout" onClick={logout}>Logout</a></div><div id="orders"><div id="OrdersHeadTable"><p>Order #</p><p>Product Qty</p><p>Order Date</p><p>Order Status</p><p>Order Subtotal</p><p>Total</p></div><div className="comenzi"></div></div></div>
+    <div id="boxAdress">
+      <div id="boxText">
+        <a id="btnaccountinfo" onClick={userinfolink} >Account Info</a>
+        <a id="btnorders" onClick={userOrders} >Orders</a>
+        <a id="btnlogout" onClick={logout}>Logout</a>
+        </div>
+        <div id="orders">
+          <div id="OrdersHeadTable">
+            <p className="table_header"> Order #</p>
+            <p className="table_header">Product Qty</p>
+            <p className="table_header">Order Date</p>
+            <p className="table_header">Order Status</p>
+            <p className="table_header">Order Subtotal</p>
+            <p className="table_header">Total</p>
+            </div>
+            </div>
+            </div>
     </div>
 </div>
 
 )}
-ReactDOM.render(<Orders/>,document.querySelector("#orders"))
+ReactDOM.render(<Orders/>,document.querySelector("#continut"))

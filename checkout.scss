@@ -1,0 +1,314 @@
+@import "culori";
+@import "mixinuri";
+@import "header";
+@import "footer";
+body {
+    font-family: $font-family;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+main {
+    min-height: 600px;
+    padding: 20px;
+}
+
+@media (min-width: 320px) {
+    .selectaddress {
+        float: right;
+        position: relative;
+        top: -25px;
+    }
+    #cos {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .subtotal {
+        display: inline-block;
+        p {
+            @include tipografie(16px, 700, 21px, $cultitlu);
+            display: inline-block;
+        }
+        #subtotal {
+            float: right;
+        }
+    }
+    .shipping {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+    .shopmethod {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    h1 {
+        padding-bottom: 20px;
+    }
+    .comandamea {
+        padding-bottom: 40px;
+    }
+    #checkbox {
+        position: relative;
+        bottom: 0;
+        left: 215px;
+        height: 20px;
+        width: 20px;
+    }
+    #adrese {
+        .addresbx {
+            padding: 43px 10px 50px 10px;
+            background-color: $background;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            display: inline-block;
+            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+            margin-right: 20px;
+        }
+        .adresstext {
+            @include tipografie(18px, 400, 25px, $cultitlu)
+        }
+    }
+    .cumparaturi {
+        padding-right: 15px;
+        border-bottom: 1px solid $backfot;
+        display: flex;
+        padding-top: 15px;
+        width: 100%;
+    }
+    #imgsh {
+        width: 120px;
+        height: 120px;
+        display: inline-block;
+    }
+    .detfruct {
+        display: inline-block;
+        width: 85%;
+        text-align: left;
+    }
+    .numeFruct {
+        @include tipografie(16px, 800, 18px, $cultxtcateg);
+        padding-bottom: 10px;
+    }
+    #value {
+        text-align: center;
+        @include tipografie(16px, 800, 18px, $cultxtcateg);
+    }
+    #quantyy {
+        display: inline-block;
+        @include tipografie(14px, 500, 16px, $cultxtcateg);
+    }
+    .valuequanty {
+        width: 50px;
+        padding: 0;
+        position: relative;
+        right: 30px;
+        top: 25px;
+        border: 0.5px solid $culborder;
+        text-align: center;
+        border-radius: 25px
+    }
+    .pricebut {
+        position: relative;
+        top: 30px;
+        padding: 0;
+    }
+    .price {
+        padding: 0;
+        @include tipografie(14px, 500, 16px, $cultxtcateg)
+    }
+    .butoane {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        padding-top: 100px;
+    }
+    #submitOrd {
+        border: none;
+        border-radius: 16px;
+        background-color: #059E67;
+        line-height: 1;
+        align-items: baseline;
+        justify-content: center;
+        display: flex;
+        @include tipografie(14px, 700, 16px, $alb);
+        width: 45%;
+        text-align: center;
+        padding: 15px 0;
+    }
+    #addAdres {
+        border: 1px solid $culbacklact;
+        border-radius: 16px;
+        background-color: $alb;
+        line-height: 1;
+        align-items: baseline;
+        justify-content: center;
+        display: flex;
+        @include tipografie(14px, 700, 16px, $culbacklact);
+        width: 45%;
+        text-align: center;
+        padding: 15px 0;
+    }
+}
+
+.headernewadres {
+    justify-content: space-between;
+    display: flex;
+    h2 {
+        padding-top: 6px;
+        padding-left: 50px;
+        @include tipografie(23px, 800, 32px, $cultitlu)
+    }
+}
+
+.names {
+    width: 100%;
+}
+
+#close {
+    background: none;
+    border: none;
+    padding-right: 15px;
+}
+
+#addadres {
+    @include tipografie(14px, 700, 16px, $alb);
+    background-color: $culbacklact;
+    width: 285px;
+    padding: 16px 0 16px 0;
+    border-radius: 16px;
+    border: none;
+    float: left;
+    margin: 20px 0 32px 38px;
+}
+
+.popup-overlay {
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid $ordersbord;
+    border-radius: 18px;
+    width: 80%;
+    height: auto;
+    left: 10%;
+    top: 10%;
+}
+
+.popup-overlay.active {
+    visibility: visible;
+    text-align: center;
+}
+
+.popup-content {
+    visibility: hidden;
+}
+
+.popup-content.active {
+    flex-direction: column;
+    visibility: visible;
+    padding-top: 6px;
+    align-items: center;
+    display: flex;
+    margin-left: 38px;
+    margin-right: 38px;
+    border-top: 1px solid $ordersbord;
+    border-bottom: 1px solid $ordersbord;
+    padding-bottom: 81px;
+    p {
+        @include tipografie(14px, 700, 16px, $cultitlu);
+        padding-bottom: 8px;
+        padding-top: 28px;
+    }
+    input {
+        padding: 20px 24px;
+        border: 1px solid $ordersbord;
+        border-radius: 18px;
+        background-color: #FFFFFF;
+    }
+}
+
+.date {
+    width: 80%;
+}
+
+.last,
+.first {
+    width: 80%;
+}
+
+@media (min-width: 1024px) {
+    .nume {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 45%;
+    }
+    .date {
+        width: 50%;
+    }
+    .names {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .last,
+        .first {
+            width: 100%;
+        }
+        p {
+            display: inline-block;
+        }
+    }
+    .popup-content.active {
+        align-items: flex-start;
+    }
+    main {
+        padding: 40px;
+    }
+    h1 {
+        padding-bottom: 42px;
+    }
+    #adrese {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        .addresbx {
+            margin-right: 25px;
+        }
+    }
+    .comandamea {
+        float: right;
+        border: 1px solid $ordersbord;
+        padding: 10px;
+    }
+}

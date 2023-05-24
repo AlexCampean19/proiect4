@@ -1,155 +1,204 @@
-@import "culori";
-@import "mixinuri";
-@import "header";
-@import "footer";
-body {
-    font-family: $font-family;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-* {
-    margin: 0;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
-@media (min-width: 320px) {
-    main {
-        padding: 20px;
-        min-height: 600px;
-        .active {
-            border: green($color: #000000);
-        }
-        h2 {
-            padding-bottom: 20px;
-            @include tipografie(32x, 800, 36px, $cultitlu);
-            display: inline-block;
-        }
-        #boxText {
-            padding-bottom: 20px;
-            #btnaccountinfo,
-            #btnorders,
-            #btnlogout {
-                @include tipografie(20px, 400, 24px, $cultitlu);
-                padding-top: 5px;
-                display: block;
-                cursor: pointer;
-                text-decoration: none;
+    @import "culori";
+    @import "mixinuri";
+    @import "header";
+    @import "footer";
+    body {
+        font-family: $font-family;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    * {
+        margin: 0;
+    }
+    
+    img {
+        display: block;
+        max-width: 100%;
+    }
+    
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+    
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: break-word;
+    }
+    
+    @media (min-width: 320px) {
+        main {
+            padding: 20px;
+            min-height: 600px;
+            .active {
+                border: green($color: #000000);
             }
-            #btnorders {
-                color: $culbacklact
+            h2 {
+                padding-bottom: 20px;
+                @include tipografie(32x, 800, 36px, $cultitlu);
+                display: inline-block;
             }
-        }
-        #boxAdress {
-            #orders {
-                width: 100%;
-                overflow-x: auto;
-                #OrdersHeadTable {
-                    display: flex;
-                    flex-direction: row;
-                    padding-top: 12px;
-                    padding-bottom: 12px;
-                    justify-content: space-around;
-                    border-top: 1px solid $cultitlu;
-                    border-bottom: 1px solid $cultitlu;
-                    width: 100%;
-                    border-collapse: collapse;
-                    p {
-                        @include tipografie(16px, 800, 20px, $cultitlu)
-                    }
-                }
-                .comenzi {
+            #boxText {
+                padding-bottom: 20px;
+                #btnaccountinfo,
+                #btnorders,
+                #btnlogout {
+                    @include tipografie(20px, 400, 24px, $cultitlu);
+                    padding-top: 5px;
                     display: block;
-                    padding: 0;
-                    border: none;
-                    margin: 0;
-                    .comanda {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-around;
-                        border-bottom: 1px solid $ordersbord;
-                        padding: 9px 0;
-                        border-collapse: collapse;
-                        p {
-                            @include tipografie(16px, 400, 20px, $cultitlu);
-                            display: inline-block;
-                        }
-                    }
+                    cursor: pointer;
+                    text-decoration: none;
                 }
+                #btnorders {
+                    color: $culbacklact
+                }
+            }
+            #boxAdress {
+                display: block;
+            }
+            #orders {
+                display: block;
+            }
+            #OrdersHeadTable {
+                display: none;
+            }
+            .comanda>.tableSmall>.tableCell:nth-child(odd) {
+                display: table-cell;
+                width: 50%;
+            }
+            .tableCell {
+                display: table-cell;
+                width: 50%;
+                @include tipografie(18x, 600, 22px, $cultitlu)
+            }
+            .comanda {
+                display: table;
+                width: 100%;
+                padding-bottom: 20px;
+                margin: 5% auto 0;
+                text-align: center;
+            }
+            .tableSmall {
+                display: table-row;
+            }
+            .comanda>.tableSmall:first-child>.tableCell:last-child {
+                border-left: none;
+            }
+            .comanda>.tableSmall>.tableCell:first-child {
+                border-left: $ordersbord 1px solid;
+                border-top: $ordersbord 1px solid;
+                border-right: #BCBCBC 1px solid;
+            }
+            .comanda.tableSmall:first-child>.tableCell:first-child {
+                border-top: $ordersbord 1px solid;
+            }
+            .comanda>.tableSmall:first-child>.tableCell:last-child {
+                border-top: $ordersbord 1px solid;
+            }
+            .comanda>.tableSmall:last-child>.tableCell:first-child {
+                border-right: none;
+            }
+            .comanda>.tableSmall>.tableCell:last-child {
+                border-right: $ordersbord 1px solid;
+                border-top: #BCBCBC 1px solid;
+            }
+            .comanda>.tableSmall:last-child>.tableCell:first-child {
+                border-bottom: #BCBCBC 1px solid;
+                border-right: #BCBCBC 1px solid;
+            }
+            .comanda>.tableSmall:last-child>.tableCell:last-child {
+                border-bottom: #BCBCBC 1px solid;
             }
         }
     }
-}
-
-@media (min-width: 720px) {
-    main {
-        #boxText {
-            display: inline-block;
-            width: 20%;
-        }
-        #boxAdress {
-            display: flex;
+    
+    @media (min-width: 720px) {
+        main {
+            #boxText {
+                display: inline-block;
+                width: 20%;
+            }
             #orders {
                 width: 80%;
-                #OrdersHeadTable {
-                    display: flex;
-                    flex-direction: row;
-                    padding-top: 12px;
-                    padding-bottom: 12px;
-                    justify-content: space-around;
-                    border-top: 1px solid $cultitlu;
-                    border-bottom: 1px solid $cultitlu;
-                    width: 98%;
-                    p {
-                        @include tipografie(18px, 800, 22px, $cultitlu)
-                    }
-                }
-                .comenzi {
-                    display: block;
-                    padding: 0;
-                    border: none;
-                    margin: 0;
-                    .comanda {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-around;
-                        border-bottom: 1px solid $ordersbord;
-                        padding: 9px 0;
-                        p {
-                            @include tipografie(18px, 400, 22px, $cultitlu);
-                            display: inline-block;
-                            padding-right: 30px;
-                        }
-                    }
-                }
             }
         }
     }
-}
-
-@media (min-width: 1024px) {}
+    
+    @media (min-width: 1024px) {
+        main {
+            #boxAdress {
+                display: flex;
+            }
+            #orders {
+                display: table;
+                text-align: center;
+                width: 80%;
+            }
+            .comanda {
+                display: table-row;
+            }
+            #OrdersHeadTable {
+                display: table-row;
+            }
+            .table_header {
+                display: table-cell;
+                padding-top: 15px;
+                border-top: 1px solid $cultitlu;
+                border-bottom: 1px solid $cultitlu;
+                @include tipografie(18x, 800, 22px, $cultitlu)
+            }
+            .tableSmall {
+                display: table-cell;
+                border-bottom: 1px solid $ordersbord;
+            }
+            .comanda>.tableSmall>.tableCell:nth-child(odd) {
+                display: none;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .comanda>.tableSmall>.tableCell {
+                padding-top: 10px;
+                @include tipografie(18x, 400, 22px, $cultitlu)
+            }
+            .comanda>.tableSmall:first-child>.tableCell:last-child {
+                border-left: none;
+            }
+            .comanda>.tableSmall>.tableCell:first-child {
+                border-left: $ordersbord 1px solid;
+                border-top: $ordersbord 1px solid;
+                border-right: #BCBCBC 1px solid;
+            }
+            .comanda.tableSmall:first-child>.tableCell:first-child {
+                border-top: none;
+            }
+            .comanda>.tableSmall:first-child>.tableCell:last-child {
+                border-top: none;
+            }
+            .comanda>.tableSmall:last-child>.tableCell:first-child {
+                border-right: none;
+            }
+            .comanda>.tableSmall>.tableCell:last-child {
+                border-right: none;
+                border-top: none;
+            }
+            .comanda>.tableSmall:last-child>.tableCell:first-child {
+                border-bottom: none;
+                border-right: none;
+            }
+            .comanda>.tableSmall:last-child>.tableCell:last-child {
+                border-bottom: none;
+            }
+        }
+    }

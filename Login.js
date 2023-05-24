@@ -1,78 +1,74 @@
 
-
-
 function Form(){
-const {useState}=React
-const [email,setEmail]=useState("")
-const[password,setPassword]=useState("")
-let data={
-  "username":email, 
-  "password":password,
-}
-function Submit(e){
-  e.preventDefault()
-  console.log("email",email)
-  console.log("password",password)
-    fetch("https://magento-demo.tk/rest/V1/integration/customer/token",{
-      method:"POST",
-    headers:{
-      'Content-Type': 'application/json'
-    },
-      body:JSON.stringify(data)
-    }).then(response=>response.json())
-
-    .then((response)=>{ 
-      console.log(response);
-      if(response.message==='The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.'){
-        $(".msj").text('Email/password are invalid!').attr('id', 'fail').show();
-        setTimeout(function() { $("#fail").hide(); 
-      }, 3000);
-      }else {
-      sessionStorage.setItem('users',response),
-      $(".msj").text('You have logged in').attr('id', 'succes').show();
-if(window.location.origin.includes('github.io')){
-  window.location.href=window.location.origin+'/proiect4/userinfo.html';
-}else{
-  window.location.href=window.location.origin+'/userinfo.html'
-}
-
-  
-    
-  }
+    const {useState}=React
+    const [email,setEmail]=useState("")
+    const[password,setPassword]=useState("")
+    let data={
+      "username":email, 
+      "password":password,
     }
-    ).catch(error=>{
-      console.log(error);
-      $(".msj").text('We experince tehnical error! Try again later.').attr('id', 'fail').show();
-      setTimeout(function() { $("#fail").hide(); 
-    }, 5000);
-    })
-}
-
-return(
-  <div>
-   <form onSubmit={Submit}>
-   <i id="lgpagelogo"><span>Logo</span></i>
-      <label htmlFor="email">Email: </label>
-      <div id="emailpass">
-      <i id="emailAdress"><span>Email</span></i>
-      <input
-        type="text"
-        value={email}
-        placeholder="Enter a Email"
-onInput={(e)=>setEmail(e.target.value)}
-      /></div>
-        <label htmlFor="password">Password: </label>
-        <div id="emailpass">
-        <i id="pass"><span>Pass</span></i>
-        <input
-          type="password"
-          value={password}
-          placeholder="Enter a Password"
-          onInput={(e)=>setPassword(e.target.value)}
-        /></div>
-      <button  type="submit" >Login</button>
-    </form>
-  </div>
-)
-}
-ReactDOM.render(<Form/>,document.querySelector("#root"))
+    function Submit(e){
+      e.preventDefault()
+      console.log("email",email)
+      console.log("password",password)
+        fetch("https://magento-demo.tk/rest/V1/integration/customer/token",{
+          method:"POST",
+        headers:{
+          'Content-Type': 'application/json'
+        },
+          body:JSON.stringify(data)
+        }).then(response=>response.json())
+    
+        .then((response)=>{ 
+          console.log(response);
+          if(response.message==='The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.'){
+            $(".msj").text('Email/password are invalid!').attr('id', 'fail').show();
+            setTimeout(function() { $("#fail").hide(); 
+          }, 3000);
+          }else {
+          sessionStorage.setItem('users',response),
+          $(".msj").text('You have logged in').attr('id', 'succes').show();
+    if(window.location.origin.includes('github.io')){
+      window.location.href=window.location.origin+'/proiect4/userinfo.html';
+    }else{
+      window.location.href=window.location.origin+'/userinfo.html'
+    }
+    
+      
+        
+      }
+        }
+        ).catch(error=>{
+          console.log(error);
+          $(".msj").text('We experince tehnical error! Try again later.').attr('id', 'fail').show();
+          setTimeout(function() { $("#fail").hide(); 
+        }, 5000);
+        })
+    }
+    
+    return(
+      <div>
+       <form onSubmit={Submit}>
+   
+          <label htmlFor="email">Email: </label>
+          <div id="emailpass">
+          <input
+            type="text"
+            value={email}
+            placeholder="Enter a Email"
+    onInput={(e)=>setEmail(e.target.value)}
+          /></div>
+            <label htmlFor="password">Password: </label>
+            <div id="emailpass">
+            <input
+              type="password"
+              value={password}
+              placeholder="Enter a Password"
+              onInput={(e)=>setPassword(e.target.value)}
+            /></div>
+          <button  type="submit" >Login</button>
+        </form>
+      </div>
+    )
+    }
+    ReactDOM.render(<Form/>,document.querySelector("#root"))
