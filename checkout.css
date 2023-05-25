@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (min-width: 320px) {
   header {
     text-align: center;
@@ -910,9 +911,35 @@ main {
 
 @media (min-width: 320px) {
   .selectaddress {
-    float: right;
+    display: none;
+  }
+  .selectaddress + label:before {
+    content: "✔";
+    display: inline-block;
+    width: 22.4px;
     position: relative;
-    top: -25px;
+    height: 22.5px;
+    top: -22px;
+    left: 194px;
+    vertical-align: bottom;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 22.5px;
+    vertical-align: middle;
+  }
+  .selectaddress + label:active:before {
+    transform: scale(0);
+  }
+  .selectaddress:checked + label:before {
+    background-color: #059E67;
+    color: #fff;
+  }
+  .selectaddress:checked + label {
+    border: 1px solid #059E67;
+  }
+  .adrsel {
+    padding: 20px;
   }
   #cos {
     display: flex;
@@ -920,6 +947,7 @@ main {
   }
   .subtotal {
     display: inline-block;
+    padding-top: 10px;
   }
   .subtotal p {
     font-size: 16px;
@@ -954,13 +982,16 @@ main {
     height: 20px;
     width: 20px;
   }
+  #adrese {
+    display: flex;
+    flex-wrap: wrap;
+  }
   #adrese .addresbx {
     padding: 43px 10px 50px 10px;
     background-color: #F9F9F9;
     border-radius: 16px;
     margin-bottom: 25px;
     display: inline-block;
-    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
     margin-right: 20px;
   }
   #adrese .adresstext {
@@ -1163,6 +1194,9 @@ main {
 }
 
 @media (min-width: 1024px) {
+  .adrsel {
+    width: auto;
+  }
   .nume {
     display: flex;
     flex-direction: column;

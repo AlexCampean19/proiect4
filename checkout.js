@@ -80,12 +80,12 @@ sessionStorage.setItem('customers',response)
 for (const [key, value] of Object.entries(raspuns.addresses)){
 console.log(value.city)
 
-template1+='<label class="addresbx" for="radiobut"><input  type="radio" name="radiobut" class="selectaddress"  value="'+value.id+'"/><p class="adresstext">'+value.firstname+'</p><p class="adresstext">'+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+' '+value.street+'</p><p class="adresstext">'+value.city+' '+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></label>';
+template1+='<input type="radio" name="radiobut" id="'+value.id+'" class="selectaddress"  value="'+value.id+'"/><label class="adrsel"  for="'+value.id+'"><span class="input-radio-faux"></span><p class="adresstext">'+value.firstname+'</p><p class="adresstext">'+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+' '+value.street+'</p><p class="adresstext">'+value.city+' '+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></label>';
 }
 
 jQuery("#adrese").append(template1)
 jQuery("#subtotal").html(value.subtotal)
-$('input[name="radiobut"]').change(function() {
+$('.selectaddress').change(function() {
 console.log([$('input[name="radiobut"]:checked').val()])
 let id=$('input[name="radiobut"]:checked').val()
 
@@ -176,6 +176,7 @@ fetch("https://magento-demo.tk/rest/V1/carts/mine/shipping-information",{
  
   let raspuns=JSON.parse(response)
 console.log(raspuns)
+sessionStorage.setItem('paymethod',response)
 jQuery('#subtotal').text(raspuns.totals.subtotal + "$")
 });
 }
@@ -184,6 +185,9 @@ jQuery('#subtotal').text(raspuns.totals.subtotal + "$")
 let adrese2=JSON.parse(adrese).addresses
 console.log(adrese2);
 let adrsselect=JSON.parse(sessionStorage.getItem('adrsselectata'))
+let email=JSON.parse(sessionStorage.getItem('customers')).email
+let methodpay=JSON.parse(sessionStorage.getItem('paymethod')).payment_methods[0].code
+
 function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-information",{
 
   method:"POST",
@@ -192,13 +196,13 @@ function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-i
   body:JSON.stringify({
     
       "paymentMethod": {
-        "method": "cashondelivery"
+        "method": methodpay
       },
       "billing_address": {
-        "email": adrsselect.email,
+        "email": email,
         "region": adrsselect.region.region,
-        "region_id":adrsselect.region_id,
-        "region_code": adrsselect.region_code,
+        "region_id":adrsselect.region.region_id,
+        "region_code": adrsselect.region.region_code,
         "country_id":adrsselect.country_id,
         "street": [
           adrsselect.street[0]
@@ -208,9 +212,7 @@ function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-i
         "telephone": adrsselect.telephone,
         "firstname": adrsselect.firstname,
         "lastname": adrsselect.lastname
-      
     }
-
   }),
 }).then(response=> response.text()).then((response)=>{
  
