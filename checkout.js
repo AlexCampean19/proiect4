@@ -186,7 +186,7 @@ let adrese2=JSON.parse(adrese).addresses
 console.log(adrese2);
 let adrsselect=JSON.parse(sessionStorage.getItem('adrsselectata'))
 let email=JSON.parse(sessionStorage.getItem('customers')).email
-let methodpay=JSON.parse(sessionStorage.getItem('paymethod')).payment_methods[0].code
+
 
 function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-information",{
 
@@ -196,7 +196,7 @@ function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-i
   body:JSON.stringify({
     
       "paymentMethod": {
-        "method": methodpay
+        "method": "cashondelivery"
       },
       "billing_address": {
         "email": email,
