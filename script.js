@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 })
 jQuery('#btnlogout').click(function() {
     sessionStorage.removeItem('users');
+    sessionStorage.removeItem('cartId');
+    sessionStorage.removeItem('quoteId')
     if (window.location.origin.includes('github.io')) {
         window.location.href = window.location.origin + '/proiect4/login.html';
     } else {

@@ -101,18 +101,24 @@ jQuery(document).ready(function() {
 function createCart() {
     let verificareCart = sessionStorage.getItem('cartId');
     if (sessionStorage.getItem('users')) {
+        url = 'https://magento-demo.tk/rest/V1/customers'
 
+    } else {
+        url = 'https://magento-demo.tk/rest/V1/guest-carts'
     }
     if (!verificareCart || verificareCart === 'null') {
+
         let interval = setInterval(() => {
             jQuery.ajax({
                 method: "POST",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                url: 'https://magento-demo.tk/rest/V1/guest-carts',
+                url: url,
+                headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
             }).done(function(response) {
                 sessionStorage.setItem('cartId', response)
                 cartId()
+                console.log(response)
             }).fail(function(response) {
                 console.log(response)
             });
@@ -125,17 +131,37 @@ function createCart() {
 
 
 function cartId() {
-    jQuery.ajax({
-        method: "GET",
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        url: 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId'),
-    }).done(function(response) {
-        console.log(response)
-        sessionStorage.setItem('quoteId', response.id);
-    }).fail(function(response) {
+    if (sessionStorage.getItem('users')) {
 
-    })
+        jQuery.ajax({
+            method: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            url: 'https://magento-demo.tk/rest/V1/carts/mine',
+            headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
+        }).done(function(response) {
+            console.log(response)
+            sessionStorage.setItem('quoteId', response.id);
+        }).fail(function(response) {
+            console.log(response)
+        })
+
+    } else {
+
+        jQuery.ajax({
+            method: "GET",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            url: 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId'),
+
+        }).done(function(response) {
+            console.log(response)
+            sessionStorage.setItem('quoteId', response.id);
+        }).fail(function(response) {
+            console.log(response)
+        })
+    }
+
 }
 
 
