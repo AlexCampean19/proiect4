@@ -35,6 +35,10 @@ console.log(value.city)
 template+='<div class="addresbx"><p class="adresstext">'+value.firstname+'</p><p class="adresstext">'+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+' '+value.street+'</p><p class="adresstext">'+value.city+' '+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></div>';
 }
 jQuery("#addres").append(template)
+setTimeout(function() {
+  jQuery(".stilizareloader").css('display', 'none');
+
+}, 1000)
 })
     return(
 <div id="continut">

@@ -85,6 +85,10 @@ template1+='<input type="radio" name="radiobut" id="'+value.id+'" class="selecta
 
 jQuery("#adrese").append(template1)
 jQuery("#subtotal").html(value.subtotal)
+setTimeout(function() {
+  jQuery(".stilizareloader").css('display', 'none');
+
+}, 1000)
 $('.selectaddress').change(function() {
 console.log([$('input[name="radiobut"]:checked').val()])
 let id=$('input[name="radiobut"]:checked').val()

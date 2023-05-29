@@ -1,5 +1,9 @@
 
 function Form(){
+  setTimeout(function() {
+    jQuery(".stilizareloader").css('display', 'none');
+  
+  }, 1000)
     const {useState}=React
     const [email,setEmail]=useState("")
     const[password,setPassword]=useState("")

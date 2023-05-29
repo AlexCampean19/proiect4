@@ -34,6 +34,10 @@ function Orders(){
 template+='<div class="comanda"><div class="tableSmall"><p class="tableCell">Order #</p><p class="tableCell" data-label="OrderdId">'+value.order_id.slice(-2)+'</p></div><div class="tableSmall"><p class="tableCell" class="tableCell">Product Qty</p><p  class="tableCell" data-label="OrderItems">'+value.order_items+'</p></div><div class="tableSmall"><p class="tableCell">Order Date</p><p class="tableCell" data-label="OrderDate">'+value.order_date.slice(0,10)+'</p></div><div class="tableSmall"><p class="tableCell">Order Staus</p><p class="tableCell" data-label="OrderStatus">'+value.order_status+'</p></div><div class="tableSmall"><p class="tableCell">Order SubTotal</p><p class="tableCell" data-label="OrderSubtotal">'+value.order_subtotal+'</p></div><div class="tableSmall"><p class="tableCell">Order Total</p><p class="tableCell" data-label="OrderTotal">'+value.order_total+'</p></div></div>'
     }
     jQuery('#orders').append(template)
+    setTimeout(function() {
+      jQuery(".stilizareloader").css('display', 'none');
+    
+    }, 1000)
 })
 return (<div>
 <div id="continut">
