@@ -234,6 +234,7 @@ function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-i
  
   let raspuns=JSON.parse(response)
 console.log(raspuns)
+sessionStorage.setItem('yourcomandId',raspuns)
 
 })
 }
@@ -251,7 +252,7 @@ return(
 <label className="shopmethod">Store Pickup <input  onChange={onClick} value={"freeshipping"} type="radio" name="delivery" id="ridicare"/></label>
 </form>
 <div className="butoane"> 
-<button id="submitOrd" onClick={selectare}>Submit Order</button>
+<button id="submitOrd" href="https://alexcampean19.github.io/proiect4/succes.html" onClick={selectare}>Submit Order</button>
 <button id="addAdres" onClick={open}>Add New Address</button>
 </div>
 <div className="popup-overlay">

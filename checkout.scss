@@ -103,6 +103,7 @@ main {
     }
     #cos {
         display: flex;
+        justify-content: flex-end;
         flex-direction: column-reverse;
         overflow: auto;
         height: 400px;

@@ -100,14 +100,19 @@ jQuery(document).ready(function() {
 
 function createCart() {
     let verificareCart = sessionStorage.getItem('cartId');
-    if (sessionStorage.getItem('users')) {
-        url = 'https://magento-demo.tk/rest/V1/customers'
 
-    } else {
-        url = 'https://magento-demo.tk/rest/V1/guest-carts'
-    }
     if (!verificareCart || verificareCart === 'null') {
+        console.log('1')
+        let url = ''
+        if (sessionStorage.getItem('users')) {
 
+            url = 'https://magento-demo.tk/rest/default/V1/carts/mine'
+
+        } else {
+            url = 'https://magento-demo.tk/rest/V1/guest-carts'
+
+        }
+        console.log('1')
         let interval = setInterval(() => {
             jQuery.ajax({
                 method: "POST",
@@ -116,6 +121,7 @@ function createCart() {
                 url: url,
                 headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
             }).done(function(response) {
+
                 sessionStorage.setItem('cartId', response)
                 cartId()
                 console.log(response)
@@ -131,44 +137,32 @@ function createCart() {
 
 
 function cartId() {
-    if (sessionStorage.getItem('users')) {
+    let url = ''
 
-        jQuery.ajax({
-            method: "POST",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            url: 'https://magento-demo.tk/rest/V1/carts/mine',
-            headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
-        }).done(function(response) {
-            console.log(response)
-            sessionStorage.setItem('quoteId', response.id);
-        }).fail(function(response) {
-            console.log(response)
-        })
+    url = 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId')
 
-    } else {
 
-        jQuery.ajax({
-            method: "GET",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            url: 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId'),
+    jQuery.ajax({
+        method: "GET",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        url: url,
 
-        }).done(function(response) {
-            console.log(response)
-            sessionStorage.setItem('quoteId', response.id);
-        }).fail(function(response) {
-            console.log(response)
-        })
-    }
-
+    }).done(function(response) {
+        console.log(response)
+        sessionStorage.setItem('quoteId', response.id);
+    }).fail(function(response) {
+        console.log(response)
+    })
 }
 
 
 
 
+
+
 function addCart(target) {
-    let url = '';
+
     let payload = '';
     if (target.closest('.card1').length > 0) {
         payload = JSON.stringify({
@@ -187,7 +181,9 @@ function addCart(target) {
             }
         })
     }
+    let url = '';
     if (sessionStorage.getItem('users')) {
+
         url = 'https://magento-demo.tk/rest/V1/carts/mine/items';
     } else {
         url = 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId') + '/items';

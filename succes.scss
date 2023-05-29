@@ -1,0 +1,86 @@
+    @import "culori";
+    @import "mixinuri";
+    @import "header";
+    @import "footer";
+    body {
+        font-family: $font-family;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    * {
+        margin: 0;
+    }
+    
+    img {
+        display: block;
+        max-width: 100%;
+    }
+    
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+    
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: break-word;
+    }
+    
+    main {
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        div {
+            text-align: center;
+        }
+    }
+    
+    .succes {
+        border: 1px solid $culbacklact;
+        background-color: transparent;
+        font-family: "Font Awesome 5 Free";
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-size: 30px;
+        border-radius: 50%;
+        padding: 20px;
+        color: #1D1929;
+        font-weight: 900;
+        border-radius: 50%;
+        &:after {
+            content: "\f00c";
+            color: $culbacklact;
+        }
+        span {
+            display: none
+        }
+    }
+    
+    h1 {
+        @include tipografie(28px, 800, 32px, $cultitlu);
+        text-align: center;
+        padding: 25px;
+        display: block;
+    }
+    
+    p {
+        @include tipografie(24px, 600, 28px, $cultitlu);
+    }
