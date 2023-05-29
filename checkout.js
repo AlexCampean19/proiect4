@@ -138,8 +138,15 @@ setTimeout(function() {
 })
 
 if(raspuns.addresses[0].default_billing===true){
+  if($('#ridciare').is(':checked')) {
+    let ridicare=jQuery('#ridicare').val()
+    sessionStorage.setItem('delivery',ridicare)
+  }else{
+    let curier=$('#curier').val()
+    sessionStorage.setItem('delivery',curier)
+    }
+  
 jQuery('input[name="radiobut"]:first').attr('checked',true)
-
 let id=jQuery('input[name="radiobut"]:first').attr('checked',true).val()
 var filterData=adrese2.filter(function(item){
   return( id.indexOf(parseInt(item.id))>-1)
@@ -167,7 +174,7 @@ let payload= JSON.stringify({
     },
    
     "shipping_carrier_code": sessionStorage.getItem('delivery'),
-    "shipping_method_code":  sessionStorage.getItem('delivery')
+    "shipping_method_code": sessionStorage.getItem('delivery'),
   
 }
 });
@@ -178,10 +185,11 @@ fetch("https://magento-demo.tk/rest/V1/carts/mine/shipping-information",{
 
   body:payload,
 }).then(response=> response.text()).then((response)=>{
+  if(response){
   setTimeout(function() {
     jQuery(".stilizareloader").css('display', 'none');
   
-  }, 1000)
+  }, 1000)}
   let raspuns=JSON.parse(response)
 console.log(raspuns)
 sessionStorage.setItem('paymethod',response)
