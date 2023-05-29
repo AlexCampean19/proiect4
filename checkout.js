@@ -216,18 +216,18 @@ function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-i
       },
       "billing_address": {
         "email": email,
-        "region": adrsselect.region.region,
-        "region_id":adrsselect.region.region_id,
-        "region_code": adrsselect.region.region_code,
-        "country_id":adrsselect.country_id,
+        "region": JSON.parse(sessionStorage.getItem('adrsselectata')).region.region,
+        "region_id":JSON.parse(sessionStorage.getItem('adrsselectata')).region.region_id,
+        "region_code": JSON.parse(sessionStorage.getItem('adrsselectata')).region.region_code,
+        "country_id":JSON.parse(sessionStorage.getItem('adrsselectata')).country_id,
         "street": [
-          adrsselect.street[0]
+          JSON.parse(sessionStorage.getItem('adrsselectata')).street[0]
         ],
-        "postcode": adrsselect.postcode,
-        "city": adrsselect.city,
-        "telephone": adrsselect.telephone,
-        "firstname": adrsselect.firstname,
-        "lastname": adrsselect.lastname
+        "postcode": JSON.parse(sessionStorage.getItem('adrsselectata')).postcode,
+        "city": JSON.parse(sessionStorage.getItem('adrsselectata')).city,
+        "telephone": JSON.parse(sessionStorage.getItem('adrsselectata')).telephone,
+        "firstname": JSON.parse(sessionStorage.getItem('adrsselectata')).firstname,
+        "lastname": JSON.parse(sessionStorage.getItem('adrsselectata')).lastname
     }
   }),
 }).then(response=> response.text()).then((response)=>{
@@ -235,7 +235,8 @@ function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-i
   let raspuns=JSON.parse(response)
 console.log(raspuns)
 
-});}
+})
+}
   
 
 
