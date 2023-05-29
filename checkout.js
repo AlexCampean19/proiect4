@@ -187,7 +187,7 @@ console.log(adrese2);
 let adrsselect=JSON.parse(sessionStorage.getItem('adrsselectata'))
 let email=JSON.parse(sessionStorage.getItem('customers')).email
 console.log(email);
-
+console.log(adrsselect)
 function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-information",{
 
   method:"POST",
