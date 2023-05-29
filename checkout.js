@@ -85,10 +85,7 @@ template1+='<input type="radio" name="radiobut" id="'+value.id+'" class="selecta
 
 jQuery("#adrese").append(template1)
 jQuery("#subtotal").html(value.subtotal)
-setTimeout(function() {
-  jQuery(".stilizareloader").css('display', 'none');
 
-}, 1000)
 $('.selectaddress').change(function() {
 console.log([$('input[name="radiobut"]:checked').val()])
 let id=$('input[name="radiobut"]:checked').val()
@@ -133,6 +130,10 @@ fetch("https://magento-demo.tk/rest/V1/carts/mine/shipping-information",{
   let raspuns=JSON.parse(response)
 console.log(raspuns)
 jQuery('#subtotal').text(raspuns.totals.subtotal + "$")
+setTimeout(function() {
+  jQuery(".stilizareloader").css('display', 'none');
+
+}, 1000)
 });
 })
 
@@ -177,7 +178,10 @@ fetch("https://magento-demo.tk/rest/V1/carts/mine/shipping-information",{
 
   body:payload,
 }).then(response=> response.text()).then((response)=>{
- 
+  setTimeout(function() {
+    jQuery(".stilizareloader").css('display', 'none');
+  
+  }, 1000)
   let raspuns=JSON.parse(response)
 console.log(raspuns)
 sessionStorage.setItem('paymethod',response)
