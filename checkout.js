@@ -77,6 +77,7 @@ headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
   console.log(JSON.parse(response))
 let raspuns=JSON.parse(response)
 sessionStorage.setItem('customers',response)
+sessionStorage.setItem('adrese',response.addresses)
 for (const [key, value] of Object.entries(raspuns.addresses)){
 console.log(value.city)
 
@@ -237,7 +238,30 @@ console.log(raspuns)
 sessionStorage.setItem('yourcomandId',raspuns)
 
 })
-}
+} 
+function newAddress(){
+  let lastname=jQuery("#lastname").val();
+ let firstname=jQuery("#firstname").val();
+  let address=jQuery("#address").val();
+  let country=jQuery("country").val();
+  let state=jQuery("#state").val();
+  let city=jQuery("city").val();
+  let zipcode=jQuery("#zipcode").val();
+  let telephone=jQuery("#telefon").val();
+  let adresacompleta=[
+"firstname"=firstname,
+"lastname"=lastname,
+"address"=address,
+"country"=country,
+"state"=state,
+"city"=city,
+"zipcode"=zipcode,
+"telephone"=telephone,
+]
+adresacompleta.push(JSON.parse(sessionStorage.getItem('adrese')))
+sessionStorage.setItem('adrese',JSON.stringify(adresacompleta))
+  }
+
   
 
 
@@ -252,7 +276,7 @@ return(
 <label className="shopmethod">Store Pickup <input  onChange={onClick} value={"freeshipping"} type="radio" name="delivery" id="ridicare"/></label>
 </form>
 <div className="butoane"> 
-<button id="submitOrd" href="https://alexcampean19.github.io/proiect4/succes.html" onClick={selectare}>Submit Order</button>
+<button id="submitOrd" href={'https://alexcampean19.github.io/proiect4/succes.html'} onClick={selectare}>Submit Order</button>
 <button id="addAdres" onClick={open}>Add New Address</button>
 </div>
 <div className="popup-overlay">
@@ -263,17 +287,17 @@ return(
 
      
      <div className="names">
-<div className="nume"><p>First Name </p> <input className="first" type="text" placeholder="First Name" required/></div>
-<div className="nume"><p>Last Name</p>  <input className="last" type="text" placeholder="Last Name" required/></div></div>
-<p>Address</p>  <input className="date" type="text" placeholder="Address" required/>
-<p>Country </p> <input className="date" type="text" placeholder="Country" required/>
-<p>State </p> <input className="date"  type="text" placeholder="State" required/>
-<p>City</p>  <input className="date"  type="text" placeholder="City" required/>
-<p>Zip Code</p>  <input className="date"  type="text" placeholder="Zip Code" required/>
-<p>Telephone</p> <input  className="date" type="text" placeholder="Telephone" required/>
+<div className="nume"><p>First Name </p> <input className="first" type="text" id="firstname" placeholder="First Name" required/></div>
+<div className="nume"><p>Last Name</p>  <input className="last" id="lastname" type="text" placeholder="Last Name" required/></div></div>
+<p>Address</p>  <input className="date" id="address" type="text" placeholder="Address" required/>
+<p>Country </p> <input className="date" type="text" id="country" placeholder="Country" required/>
+<p>State </p> <input className="date"  type="text" id="state" placeholder="State" required/>
+<p>City</p>  <input className="date"  type="text" id="city" placeholder="City" required/>
+<p>Zip Code</p>  <input className="date"  type="text" id="zipcode"placeholder="Zip Code" required/>
+<p>Telephone</p> <input  className="date" type="text" id="telefon" placeholder="Telephone" required/>
 
    </form>
-<button id="addadres">Add Adress</button>
+<button id="addadres" onClick={newAddress}>Add Adress</button>
 </div>
 
 
