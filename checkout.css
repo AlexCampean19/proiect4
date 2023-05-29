@@ -944,9 +944,11 @@ main {
   #cos {
     display: flex;
     flex-direction: column-reverse;
+    overflow: auto;
+    height: 400px;
   }
   .subtotal {
-    display: inline-block;
+    display: block;
     padding-top: 10px;
   }
   .subtotal p {
@@ -958,6 +960,9 @@ main {
   }
   .subtotal #subtotal {
     float: right;
+  }
+  .quantity {
+    display: flex;
   }
   .shipping {
     display: flex;
@@ -1016,6 +1021,7 @@ main {
     display: inline-block;
     width: 85%;
     text-align: left;
+    padding-left: 15px;
   }
   .numeFruct {
     font-size: 16px;
@@ -1042,8 +1048,7 @@ main {
     width: 50px;
     padding: 0;
     position: relative;
-    right: 30px;
-    top: 25px;
+    top: -4px;
     border: 0.5px solid #E8E8EA;
     text-align: center;
     border-radius: 25px;

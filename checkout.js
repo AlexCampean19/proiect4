@@ -63,7 +63,7 @@ console.log()
     let raspuns=JSON.parse(response)
 
     for (const [key, value] of Object.entries(raspuns.items)) {
-        template += '<div class="cumparaturi" data-id="' + value.item_id + '"><img id="imgsh" src="' + value.extension_attributes.image + '" /><div class="detfruct" ><p  class="numeFruct" >' + value.name + '</p><p id="quantyy">Qty:</p><input class="valuequanty" value="' + value.qty + '"><div class="pricebut"><p class="price">Price: ' + value.price + ' $</p></div></div></div> '
+        template += '<div class="cumparaturi" data-id="' + value.item_id + '"><img id="imgsh" src="' + value.extension_attributes.image + '" /><div class="detfruct" ><p  class="numeFruct" >' + value.name + '</p><div class="quantity"><p id="quantyy">Qty:</p><input class="valuequanty" value="' + value.qty + '"></div><div class="pricebut"><p class="price">Price: ' + value.price + ' $</p></div></div></div> '
    
       } 
     jQuery('#cos').append(template)
@@ -226,7 +226,7 @@ console.log(raspuns)
 return(
     <div>
     
-<div className="comandamea"><h3>Cart summary</h3><div id="cos"><div className="subtotal"><p>Subtotal:</p><p id="subtotal"></p></div></div></div>
+<div className="comandamea"><h3>Cart summary</h3><div id="cos"></div><div className="subtotal"><p>Subtotal:</p><p id="subtotal"></p></div></div>
 <div id="adrese"></div>
 
 <form className="shipping"><h3>Shipping method</h3>

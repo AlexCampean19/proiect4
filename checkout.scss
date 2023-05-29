@@ -78,9 +78,11 @@ main {
     #cos {
         display: flex;
         flex-direction: column-reverse;
+        overflow: auto;
+        height: 400px;
     }
     .subtotal {
-        display: inline-block;
+        display: block;
         padding-top: 10px;
         p {
             @include tipografie(16px, 700, 21px, $cultitlu);
@@ -89,6 +91,9 @@ main {
         #subtotal {
             float: right;
         }
+    }
+    .quantity {
+        display: flex;
     }
     .shipping {
         display: flex;
@@ -144,6 +149,7 @@ main {
         display: inline-block;
         width: 85%;
         text-align: left;
+        padding-left: 15px
     }
     .numeFruct {
         @include tipografie(16px, 800, 18px, $cultxtcateg);
@@ -161,8 +167,7 @@ main {
         width: 50px;
         padding: 0;
         position: relative;
-        right: 30px;
-        top: 25px;
+        top: -4px;
         border: 0.5px solid $culborder;
         text-align: center;
         border-radius: 25px
