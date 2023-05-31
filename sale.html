@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="stylesheet" type="text/css" href="sale.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;700;800&display=swap" rel="stylesheet">
@@ -15,9 +15,7 @@
     <link rel="stylesheet" href="glide/@glidejs/glide/dist/css/glide.theme.min.css">
     <script src="https://kit.fontawesome.com/b0f990c8c7.js" crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="jquery.paginate.css">
     <title>Fresh&Delicious</title>
 </head>
 
@@ -55,7 +53,6 @@
             <li><a href="https://alexcampean19.github.io/proiect4/login.html" id="btnlogout">Log Out</a></li>
         </ul>
         <a class="cart buttoncart" href="#">
-
             <span>Cart</span>
             <p id="nrprod"></p>
         </a>
@@ -81,10 +78,61 @@
 
     </header>
     <main>
-        <h1>Login Page</h1>
 
-        <div type="module" id="root">
+        <div class="container ">
+            <div class="cutia1 ">
+                <div class="titlu ">
+                    <h2>Fire Up more table time</h2>
+                    <p>Summer is sweet</p>
+                </div>
+                <form class="navigare ">
+                    <input type="text " placeholder="Search groceries... " name="search " autocomplete="off">
+                    <button id="searchclose"><a href="https://alexcampean19.github.io/proiect4/">X</a></button>
+                    <button class="buton "><span>
+                        search
+                    </span>
+                    </button>
+                </form>
+            </div>
 
+            <div class="fructe ">
+                <h1></h1>
+                <p id="noitems">No products found</p>
+                <div class="detfruct ">
+                    <span class="det1"> </span>
+                    <div class="det4 ">
+                        <span class="det2 ">Item per page</span>
+                        <div class="det3 ">
+                            <select id="listaSelector">
+                                <option value="4">4</option>
+                                <option value="8">8</option>
+                                <option value="12">12</option>
+                                <option value="24">24</option>
+                            </select></div>
+                    </div>
+                </div>
+                <div class="cardfructe">
+                </div>
+                <div class="lista ">
+
+                </div>
+            </div>
+            <div class="categori ">
+
+                <h2></h2>
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+
+                        </ul>
+                    </div>
+
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><span class="arrowslide">prev</span></button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><span class="arrowslide">next</span></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -95,8 +143,8 @@
                     <h3>Our Company</h3>
                     <ul class="c1 ">
                         <li><a href="https://alexcampean19.github.io/CV/ ">About Us</a></li>
-                        <li><a href="https://alexcampean19.github.io/proiect3/eror404 ">Terms & Conditions</a></li>
-                        <li><a href="https://alexcampean19.github.io/proiect3/eror404 ">Return Request</a></li>
+                        <li><a href="https://alexcampean19.github.io/proiect4/eror404 ">Terms & Conditions</a></li>
+                        <li><a href="https://alexcampean19.github.io/proiect4/eror404 ">Return Request</a></li>
                         <li><a href="https://alexcampean19.github.io/CV/" target="_blank">Contact</a></li>
                     </ul>
                 </div>
@@ -122,10 +170,14 @@
         </div>
     </footer>
 
-
-    <script src="script.js"></script>
+    <script src="glide.min.js"></script>
     <script src="scriptendpoint.js"></script>
-    <script src="Login.js" type="text/babel"></script>
+    <script src="sale.js"></script>
+    <script src="jquery.paginate.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
 </body>
 
 </html>
