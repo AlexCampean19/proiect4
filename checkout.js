@@ -1,8 +1,11 @@
 
 
+
 function Checkout(){
+
   const {useState}=React
   const [radioValue, setRadioValue] = useState(0);
+ 
   const onClick = (ev) => {
     console.log(ev.target.value);
     sessionStorage.setItem('delivery',ev.target.value)
@@ -79,7 +82,7 @@ let raspuns=JSON.parse(response)
 sessionStorage.setItem('customers',response)
 sessionStorage.setItem('adrese',response.addresses)
 for (const [key, value] of Object.entries(raspuns.addresses)){
-console.log(value.city)
+console.log(raspuns.addresses)
 
 template1+='<input type="radio" name="radiobut" id="'+value.id+'" class="selectaddress"  value="'+value.id+'"/><label class="adrsel"  for="'+value.id+'"><span class="input-radio-faux"></span><p class="adresstext">'+value.firstname+'</p><p class="adresstext">'+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+' '+value.street+'</p><p class="adresstext">'+value.city+' '+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></label>';
 }
@@ -235,32 +238,52 @@ function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-i
  
   let raspuns=JSON.parse(response)
 console.log(raspuns)
-sessionStorage.setItem('yourcomandId',raspuns)
+localStorage.setItem('yourcomandId',raspuns)
 
 })
 } 
-function newAddress(){
-  let lastname=jQuery("#lastname").val();
- let firstname=jQuery("#firstname").val();
-  let address=jQuery("#address").val();
-  let country=jQuery("country").val();
-  let state=jQuery("#state").val();
-  let city=jQuery("city").val();
-  let zipcode=jQuery("#zipcode").val();
-  let telephone=jQuery("#telefon").val();
-  let adresacompleta=[
-"firstname"=firstname,
-"lastname"=lastname,
-"address"=address,
-"country"=country,
-"state"=state,
-"city"=city,
-"zipcode"=zipcode,
-"telephone"=telephone,
-]
-adresacompleta.push(JSON.parse(sessionStorage.getItem('adrese')))
-sessionStorage.setItem('adrese',JSON.stringify(adresacompleta))
-  }
+function addAdres(){
+fetch("https://magento-demo.tk/rest/V1/customers/me",{
+  method:"PUT",
+  headers: { "Authorization": "Bearer " + sessionStorage.getItem('users'),  'Content-Type': 'application/json' },
+  body:JSON.stringify({
+    
+      "customer": {
+        "email": email,
+        "firstname":jQuery('#firstname').val(),
+        "lastname":jQuery('#lastname').val(),
+        "dob":jQuery('#dob').val(),
+        "addresses": [
+          {
+            "region": {
+                "region_code": jQuery('#statecode').val(),
+     
+                "region": jQuery('#state').val(),
+            },
+            "country_id": jQuery('#country').val(),
+            "street": [
+                jQuery('#address').val()
+            ],
+            "telephone": jQuery('#telefon').val(),
+            "postcode": jQuery('#zipcode').val(),
+            "city": jQuery('#city').val(),
+            "firstname": jQuery('#firstname').val(),
+            "lastname": jQuery('#lastname').val(),
+            "default_shipping": "true",
+            "default_billing":"true"
+          }
+        ]
+      }
+    
+    
+  }),
+}).then(response=> response.text()).then((response)=>{
+  sessionStorage.setItem('customers',response)
+  let raspuns=JSON.parse(response)
+console.log(raspuns)
+window.location.reload(true)
+})
+}
 
   
 
@@ -276,7 +299,7 @@ return(
 <label className="shopmethod">Store Pickup <input  onChange={onClick} value={"freeshipping"} type="radio" name="delivery" id="ridicare"/></label>
 </form>
 <div className="butoane"> 
-<button id="submitOrd" href={'https://alexcampean19.github.io/proiect4/succes.html'} onClick={selectare}>Submit Order</button>
+<button id="submitOrd"onClick={selectare}>Submit Order</button>
 <button id="addAdres" onClick={open}>Add New Address</button>
 </div>
 <div className="popup-overlay">
@@ -290,14 +313,16 @@ return(
 <div className="nume"><p>First Name </p> <input className="first" type="text" id="firstname" placeholder="First Name" required/></div>
 <div className="nume"><p>Last Name</p>  <input className="last" id="lastname" type="text" placeholder="Last Name" required/></div></div>
 <p>Address</p>  <input className="date" id="address" type="text" placeholder="Address" required/>
-<p>Country </p> <input className="date" type="text" id="country" placeholder="Country" required/>
+<p>Country Id</p> <input className="date" type="text" id="country" placeholder="Country Id" required   />
 <p>State </p> <input className="date"  type="text" id="state" placeholder="State" required/>
+<p>State Code</p><input className="date"  type="text" id="statecode" placeholder="State Code" required />
+
 <p>City</p>  <input className="date"  type="text" id="city" placeholder="City" required/>
 <p>Zip Code</p>  <input className="date"  type="text" id="zipcode"placeholder="Zip Code" required/>
 <p>Telephone</p> <input  className="date" type="text" id="telefon" placeholder="Telephone" required/>
-
+<p>Date of bithday</p> <input  className="date" type="text" id="dob" placeholder="Date of birthday" required/>
    </form>
-<button id="addadres" onClick={newAddress}>Add Adress</button>
+<button id="addadres" onClick={addAdres}>Add Adress</button>
 </div>
 
 

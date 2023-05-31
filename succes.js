@@ -1,6 +1,6 @@
 
 function Succes(){
-let idcomand=sessionStorage.getItem('yourcomandId')
+let idcomand=localStorage.getItem('yourcomandId')
       return(
         <div>
             <a  className="succes"><span>Succes</span></a>

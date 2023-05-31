@@ -121,10 +121,10 @@ function createCart() {
                 url: url,
                 headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
             }).done(function(response) {
-
+                console.log(response)
                 sessionStorage.setItem('cartId', response)
                 cartId()
-                console.log(response)
+
             }).fail(function(response) {
                 console.log(response)
             });
@@ -138,10 +138,7 @@ function createCart() {
 
 function cartId() {
     let url = ''
-
     url = 'https://magento-demo.tk/rest/V1/guest-carts/' + sessionStorage.getItem('cartId')
-
-
     jQuery.ajax({
         method: "GET",
         contentType: "application/json; charset=utf-8",
