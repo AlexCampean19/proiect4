@@ -1214,6 +1214,17 @@ main {
   border: 1px solid #BCBCBC;
   border-radius: 18px;
   background-color: #FFFFFF;
+  color: #A5A3A9;
+}
+
+#country,
+#state {
+  padding: 20px 24px;
+  border: 1px solid #BCBCBC;
+  border-radius: 18px;
+  background-color: #FFFFFF;
+  width: 80%;
+  color: #A5A3A9;
 }
 
 .date {
@@ -1234,6 +1245,10 @@ main {
     flex-direction: column;
     text-align: left;
     width: 45%;
+  }
+  #country,
+  #state {
+    width: 50%;
   }
   .date {
     width: 50%;

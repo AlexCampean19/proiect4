@@ -102,7 +102,7 @@ function createCart() {
     let verificareCart = sessionStorage.getItem('cartId');
 
     if (!verificareCart || verificareCart === 'null') {
-        console.log('1')
+
         let url = ''
         if (sessionStorage.getItem('users')) {
 
@@ -112,7 +112,7 @@ function createCart() {
             url = 'https://magento-demo.tk/rest/V1/guest-carts'
 
         }
-        console.log('1')
+
         let interval = setInterval(() => {
             jQuery.ajax({
                 method: "POST",

@@ -16,6 +16,23 @@ const open=()=>{
  const close=()=>{
   $(".popup-overlay, .popup-content").removeClass("active");
  }
+const tara= (ev)=>{
+  sessionStorage.setItem('idTara',JSON.stringify(ev.target.value));
+  console.log((sessionStorage.getItem('idTara')))
+  alegereTara()
+};
+const region=(ev)=>{
+  console.log(ev.target.value)
+  sessionStorage.setItem('orasSelectat',JSON.stringify(ev.target.value))
+  let coduriOrase=JSON.parse(sessionStorage.getItem('taraAleasa')).available_regions;
+let judetgasit=coduriOrase.filter(judet=>judet.name == ev.target.value)
+sessionStorage.setItem('judetSelectat',JSON.stringify(judetgasit))
+}
+
+
+
+
+
     let adrese=sessionStorage.getItem('customers')
     let adresaprincpala=JSON.parse(adrese).addresses[0];
 fetch("https://magento-demo.tk/rest/V1/carts/mine/estimate-shipping-methods",{
@@ -55,12 +72,12 @@ if(raspuns[0].carrier_title==="Courier Shipping"){
 }
 
 });
-console.log()
+
     let template='';
     let template1='';
     fetch("https://magento-demo.tk/rest/default/V1/carts/mine",{
     method:"GET",
-    headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
+    headers: { "Authorization": "Bearer " + sessionStorage.getItem('users')}
   }).then(response=> response.text()).then((response)=>{
     console.log(JSON.parse(response))
     let raspuns=JSON.parse(response)
@@ -242,6 +259,41 @@ localStorage.setItem('yourcomandId',raspuns)
 
 })
 } 
+
+let templateCountry='';
+
+  fetch("https://magento-demo.tk/rest/V1/directory/countries",{
+    method:"GET",
+  })
+.then(response=> response.text()).then((response)=>{
+
+  let raspuns=JSON.parse(response)
+  console.log(raspuns)
+  for (const [key, value] of Object.entries(raspuns)) {
+   
+    templateCountry+='    <option value='+value.id+'>'+value.full_name_english+'</option>';
+ 
+  }
+  jQuery('#country').append(templateCountry)
+
+})
+
+let templateRegiune='';
+function alegereTara()
+{fetch("https://magento-demo.tk/rest/V1/directory/countries/"+sessionStorage.getItem('idTara').replace(/['"]+/g, ''),{
+  method:"GET",
+})
+.then(response=> response.text()).then((response)=>{
+  
+let raspuns=JSON.parse(response)
+for (const [key, value] of Object.entries(raspuns.available_regions)) {
+  templateRegiune+='<option class="judet" value="'+value.name+'">'+value.name+'</option>'
+}
+jQuery('#state').append(templateRegiune)
+console.log(raspuns)
+sessionStorage.setItem('taraAleasa',response)
+
+})}
 function addAdres(){
 fetch("https://magento-demo.tk/rest/V1/customers/me",{
   method:"PUT",
@@ -252,15 +304,15 @@ fetch("https://magento-demo.tk/rest/V1/customers/me",{
         "email": email,
         "firstname":jQuery('#firstname').val(),
         "lastname":jQuery('#lastname').val(),
-        "dob":jQuery('#dob').val(),
+  
         "addresses": [
           {
             "region": {
-                "region_code": jQuery('#statecode').val(),
-     
-                "region": jQuery('#state').val(),
+                "region_code": JSON.parse(sessionStorage.getItem('judetSelectat'))[0].code,
+     "region_id":JSON.parse(sessionStorage.getItem('judetSelectat'))[0].id,
+                "region": JSON.parse(sessionStorage.getItem('judetSelectat'))[0].name,
             },
-            "country_id": jQuery('#country').val(),
+            "country_id": sessionStorage.getItem('idTara'),
             "street": [
                 jQuery('#address').val()
             ],
@@ -313,14 +365,12 @@ return(
 <div className="nume"><p>First Name </p> <input className="first" type="text" id="firstname" placeholder="First Name" required/></div>
 <div className="nume"><p>Last Name</p>  <input className="last" id="lastname" type="text" placeholder="Last Name" required/></div></div>
 <p>Address</p>  <input className="date" id="address" type="text" placeholder="Address" required/>
-<p>Country Id</p> <input className="date" type="text" id="country" placeholder="Country Id" required   />
-<p>State </p> <input className="date"  type="text" id="state" placeholder="State" required/>
-<p>State Code</p><input className="date"  type="text" id="statecode" placeholder="State Code" required />
-
+<p >Country</p> <select  onChange={tara} required id="country"><option value="Country">Country</option></select>
+<p>State </p><select  onChange={region} required id="state"><option  value="State">State</option></select>
 <p>City</p>  <input className="date"  type="text" id="city" placeholder="City" required/>
 <p>Zip Code</p>  <input className="date"  type="text" id="zipcode"placeholder="Zip Code" required/>
 <p>Telephone</p> <input  className="date" type="text" id="telefon" placeholder="Telephone" required/>
-<p>Date of bithday</p> <input  className="date" type="text" id="dob" placeholder="Date of birthday" required/>
+
    </form>
 <button id="addadres" onClick={addAdres}>Add Adress</button>
 </div>
