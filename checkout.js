@@ -303,7 +303,7 @@ fetch("https://magento-demo.tk/rest/V1/curs/adresa",{
     "customer_id": JSON.parse(sessionStorage.getItem('customers')).id,
     "first_name":jQuery('#firstname').val(),
     "last_name":jQuery('#lastname').val(),
-    "region_id": JSON.parse(sessionStorage.getItem('judetSelectat'))[0].code,
+    "region_id": JSON.parse(sessionStorage.getItem('judetSelectat'))[0].id,
     "country_id": sessionStorage.getItem('idTara'),
     "street":  jQuery('#address').val(),
     "telephone": jQuery('#zipcode').val(),
