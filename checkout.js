@@ -294,40 +294,21 @@ console.log(raspuns)
 sessionStorage.setItem('taraAleasa',response)
 
 })}
+
 function addAdres(){
-fetch("https://magento-demo.tk/rest/V1/customers/me",{
-  method:"PUT",
-  headers: { "Authorization": "Bearer " + sessionStorage.getItem('users'),  'Content-Type': 'application/json' },
+fetch("https://magento-demo.tk/rest/V1/curs/adresa",{
+  method:"POST",
+  headers: { "Authorization": "Bearer " + sessionStorage.getItem('users'),  'Content-Type': 'application/json'},
   body:JSON.stringify({
-    
-      "customer": {
-        "email": email,
-        "firstname":jQuery('#firstname').val(),
-        "lastname":jQuery('#lastname').val(),
-  
-        "addresses": [
-          {
-            "region": {
-                "region_code": JSON.parse(sessionStorage.getItem('judetSelectat'))[0].code,
-     "region_id":JSON.parse(sessionStorage.getItem('judetSelectat'))[0].id,
-                "region": JSON.parse(sessionStorage.getItem('judetSelectat'))[0].name,
-            },
-            "country_id": sessionStorage.getItem('idTara'),
-            "street": [
-                jQuery('#address').val()
-            ],
-            "telephone": jQuery('#telefon').val(),
-            "postcode": jQuery('#zipcode').val(),
-            "city": jQuery('#city').val(),
-            "firstname": jQuery('#firstname').val(),
-            "lastname": jQuery('#lastname').val(),
-            "default_shipping": "true",
-            "default_billing":"true"
-          }
-        ]
-      }
-    
-    
+    "customer_id": JSON.parse(sessionStorage.getItem('customers')).id,
+    "first_name":jQuery('#firstname').val(),
+    "last_name":jQuery('#lastname').val(),
+    "region_id": JSON.parse(sessionStorage.getItem('judetSelectat'))[0].code,
+    "country_id": sessionStorage.getItem('idTara'),
+    "street":  jQuery('#address').val(),
+    "telephone": jQuery('#zipcode').val(),
+    "city": jQuery('#city').val(),
+    "zip_code":  jQuery('#zipcode').val(),
   }),
 }).then(response=> response.text()).then((response)=>{
   sessionStorage.setItem('customers',response)
