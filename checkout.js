@@ -101,7 +101,7 @@ sessionStorage.setItem('adrese',response.addresses)
 for (const [key, value] of Object.entries(raspuns.addresses)){
 console.log(raspuns.addresses)
 
-template1+='<input type="radio" name="radiobut" id="'+value.id+'" class="selectaddress"  value="'+value.id+'"/><label class="adrsel"  for="'+value.id+'"><span class="input-radio-faux"></span><p class="adresstext">'+value.firstname+'</p><p class="adresstext">'+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+' '+value.street+'</p><p class="adresstext">'+value.city+' '+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></label>';
+template1+='<input type="radio" name="radiobut" id="'+value.id+'" class="selectaddress"  value="'+value.id+'"/><label class="adrsel"  for="'+value.id+'"><span class="input-radio-faux"></span><p class="adresstext">'+value.firstname+'</p><p class="adresstext">'+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+'</p><p class="adresstext">'+value.street+'</p><p class="adresstext">'+value.city+'</p><p class="adresstext">'+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></label>';
 }
 
 jQuery("#adrese").append(template1)
@@ -255,8 +255,12 @@ function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-i
  
   let raspuns=JSON.parse(response)
 console.log(raspuns)
-localStorage.setItem('yourcomandId',raspuns)
-
+localStorage.setItem('yourcomandId',JSON.stringify(raspuns))
+if(window.location.origin.includes('github.io')){
+  window.location.href=window.location.origin+'/proiect4/succes.html';
+}else{
+  window.location.href=window.location.origin+'/succes.html'
+}
 })
 } 
 
@@ -289,7 +293,8 @@ let raspuns=JSON.parse(response)
 for (const [key, value] of Object.entries(raspuns.available_regions)) {
   templateRegiune+='<option class="judet" value="'+value.name+'">'+value.name+'</option>'
 }
-jQuery('#state').append(templateRegiune)
+jQuery('#state').html(templateRegiune)
+
 console.log(raspuns)
 sessionStorage.setItem('taraAleasa',response)
 
@@ -304,14 +309,14 @@ fetch("https://magento-demo.tk/rest/V1/curs/adresa",{
     "first_name":jQuery('#firstname').val(),
     "last_name":jQuery('#lastname').val(),
     "region_id": JSON.parse(sessionStorage.getItem('judetSelectat'))[0].id,
-    "country_id": sessionStorage.getItem('idTara'),
+    "country_id": JSON.parse(sessionStorage.getItem('idTara')),
     "street":  jQuery('#address').val(),
-    "telephone": jQuery('#zipcode').val(),
+    "telephone": jQuery('#telefon').val(),
     "city": jQuery('#city').val(),
     "zip_code":  jQuery('#zipcode').val(),
   }),
 }).then(response=> response.text()).then((response)=>{
-  sessionStorage.setItem('customers',response)
+
   let raspuns=JSON.parse(response)
 console.log(raspuns)
 window.location.reload(true)

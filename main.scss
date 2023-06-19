@@ -268,21 +268,9 @@
                             background: $culbacklact;
                         }
                     }
-                    .salembof {
+                    #salembout {
                         border: 0;
-                        background-color: transparent;
-                        font-family: "Font Awesome 5 Free";
-                        -webkit-font-smoothing: antialiased;
-                        display: inline-block;
-                        font-style: normal;
-                        font-variant: normal;
-                        text-rendering: auto;
-                        line-height: 1;
-                        font-size: 18px;
-                        color: $cultitlu;
-                        font-weight: 900;
-                        padding: 0;
-                        display: block;
+                        background-color: $backfot;
                         &:after {
                             content: "\f290";
                             border-radius: 12px;
@@ -650,6 +638,16 @@
                             color: white;
                             font-size: 20px;
                             border: 0;
+                        }
+                    }
+                    #salembout {
+                        background-color: $backfot;
+                        &:after {
+                            content: "\f290";
+                            border-radius: 12px;
+                            color: white;
+                            border: 7px solid $backfot;
+                            background: $backfot;
                         }
                     }
                     .mbbuy {

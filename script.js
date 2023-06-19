@@ -55,11 +55,11 @@ jQuery('#cart').click(function() {
     jQuery('.cart.buttoncart').removeClass('showshop')
 })
 if (sessionStorage.getItem('users')) {
-    jQuery('#checkoutbtn').removeClass('checkoutof')
-    jQuery('#checkoutbtn').addClass('checkout')
+    jQuery('.checkoutbtn').removeClass('checkoutbtnof')
+    jQuery('.checkoutbtn').addClass('checkoutbtn')
 } else {
-    jQuery('#checkoutbtn').addClass('checkoutof')
-    jQuery('#checkoutbtn').removeClass('checkout')
+    jQuery('.checkoutbtn').addClass('checkoutbtnof')
+    jQuery('.checkoutbtn').removeClass('checkoutbtn')
 }
 
 

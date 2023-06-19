@@ -334,7 +334,7 @@
     width: 100%;
     bottom: 0;
   }
-  header .checkout {
+  header .checkoutbtn {
     text-decoration: none;
     color: white;
     text-align: center;
@@ -345,11 +345,11 @@
     background-color: #059E67;
     pointer-events: auto;
   }
-  header .checkout:hover {
+  header .checkoutbtn:hover {
     background-color: #00774C;
     color: white;
   }
-  header .checkoutof {
+  header .checkoutbtnof {
     text-decoration: none;
     color: white;
     text-align: center;
@@ -946,7 +946,7 @@ main {
     position: relative;
     height: 22.5px;
     top: -22px;
-    left: 147px;
+    left: 107px;
     vertical-align: bottom;
     color: white;
     font-size: 16px;

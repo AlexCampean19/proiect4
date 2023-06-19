@@ -42,7 +42,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
             event.target.parentNode.classList.toggle('showsub-menu')
         }
     });
-
+    if (sessionStorage.getItem('users')) {
+        jQuery('.checkoutbtn').removeClass('checkoutbtnof')
+        jQuery('.checkoutbtn').addClass('checkoutbtn')
+    } else {
+        jQuery('.checkoutbtn').addClass('checkoutbtnof')
+        jQuery('.checkoutbtn').removeClass('checkoutbtn')
+    }
 
 
     function WindowResize() {

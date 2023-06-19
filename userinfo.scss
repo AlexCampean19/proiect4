@@ -80,6 +80,7 @@ h6 {
             padding-bottom: 20px;
             #btnaccountinfo,
             #btnorders,
+            #btnnewaddress,
             #btnlogout {
                 @include tipografie(20px, 400, 24px, $cultitlu);
                 padding-top: 5px;
@@ -105,6 +106,91 @@ h6 {
                 @include tipografie(18px, 400, 25px, $cultitlu)
             }
         }
+        .headernewadres {
+            justify-content: space-between;
+            display: flex;
+            h2 {
+                padding-top: 6px;
+                padding-left: 50px;
+                @include tipografie(23px, 800, 32px, $cultitlu)
+            }
+        }
+        .names {
+            width: 100%;
+        }
+        #close {
+            background: none;
+            border: none;
+            padding-right: 15px;
+        }
+        #addadres {
+            @include tipografie(14px, 700, 16px, $alb);
+            background-color: $culbacklact;
+            width: 285px;
+            padding: 16px 0 16px 0;
+            border-radius: 16px;
+            border: none;
+            float: left;
+            margin: 20px 0 32px 38px;
+        }
+        .popup-overlay {
+            visibility: hidden;
+            position: absolute;
+            background: #ffffff;
+            border: 1px solid $ordersbord;
+            border-radius: 18px;
+            width: 80%;
+            height: auto;
+            left: 10%;
+            top: 10%;
+        }
+        .popup-overlay.active {
+            visibility: visible;
+            text-align: center;
+        }
+        .popup-content {
+            visibility: hidden;
+        }
+        .popup-content.active {
+            flex-direction: column;
+            visibility: visible;
+            padding-top: 6px;
+            align-items: center;
+            display: flex;
+            margin-left: 38px;
+            margin-right: 38px;
+            border-top: 1px solid $ordersbord;
+            border-bottom: 1px solid $ordersbord;
+            padding-bottom: 81px;
+            p {
+                @include tipografie(14px, 700, 16px, $cultitlu);
+                padding-bottom: 8px;
+                padding-top: 28px;
+            }
+            input {
+                padding: 20px 24px;
+                border: 1px solid $ordersbord;
+                border-radius: 18px;
+                background-color: #FFFFFF;
+                color: #A5A3A9;
+            }
+        }
+        #country,
+        #state {
+            padding: 20px 24px;
+            border: 1px solid #BCBCBC;
+            border-radius: 18px;
+            background-color: #FFFFFF;
+            width: 80%;
+            color: #A5A3A9;
+        }
+        .date {
+            width: 80%;
+        }
+        .last,
+        .first {
+            width: 80%;
+        }
     }
 }
 
@@ -124,6 +210,39 @@ h6 {
                     margin-right: 25px;
                 }
             }
+        }
+    }
+}
+
+@media(min-width:1024px) {
+    main {
+        .nume {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            width: 45%;
+        }
+        #country,
+        #state {
+            width: 50%;
+        }
+        .date {
+            width: 50%;
+        }
+        .names {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .last,
+            .first {
+                width: 100%;
+            }
+            p {
+                display: inline-block;
+            }
+        }
+        .popup-content.active {
+            align-items: flex-start;
         }
     }
 }

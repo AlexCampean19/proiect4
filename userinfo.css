@@ -333,7 +333,7 @@
     width: 100%;
     bottom: 0;
   }
-  header .checkout {
+  header .checkoutbtn {
     text-decoration: none;
     color: white;
     text-align: center;
@@ -344,11 +344,11 @@
     background-color: #059E67;
     pointer-events: auto;
   }
-  header .checkout:hover {
+  header .checkoutbtn:hover {
     background-color: #00774C;
     color: white;
   }
-  header .checkoutof {
+  header .checkoutbtnof {
     text-decoration: none;
     color: white;
     text-align: center;
@@ -950,6 +950,7 @@ h6 {
   }
   main #boxText #btnaccountinfo,
   main #boxText #btnorders,
+  main #boxText #btnnewaddress,
   main #boxText #btnlogout {
     font-size: 20px;
     font-weight: 400;
@@ -978,6 +979,100 @@ h6 {
     line-height: 25px;
     color: #1D1929;
   }
+  main .headernewadres {
+    justify-content: space-between;
+    display: flex;
+  }
+  main .headernewadres h2 {
+    padding-top: 6px;
+    padding-left: 50px;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 32px;
+    color: #1D1929;
+  }
+  main .names {
+    width: 100%;
+  }
+  main #close {
+    background: none;
+    border: none;
+    padding-right: 15px;
+  }
+  main #addadres {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #FFFFFF;
+    background-color: #059E67;
+    width: 285px;
+    padding: 16px 0 16px 0;
+    border-radius: 16px;
+    border: none;
+    float: left;
+    margin: 20px 0 32px 38px;
+  }
+  main .popup-overlay {
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #BCBCBC;
+    border-radius: 18px;
+    width: 80%;
+    height: auto;
+    left: 10%;
+    top: 10%;
+  }
+  main .popup-overlay.active {
+    visibility: visible;
+    text-align: center;
+  }
+  main .popup-content {
+    visibility: hidden;
+  }
+  main .popup-content.active {
+    flex-direction: column;
+    visibility: visible;
+    padding-top: 6px;
+    align-items: center;
+    display: flex;
+    margin-left: 38px;
+    margin-right: 38px;
+    border-top: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    padding-bottom: 81px;
+  }
+  main .popup-content.active p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #1D1929;
+    padding-bottom: 8px;
+    padding-top: 28px;
+  }
+  main .popup-content.active input {
+    padding: 20px 24px;
+    border: 1px solid #BCBCBC;
+    border-radius: 18px;
+    background-color: #FFFFFF;
+    color: #A5A3A9;
+  }
+  main #country,
+  main #state {
+    padding: 20px 24px;
+    border: 1px solid #BCBCBC;
+    border-radius: 18px;
+    background-color: #FFFFFF;
+    width: 80%;
+    color: #A5A3A9;
+  }
+  main .date {
+    width: 80%;
+  }
+  main .last,
+  main .first {
+    width: 80%;
+  }
 }
 @media (min-width: 720px) {
   main #boxText {
@@ -994,6 +1089,36 @@ h6 {
   }
   main #boxAdress #addres .addresbx {
     margin-right: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  main .nume {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 45%;
+  }
+  main #country,
+  main #state {
+    width: 50%;
+  }
+  main .date {
+    width: 50%;
+  }
+  main .names {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .names .last,
+  main .names .first {
+    width: 100%;
+  }
+  main .names p {
+    display: inline-block;
+  }
+  main .popup-content.active {
+    align-items: flex-start;
   }
 }
 

@@ -333,7 +333,7 @@
     width: 100%;
     bottom: 0;
   }
-  header .checkout {
+  header .checkoutbtn {
     text-decoration: none;
     color: white;
     text-align: center;
@@ -344,11 +344,11 @@
     background-color: #059E67;
     pointer-events: auto;
   }
-  header .checkout:hover {
+  header .checkoutbtn:hover {
     background-color: #00774C;
     color: white;
   }
-  header .checkoutof {
+  header .checkoutbtnof {
     text-decoration: none;
     color: white;
     text-align: center;
@@ -1139,23 +1139,11 @@
     border: 7px solid #059E67;
     background: #059E67;
   }
-  main .fructe .card1 .detalii .salembof {
+  main .fructe .card1 .detalii #salembout {
     border: 0;
-    background-color: transparent;
-    font-family: "Font Awesome 5 Free";
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-    font-size: 18px;
-    color: #1D1929;
-    font-weight: 900;
-    padding: 0;
-    display: block;
+    background-color: #D9D9D9;
   }
-  main .fructe .card1 .detalii .salembof:after {
+  main .fructe .card1 .detalii #salembout:after {
     content: "\f290";
     border-radius: 12px;
     color: white;
@@ -1510,6 +1498,16 @@
     color: white;
     font-size: 20px;
     border: 0;
+  }
+  main .fructe .card1 .detalii #salembout {
+    background-color: #D9D9D9;
+  }
+  main .fructe .card1 .detalii #salembout:after {
+    content: "\f290";
+    border-radius: 12px;
+    color: white;
+    border: 7px solid #D9D9D9;
+    background: #D9D9D9;
   }
   main .fructe .card1 .detalii .mbbuy {
     font-size: 14px;

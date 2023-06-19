@@ -34,7 +34,7 @@
              let stock = parseInt(value.stock_status);
              if (stock == 0) {
                  jQuery("#stock").text("Out of stock").addClass('outstock')
-                 jQuery(".salemb").css("background-color", "#D9D9D9")
+                 $(".salemb").css("background-color", "#D9D9D9")
                  $(".salemb").css("pointer-events", "none");
              } else {
                  jQuery("#stock").text("Is in stock").addClass('instock')

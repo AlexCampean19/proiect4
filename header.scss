@@ -314,7 +314,7 @@
             width: 100%;
             bottom: 0;
         }
-        .checkout {
+        .checkoutbtn {
             text-decoration: none;
             color: white;
             text-align: center;
@@ -325,11 +325,11 @@
             background-color: $culbacklact;
             pointer-events: auto;
         }
-        .checkout:hover {
+        .checkoutbtn:hover {
             background-color: $cullachover;
             color: white;
         }
-        .checkoutof {
+        .checkoutbtnof {
             text-decoration: none;
             color: white;
             text-align: center;

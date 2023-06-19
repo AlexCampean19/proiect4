@@ -49,6 +49,25 @@ function Form(){
         }, 5000);
         })
     }
+   
+          let url = '';
+              url = 'https://magento-demo.tk/rest/default/V1/carts/mine';
+   
+              jQuery.ajax({
+                  method: "POST",
+                  contentType: "application/json; charset=utf-8",
+                  dataType: "json",
+                  url: url,
+                  headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
+              }).done(function(response) {
+                  console.log(response)
+                  sessionStorage.removeItem('cartId')
+                  sessionStorage.setItem('cartId', response)
+              }).fail(function(response) {
+                  console.log(response)
+              });
+      
+  
     
     return(
       <div>
@@ -70,7 +89,7 @@ function Form(){
               placeholder="Enter a Password"
               onInput={(e)=>setPassword(e.target.value)}
             /></div>
-          <button  type="submit" >Login</button>
+          <button onClick={createCart} type="submit" >Login</button>
         </form>
       </div>
     )
