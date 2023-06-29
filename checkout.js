@@ -7,7 +7,7 @@ function Checkout(){
   const [radioValue, setRadioValue] = useState(0);
  
   const onClick = (ev) => {
-    console.log(ev.target.value);
+
     sessionStorage.setItem('delivery',ev.target.value)
   };
 const open=()=>{
@@ -18,11 +18,11 @@ const open=()=>{
  }
 const tara= (ev)=>{
   sessionStorage.setItem('idTara',JSON.stringify(ev.target.value));
-  console.log((sessionStorage.getItem('idTara')))
+
   alegereTara()
 };
 const region=(ev)=>{
-  console.log(ev.target.value)
+
   sessionStorage.setItem('orasSelectat',JSON.stringify(ev.target.value))
   let coduriOrase=JSON.parse(sessionStorage.getItem('taraAleasa')).available_regions;
 let judetgasit=coduriOrase.filter(judet=>judet.name == ev.target.value)
@@ -59,8 +59,7 @@ fetch("https://magento-demo.tk/rest/V1/carts/mine/estimate-shipping-methods",{
     }
 }),
 }).then(response=> response.text()).then((response)=>{
-  console.log(response.status)
-  console.log(JSON.parse(response))
+
   let raspuns=JSON.parse(response)
 if(raspuns[0].carrier_title==="Store Pickup"){
   jQuery("#ridicare").attr("checked",true)
@@ -79,27 +78,35 @@ if(raspuns[0].carrier_title==="Courier Shipping"){
     method:"GET",
     headers: { "Authorization": "Bearer " + sessionStorage.getItem('users')}
   }).then(response=> response.text()).then((response)=>{
-    console.log(JSON.parse(response))
+
     let raspuns=JSON.parse(response)
 
+if(raspuns.items == 0){
+  if(window.location.origin.includes('github.io')){
+    window.location.href=window.location.origin+'/proiect4/index.html';
+  }else{
+    window.location.href=window.location.origin+'/index.html'
+  }
+}else{
     for (const [key, value] of Object.entries(raspuns.items)) {
         template += '<div class="cumparaturi" data-id="' + value.item_id + '"><img id="imgsh" src="' + value.extension_attributes.image + '" /><div class="detfruct" ><p  class="numeFruct" >' + value.name + '</p><div class="quantity"><p id="quantyy">Qty:</p><input class="valuequanty" value="' + value.qty + '"></div><div class="pricebut"><p class="price">Price: ' + value.price + ' $</p></div></div></div> '
    
       } 
     jQuery('#cos').append(template)
-
+    }
 })
 
 fetch("https://magento-demo.tk/rest/V1/customers/me",{
 method:"GET",
 headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
 }).then(response=> response.text()).then((response)=>{
-  console.log(JSON.parse(response))
+
 let raspuns=JSON.parse(response)
+
 sessionStorage.setItem('customers',response)
 sessionStorage.setItem('adrese',response.addresses)
 for (const [key, value] of Object.entries(raspuns.addresses)){
-console.log(raspuns.addresses)
+
 
 template1+='<input type="radio" name="radiobut" id="'+value.id+'" class="selectaddress"  value="'+value.id+'"/><label class="adrsel"  for="'+value.id+'"><span class="input-radio-faux"></span><p class="adresstext">'+value.firstname+'</p><p class="adresstext">'+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+'</p><p class="adresstext">'+value.street+'</p><p class="adresstext">'+value.city+'</p><p class="adresstext">'+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></label>';
 }
@@ -108,7 +115,7 @@ jQuery("#adrese").append(template1)
 jQuery("#subtotal").html(value.subtotal)
 
 $('.selectaddress').change(function() {
-console.log([$('input[name="radiobut"]:checked').val()])
+
 let id=$('input[name="radiobut"]:checked').val()
 
 var filterData=adrese2.filter(function(item){
@@ -149,7 +156,7 @@ fetch("https://magento-demo.tk/rest/V1/carts/mine/shipping-information",{
 }).then(response=> response.text()).then((response)=>{
  
   let raspuns=JSON.parse(response)
-console.log(raspuns)
+
 jQuery('#subtotal').text(raspuns.totals.subtotal + "$")
 setTimeout(function() {
   jQuery(".stilizareloader").css('display', 'none');
@@ -212,7 +219,7 @@ fetch("https://magento-demo.tk/rest/V1/carts/mine/shipping-information",{
   
   }, 1000)}
   let raspuns=JSON.parse(response)
-console.log(raspuns)
+
 sessionStorage.setItem('paymethod',response)
 jQuery('#subtotal').text(raspuns.totals.subtotal + "$")
 });
@@ -220,11 +227,10 @@ jQuery('#subtotal').text(raspuns.totals.subtotal + "$")
 
 })
 let adrese2=JSON.parse(adrese).addresses
-console.log(adrese2);
+
 let adrsselect=JSON.parse(sessionStorage.getItem('adrsselectata'))
 let email=JSON.parse(sessionStorage.getItem('customers')).email
-console.log(email);
-console.log(adrsselect)
+
 function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-information",{
 
   method:"POST",
@@ -254,7 +260,7 @@ function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-i
 }).then(response=> response.text()).then((response)=>{
  
   let raspuns=JSON.parse(response)
-console.log(raspuns)
+
 localStorage.setItem('yourcomandId',JSON.stringify(raspuns))
 if(window.location.origin.includes('github.io')){
   window.location.href=window.location.origin+'/proiect4/succes.html';
@@ -272,7 +278,7 @@ let templateCountry='';
 .then(response=> response.text()).then((response)=>{
 
   let raspuns=JSON.parse(response)
-  console.log(raspuns)
+
   for (const [key, value] of Object.entries(raspuns)) {
    
     templateCountry+='    <option value='+value.id+'>'+value.full_name_english+'</option>';
@@ -282,9 +288,10 @@ let templateCountry='';
 
 })
 
-let templateRegiune='';
+
 function alegereTara()
-{fetch("https://magento-demo.tk/rest/V1/directory/countries/"+sessionStorage.getItem('idTara').replace(/['"]+/g, ''),{
+{let templateRegiune='';
+  fetch("https://magento-demo.tk/rest/V1/directory/countries/"+sessionStorage.getItem('idTara').replace(/['"]+/g, ''),{
   method:"GET",
 })
 .then(response=> response.text()).then((response)=>{
@@ -295,7 +302,7 @@ for (const [key, value] of Object.entries(raspuns.available_regions)) {
 }
 jQuery('#state').html(templateRegiune)
 
-console.log(raspuns)
+
 sessionStorage.setItem('taraAleasa',response)
 
 })}
@@ -318,7 +325,7 @@ fetch("https://magento-demo.tk/rest/V1/curs/adresa",{
 }).then(response=> response.text()).then((response)=>{
 
   let raspuns=JSON.parse(response)
-console.log(raspuns)
+
 window.location.reload(true)
 })
 }

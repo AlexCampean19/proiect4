@@ -100,6 +100,7 @@ main {
     }
     .adrsel {
         padding: 20px;
+        width: 150px;
     }
     #cos {
         display: flex;
@@ -146,8 +147,9 @@ main {
         width: 20px;
     }
     #adrese {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        width: 70%;
+        grid-template-columns: auto auto;
         .addresbx {
             padding: 43px 10px 50px 10px;
             background-color: $background;
@@ -338,9 +340,19 @@ main {
     width: 80%;
 }
 
+@media (min-width: 724px) {
+    .adrsel {
+        width: 250px;
+    }
+    .selectaddress+label:before {
+        content: "\2714";
+        left: 207px;
+    }
+}
+
 @media (min-width: 1024px) {
     .adrsel {
-        width: auto;
+        width: 250px;
     }
     .nume {
         display: flex;
@@ -377,9 +389,9 @@ main {
         padding-bottom: 42px;
     }
     #adrese {
-        display: flex;
-        flex-direction: row;
+        display: grid;
         width: 70%;
+        grid-template-columns: auto auto auto;
         .addresbx {
             margin-right: 25px;
         }

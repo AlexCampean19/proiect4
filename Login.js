@@ -13,8 +13,7 @@ function Form(){
     }
     function Submit(e){
       e.preventDefault()
-      console.log("email",email)
-      console.log("password",password)
+     
         fetch("https://magento-demo.tk/rest/V1/integration/customer/token",{
           method:"POST",
         headers:{
@@ -24,7 +23,7 @@ function Form(){
         }).then(response=>response.json())
     
         .then((response)=>{ 
-          console.log(response);
+        
           if(response.message==='The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.'){
             $(".msj").text('Email/password are invalid!').attr('id', 'fail').show();
             setTimeout(function() { $("#fail").hide(); 
@@ -60,7 +59,7 @@ function Form(){
                   url: url,
                   headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
               }).done(function(response) {
-                  console.log(response)
+             
                   sessionStorage.removeItem('cartId')
                   sessionStorage.setItem('cartId', response)
               }).fail(function(response) {

@@ -11,7 +11,7 @@ let idcomand=localStorage.getItem('yourcomandId')
               url: url,
               headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
           }).done(function(response) {
-              console.log(response)
+        
               sessionStorage.removeItem('cartId')
               sessionStorage.setItem('cartId', response)
         
