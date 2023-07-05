@@ -1,6 +1,3 @@
-
-
-
 function Checkout(){
 
   const {useState}=React
@@ -112,7 +109,7 @@ template1+='<input type="radio" name="radiobut" id="'+value.id+'" class="selecta
 }
 
 jQuery("#adrese").append(template1)
-jQuery("#subtotal").html(value.subtotal)
+
 
 $('.selectaddress').change(function() {
 
@@ -147,6 +144,8 @@ let payload= JSON.stringify({
   
 }
 });
+
+
 fetch("https://magento-demo.tk/rest/V1/carts/mine/shipping-information",{
 
   method:"POST",
