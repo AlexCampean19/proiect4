@@ -269,7 +269,7 @@
              relatedReviewStars(value.entity_id, value.sku)
              for (const [key, value] of Object.entries(response.items)) {
 
-                 template += '<div class="card1" data-sku="' + value.sku + '" data-id="' + value.id + '"><a class="fruct " href="https://alexcampean19.github.io/proiect3/detalii?sku=' + value.sku + ' "><img  src="https://magento-demo.tk/media/catalog/product/' + value.media_gallery_entries[0].file + '"></a><div class="detalii "><a href="https://alexcampean19.github.io/proiect2/detalii " class="nume ">' + value.name + '</a><p class="gramaj ">' + value.weight + 'g</p><div class="detalii2 "><p class="pret ">$' + value.price + '</p><div class="stele "><p class="unu "><span>stea</span></p><span>stea</span></p></div><a class="salemb "><span class="mbbuy ">Add to cart</span></a></div></div></div>';
+                 template += '<div class="card1" data-sku="' + value.sku + '"><a class="fruct " href="https://alexcampean19.github.io/proiect4/detalii?sku=' + value.sku + ' "><p></p><img  src="https://magento-demo.tk/media/catalog/product/' + value.image + '"/><p class="oferte">Sale</p></a><div class="detalii "><a href="https://alexcampean19.github.io/proiect4/detalii " class="nume ">' + value.name + '</a><p class="gramaj ">' + value.weight + '</p><div class="detalii2 "><div class="preturi2"><div class="pretred"><p class="pret1">$' + finalPrice + '</p><p class="pret3">$' + value.price + '</p></div><div class="stele "><p class="unu "><span>stea</span></p><p class="doi "><span>stea</span></p></div></div><a class="salemb "><span class="mbbuy ">Add to cart</span></a></div></div></div>';
              }
              jQuery('ul.glide__slides').append(template);
              jQuery(document).trigger('slider');
