@@ -958,7 +958,6 @@ form {
   display: flex;
   flex-direction: column;
   width: 250px;
-  align-items: center;
   justify-content: space-evenly;
   height: 350px;
   background-color: #F9F9F9;
@@ -976,9 +975,13 @@ form button {
   display: flex;
   color: #FFFFFF;
   font-weight: 900;
-  width: 90%;
+  width: 100%;
   text-align: center;
   padding: 15px 0;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #00774C;
 }
 
 label {

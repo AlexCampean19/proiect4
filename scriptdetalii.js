@@ -4,7 +4,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         dropDown.classList.toggle('showmenu');
 
     });
-
+    $(document).ready(function() {
+        $('.navbuton').hover(function() {
+            $(this).addClass('showmenu');
+            $(this).find('.menu')
+        }, function() {
+            $(this).removeClass('showmenu');
+            $(this).find('.menu').removeClass('showmenu');
+        });
+    });
     let dropDownMobile = document.querySelector('.mobilebtn');
     let dropDownMenuMobile = document.querySelector('.navigation');
     dropDownMobile.addEventListener('click', () => {

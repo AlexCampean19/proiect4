@@ -107,7 +107,7 @@ main {
         justify-content: flex-end;
         flex-direction: column-reverse;
         overflow: auto;
-        height: 400px;
+        max-height: 400px;
     }
     .subtotal {
         display: block;

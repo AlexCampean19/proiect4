@@ -1,5 +1,13 @@
 function Checkout(){
-
+  if (!sessionStorage.getItem('users'))
+{
+  console.log('1')
+  if(window.location.origin.includes('github.io')){
+    window.location.href=window.location.origin+'/proiect4/index.html';
+  }else{
+    window.location.href=window.location.origin+'/index.html'
+  }
+}
   const {useState}=React
   const [radioValue, setRadioValue] = useState(0);
  
@@ -259,12 +267,15 @@ function selectare(){fetch("https://magento-demo.tk/rest/V1/carts/mine/payment-i
 }).then(response=> response.text()).then((response)=>{
  
   let raspuns=JSON.parse(response)
-
+console.log(raspuns)
 localStorage.setItem('yourcomandId',JSON.stringify(raspuns))
-if(window.location.origin.includes('github.io')){
-  window.location.href=window.location.origin+'/proiect4/succes.html';
-}else{
-  window.location.href=window.location.origin+'/succes.html'
+if(!raspuns.message){
+  if(window.location.origin.includes('github.io')){
+    window.location.href=window.location.origin+'/proiect4/succes.html';
+  }else{
+    window.location.href=window.location.origin+'/succes.html'
+  }
+}else{ $(".msj").text('Your submit is not posible').attr('id', 'fail').show();
 }
 })
 } 

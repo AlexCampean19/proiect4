@@ -953,6 +953,11 @@
                     text-decoration: none;
                 }
             }
+            .navbuton:hover .showmenu {
+                &+.menu {
+                    display: grid;
+                }
+            }
             .showmenu {
                 &+.menu {
                     display: grid;

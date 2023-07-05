@@ -1800,6 +1800,9 @@
     display: block;
     text-decoration: none;
   }
+  header .navbar .navbuton:hover .showmenu + .menu {
+    display: grid;
+  }
   header .navbar .showmenu + .menu {
     display: grid;
     grid-template-columns: 0.5fr 1fr;

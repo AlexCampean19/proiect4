@@ -333,9 +333,9 @@
              } else {
                  percent = 0
              }
-             console.log(sku)
+
              jQuery('.card1[data-sku=' + sku + '] .doi').attr('style', 'max-width:' + percent + '%')
-             console.log(percent)
+
          })
          .fail(function(result) {
              console.log(result)

@@ -70,6 +70,7 @@
     right: 0px;
     background-color: #D9D9D9;
     border-radius: 50%;
+    cursor: pointer;
   }
   header #plus:after {
     content: "\f067";
@@ -79,6 +80,7 @@
     display: none;
   }
   header #minus {
+    cursor: pointer;
     border: 0;
     background-color: transparent;
     font-family: "Font Awesome 5 Free";
@@ -328,6 +330,7 @@
     border-radius: 10px;
     float: right;
     background-color: #D9D9D9;
+    cursor: pointer;
   }
   header #btnshop {
     position: absolute;
@@ -386,6 +389,7 @@
     font-size: 30px;
     bottom: 45px;
     position: relative;
+    cursor: pointer;
   }
   header .shop {
     display: none;
@@ -973,7 +977,7 @@ main {
     justify-content: flex-end;
     flex-direction: column-reverse;
     overflow: auto;
-    height: 400px;
+    max-height: 400px;
   }
   .subtotal {
     display: block;

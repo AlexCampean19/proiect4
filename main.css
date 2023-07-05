@@ -270,23 +270,11 @@
     border: 7px solid #059E67;
     background: #059E67;
   }
-  main .fructe .card1 .detalii .salemb #salembout {
+  main .fructe .card1 .detalii #salembout {
     border: 0;
     background-color: #D9D9D9;
-    font-family: "Font Awesome 5 Free";
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-    font-size: 18px;
-    color: #1D1929;
-    font-weight: 900;
-    padding: 0;
-    display: block;
   }
-  main .fructe .card1 .detalii .salemb #salembout:after {
+  main .fructe .card1 .detalii #salembout:after {
     content: "\f290";
     border-radius: 12px;
     color: white;
@@ -642,23 +630,10 @@
     font-size: 20px;
     border: 0;
   }
-  main .fructe .card1 .detalii .salemb #salembout {
-    border: 0;
+  main .fructe .card1 .detalii #salembout {
     background-color: #D9D9D9;
-    font-family: "Font Awesome 5 Free";
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-    font-size: 18px;
-    color: #1D1929;
-    font-weight: 900;
-    padding: 0;
-    display: block;
   }
-  main .fructe .card1 .detalii .salemb #salembout:after {
+  main .fructe .card1 .detalii #salembout:after {
     content: "\f290";
     border-radius: 12px;
     color: white;
@@ -955,6 +930,9 @@
     text-transform: none;
     display: block;
     text-decoration: none;
+  }
+  header .navbar .navbuton:hover .showmenu + .menu {
+    display: grid;
   }
   header .navbar .showmenu + .menu {
     display: grid;

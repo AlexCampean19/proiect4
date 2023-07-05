@@ -4,6 +4,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         dropDown.classList.toggle('showmenu');
 
     });
+    $(document).ready(function() {
+        $('.navbuton').hover(function() {
+            $(this).addClass('showmenu');
+            $(this).find('.menu').addClass('showmenu');
+        }, setTimeout(function() {
+            $(this).removeClass('showmenu');
+            $(this).find('.menu').removeClass('showmenu')
+        }, 1000))
+    });
     if (sessionStorage.getItem('users')) {
         document.querySelector('#userLogin').setAttribute("style", "color:#059E67;");
         document.querySelector('#userLogin').setAttribute("href", "#");

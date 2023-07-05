@@ -31,11 +31,7 @@ function Form(){
           }else {
           sessionStorage.setItem('users',response),
           $(".msj").text('You have logged in').attr('id', 'succes').show();
-    if(window.location.origin.includes('github.io')){
-      window.location.href=window.location.origin+'/proiect4/userinfo.html';
-    }else{
-      window.location.href=window.location.origin+'/userinfo.html'
-    }
+          window.history.back()
     
       
         

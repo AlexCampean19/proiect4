@@ -89,8 +89,6 @@ jQuery(document).ready(function() {
 
             } else {
                 jQuery(document).trigger("Loader");
-                // jQuery("#laoder").css('display', 'none');
-                //jQuery('body').removeClass('noscroll');
                 clearInterval(intervalcategorii);
             }
         }
@@ -226,7 +224,7 @@ function randareCart() {
         url: url,
         headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
     }).done(function(response) {
-
+        console.log(response)
         for (const [key, value] of Object.entries(response.items)) {
             template1 += '<div class="cumparaturi" data-id="' + value.item_id + '"><img id="imgsh" src="' + value.extension_attributes.image + '" /><div class="detfruct" ><p  class="numeFruct" >' + value.name + '</p><p id="quantyy">Qty:</p><input class="valuequanty" value="' + value.qty + '"><button type="button" id="minus"><span>minus</span></button><button type="button" id="plus"><span>plus</span></button><div class="pricebut"><p class="price">Price: ' + value.price + ' $</p><button id="delitm">X</button></div></div></div> '
         }
@@ -234,7 +232,12 @@ function randareCart() {
         jQuery('.itmshop').html(template1);
         jQuery('.itmcart').text(response.items.length + ' Item(s) in Cart')
         subTotal();
-
+        if (response.items_count == 0) {
+            jQuery(".buttoncart").removeClass('showshop')
+            jQuery('.buttoncart').attr("style", "pointer-events:none")
+        } else {
+            jQuery('.buttoncart').attr("style", "pointer-events:pointer")
+        }
     }).fail(function(response) {
         console.log(response)
     })

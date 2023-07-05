@@ -196,7 +196,8 @@
             }
             .comanda>.tableSmall>.tableCell {
                 padding-top: 10px;
-                @include tipografie(18x, 400, 22px, $cultitlu)
+                @include tipografie(18x, 400, 22px, $cultitlu);
+                min-width: 200px;
             }
             .comanda>.tableSmall:first-child>.tableCell:last-child {
                 border-left: none;

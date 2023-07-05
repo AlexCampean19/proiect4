@@ -64,6 +64,7 @@
             right: 0px;
             background-color: $backfot;
             border-radius: 50%;
+            cursor: pointer;
             &:after {
                 content: "\f067";
                 color: $cultxtcateg;
@@ -73,6 +74,7 @@
             }
         }
         #minus {
+            cursor: pointer;
             border: 0;
             background-color: transparent;
             font-family: "Font Awesome 5 Free";
@@ -308,6 +310,7 @@
             border-radius: 10px;
             float: right;
             background-color: $backfot;
+            cursor: pointer;
         }
         #btnshop {
             position: absolute;
@@ -363,6 +366,7 @@
             font-size: 30px;
             bottom: 45px;
             position: relative;
+            cursor: pointer;
         }
         .shop {
             display: none;
