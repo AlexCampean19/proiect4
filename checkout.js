@@ -37,44 +37,6 @@ sessionStorage.setItem('judetSelectat',JSON.stringify(judetgasit))
 
 
 
-    let adrese=sessionStorage.getItem('customers')
-    let adresaprincpala=JSON.parse(adrese).addresses[0];
-fetch("https://magento-demo.tk/rest/V1/carts/mine/estimate-shipping-methods",{
-  method:"POST",
-  headers: { "Authorization": "Bearer " + sessionStorage.getItem('users'),  'Content-Type': 'application/json' },
-
-  body: JSON.stringify({
-    "address": {
-        "region": adresaprincpala.region.region,
-        "region_id": adresaprincpala.region.region_id,
-        "region_code": adresaprincpala.region.region_code,
-        "country_id": adresaprincpala.country_id,
-        "street": [
-            adresaprincpala.street[0]
-        ],
-        "postcode": adresaprincpala.postcode,
-        "city": adresaprincpala.city,
-        "firstname": adresaprincpala.firstname,
-        "lastname": adresaprincpala.lastname,
-        "customer_id": adresaprincpala.customer_id,
-        "email": adresaprincpala.email,
-        "telephone": adresaprincpala.telephone,
-        "same_as_billing": 1
-    }
-}),
-}).then(response=> response.text()).then((response)=>{
-
-  let raspuns=JSON.parse(response)
-if(raspuns[0].carrier_title==="Store Pickup"){
-  jQuery("#ridicare").attr("checked",true)
-  sessionStorage.setItem('delivery','freeshipping')
-}
-if(raspuns[0].carrier_title==="Courier Shipping"){
-  jQuery("#curier").attr("checked",true)
-  sessionStorage.setItem('delivery','flatrate')
-}
-
-});
 
     let template='';
     let template1='';
@@ -153,6 +115,44 @@ let payload= JSON.stringify({
 });
 
 
+let adrese=sessionStorage.getItem('customers')
+let adresaprincpala=JSON.parse(adrese).addresses[0];
+fetch("https://magento-demo.tk/rest/V1/carts/mine/estimate-shipping-methods",{
+method:"POST",
+headers: { "Authorization": "Bearer " + sessionStorage.getItem('users'),  'Content-Type': 'application/json' },
+
+body: JSON.stringify({
+"address": {
+    "region": adresaprincpala.region.region,
+    "region_id": adresaprincpala.region.region_id,
+    "region_code": adresaprincpala.region.region_code,
+    "country_id": adresaprincpala.country_id,
+    "street": [
+        adresaprincpala.street[0]
+    ],
+    "postcode": adresaprincpala.postcode,
+    "city": adresaprincpala.city,
+    "firstname": adresaprincpala.firstname,
+    "lastname": adresaprincpala.lastname,
+    "customer_id": adresaprincpala.customer_id,
+    "email": adresaprincpala.email,
+    "telephone": adresaprincpala.telephone,
+    "same_as_billing": 1
+}
+}),
+}).then(response=> response.text()).then((response)=>{
+
+let raspuns=JSON.parse(response)
+if(raspuns[0].carrier_title==="Store Pickup"){
+jQuery("#ridicare").attr("checked",true)
+sessionStorage.setItem('delivery','freeshipping')
+}
+if(raspuns[0].carrier_title==="Courier Shipping"){
+jQuery("#curier").attr("checked",true)
+sessionStorage.setItem('delivery','flatrate')
+}
+
+});
 fetch("https://magento-demo.tk/rest/V1/carts/mine/shipping-information",{
 
   method:"POST",
@@ -232,7 +232,10 @@ jQuery('#subtotal').text(raspuns.totals.subtotal + "$")
 }
 
 })
+let adrese=sessionStorage.getItem('customers')
+console.log(JSON.parse(adrese).addresses)
 let adrese2=JSON.parse(adrese).addresses
+
 
 let adrsselect=JSON.parse(sessionStorage.getItem('adrsselectata'))
 let email=JSON.parse(sessionStorage.getItem('customers')).email
