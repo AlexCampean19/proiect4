@@ -166,6 +166,7 @@
     right: 0px;
     background-color: #D9D9D9;
     border-radius: 50%;
+    cursor: pointer;
   }
   header #plus:after {
     content: "\f067";
@@ -175,6 +176,7 @@
     display: none;
   }
   header #minus {
+    cursor: pointer;
     border: 0;
     background-color: transparent;
     font-family: "Font Awesome 5 Free";
@@ -424,6 +426,7 @@
     border-radius: 10px;
     float: right;
     background-color: #D9D9D9;
+    cursor: pointer;
   }
   header #btnshop {
     position: absolute;
@@ -482,6 +485,7 @@
     font-size: 30px;
     bottom: 45px;
     position: relative;
+    cursor: pointer;
   }
   header .shop {
     display: none;
@@ -867,6 +871,55 @@
     width: 78%;
   }
 }
+body {
+  font-family: "Nunito Sans";
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+a {
+  cursor: pointer;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
 @media (min-width: 320px) {
   body {
     margin: 0;

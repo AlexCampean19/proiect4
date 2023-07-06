@@ -2,6 +2,55 @@
 @import "mixinuri";
 @import "footer";
 @import "header";
+body {
+    font-family: $font-family;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+a {
+    cursor: pointer;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
 @media (min-width: 320px) {
     body {
         margin: 0;
