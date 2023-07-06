@@ -235,6 +235,7 @@ function randareCart() {
         if (response.items_count == 0) {
             jQuery(".buttoncart").removeClass('showshop')
             jQuery('.buttoncart').attr("style", "pointer-events:none")
+            jQuery("body").removeClass('scrollblock')
         } else {
             jQuery('.buttoncart').attr("style", "pointer-events:pointer")
         }
