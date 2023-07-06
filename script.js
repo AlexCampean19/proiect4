@@ -44,11 +44,7 @@ jQuery('#btnlogout').click(function() {
     sessionStorage.removeItem('users');
     sessionStorage.removeItem('cartId');
     sessionStorage.removeItem('quoteId')
-    if (window.location.origin.includes('github.io')) {
-        window.location.href = window.location.origin + '/proiect4/login.html';
-    } else {
-        window.location.href = window.location.origin + '/login.html'
-    }
+    window.history.back()
 })
 
 jQuery('.cart.buttoncart').click(function() {
