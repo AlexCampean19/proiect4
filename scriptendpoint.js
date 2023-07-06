@@ -119,7 +119,7 @@ function createCart() {
                 url: url,
                 headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
             }).done(function(response) {
-                console.log(response)
+
                 sessionStorage.setItem('cartId', response)
                 cartId()
 
@@ -144,7 +144,7 @@ function cartId() {
         url: url,
 
     }).done(function(response) {
-        console.log(response)
+
         sessionStorage.setItem('quoteId', response.id);
     }).fail(function(response) {
         console.log(response)
@@ -191,7 +191,7 @@ function addCart(target) {
         data: payload,
         headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') },
     }).done(function(response) {
-        console.log(response)
+
         randareCart()
         $(".msj").text(response.name + ' was added to the cart').attr('id', 'succes').show();
         jQuery(".salemb").attr("id", 'salembout')
@@ -224,7 +224,7 @@ function randareCart() {
         url: url,
         headers: { "Authorization": "Bearer " + sessionStorage.getItem('users') }
     }).done(function(response) {
-        console.log(response)
+
         for (const [key, value] of Object.entries(response.items)) {
             template1 += '<div class="cumparaturi" data-id="' + value.item_id + '"><img id="imgsh" src="' + value.extension_attributes.image + '" /><div class="detfruct" ><p  class="numeFruct" >' + value.name + '</p><p id="quantyy">Qty:</p><input class="valuequanty" value="' + value.qty + '"><button type="button" id="minus"><span>minus</span></button><button type="button" id="plus"><span>plus</span></button><div class="pricebut"><p class="price">Price: ' + value.price + ' $</p><button id="delitm">X</button></div></div></div> '
         }

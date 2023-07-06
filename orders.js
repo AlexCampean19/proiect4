@@ -1,7 +1,7 @@
 function Orders(){
   if (!sessionStorage.getItem('users'))
   {
-    console.log('1')
+
     if(window.location.origin.includes('github.io')){
       window.location.href=window.location.origin+'/proiect4/index.html';
     }else{
