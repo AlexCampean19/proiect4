@@ -25,6 +25,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
             document.body.classList.remove('scrollblock')
         }
     })
+    if (sessionStorage.getItem('users')) {
+        document.querySelector('#userLogin').setAttribute("style", "color:#059E67;");
+        document.querySelector('#userLogin').setAttribute("href", "#");
+
+        let dropDownUsers = document.querySelector('#userLogin');
+        dropDownUsers.addEventListener('click', () => {
+            dropDownUsers.classList.toggle('showusersmenu');
+        });
+    } else {
+
+        document.querySelector('#userLogin').setAttribute("style", "color:black;");
+        document.querySelector('#userLogin').setAttribute("href", "https://alexcampean19.github.io/proiect4/login.html");
+    }
     jQuery('.cart.buttoncart').click(function() {
         jQuery("body").addClass('scrollblock');
         jQuery('.cart.buttoncart').addClass('showshop')
