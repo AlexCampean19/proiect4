@@ -96,6 +96,11 @@
             }
             #orders {
                 display: block;
+                z-index: 0;
+                text-align: center;
+                overflow-y: auto;
+                overflow-x: unset;
+                max-height: 500px;
             }
             #OrdersHeadTable {
                 display: none;
@@ -156,9 +161,6 @@
                 display: inline-block;
                 width: 20%;
             }
-            #orders {
-                width: 80%;
-            }
         }
     }
     
@@ -166,11 +168,10 @@
         main {
             #boxAdress {
                 display: flex;
+                flex-direction: column;
             }
             #orders {
-                display: table;
                 text-align: center;
-                width: 80%;
             }
             .comanda {
                 display: table-row;
@@ -226,6 +227,15 @@
             }
             .comanda>.tableSmall:last-child>.tableCell:last-child {
                 border-bottom: none;
+            }
+        }
+    }
+    
+    @media (min-width: 1390px) {
+        main {
+            #boxAdress {
+                display: flex;
+                flex-direction: row;
             }
         }
     }

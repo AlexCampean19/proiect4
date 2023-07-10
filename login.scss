@@ -69,6 +69,9 @@
     
     main {
         min-height: 600px;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
     }
     
     h1 {
@@ -80,19 +83,17 @@
     
     #root {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 30px;
-        padding-top: 30px;
+        padding: 30px;
+        max-width: 800px;
     }
     
     form {
         padding: 20px;
         display: flex;
         flex-direction: column;
-        width: 250px;
+        min-width: 250px;
         justify-content: space-evenly;
-        height: 350px;
+        min-height: 500px;
         background-color: #F9F9F9;
         border-radius: 16px;
         box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);

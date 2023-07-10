@@ -4,15 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         dropDown.classList.toggle('showmenu');
 
     });
-    $(document).ready(function() {
-        $('.navbuton').hover(function() {
-            $(this).addClass('showmenu');
-            $(this).find('.menu').addClass('showmenu');
-        }, setTimeout(function() {
-            $(this).removeClass('showmenu');
-            $(this).find('.menu').removeClass('showmenu')
-        }, 1000))
-    });
+
     if (sessionStorage.getItem('users')) {
         document.querySelector('#userLogin').setAttribute("style", "color:#059E67;");
         document.querySelector('#userLogin').setAttribute("href", "#");
@@ -25,6 +17,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         document.querySelector('#userLogin').setAttribute("style", "color:black;");
         document.querySelector('#userLogin').setAttribute("href", "https://alexcampean19.github.io/proiect4/login.html");
+    }
+    if (window.innerWidth > 1024) {
+        $("#userLogin").hover(function() {
+            var isHovered = $(this).is(":hover");
+            if (isHovered) {
+                $('#userLogin').addClass('showusersmenu')
+            } else {
+                setTimeout(function() {
+                    $('#userLogin').removeClass('showusersmenu')
+                }, 2000)
+            }
+        });
+        $(".navbuton").hover(function() {
+            var isHovered = $(this).is(":hover");
+            if (isHovered) {
+                $('.navbuton').addClass('showmenu')
+            } else {
+                setTimeout(function() {
+                    $('.navbuton').removeClass('showmenu')
+                }, 2000)
+            }
+        });
     }
 
     let dropDownMobile = document.querySelector('.mobilebtn');
@@ -40,6 +54,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     })
 })
+
 jQuery('#btnlogout').click(function() {
     sessionStorage.removeItem('users');
     sessionStorage.removeItem('cartId');
@@ -66,6 +81,7 @@ if (sessionStorage.getItem('users')) {
     jQuery('.checkoutbtn').addClass('checkoutbtnof')
     jQuery('.checkoutbtn').removeClass('checkoutbtn')
 }
+
 
 
 function WindowResize() {

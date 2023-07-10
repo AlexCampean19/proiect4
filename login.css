@@ -52,6 +52,7 @@
     width: 100%;
   }
   header #plus {
+    cursor: pointer;
     border: 0;
     background-color: transparent;
     font-family: "Font Awesome 5 Free";
@@ -62,22 +63,23 @@
     text-rendering: auto;
     line-height: 1;
     font-size: 15px;
-    color: #1D1929;
+    top: 0px;
     font-weight: 600;
     padding: 5px;
+    right: 25px;
     position: relative;
-    right: 0px;
-    background-color: #D9D9D9;
     border-radius: 50%;
+    cursor: pointer;
   }
   header #plus:after {
     content: "\f067";
-    color: #000000;
+    color: #D9D9D9;
   }
   header #plus span {
     display: none;
   }
   header #minus {
+    cursor: pointer;
     border: 0;
     background-color: transparent;
     font-family: "Font Awesome 5 Free";
@@ -88,17 +90,17 @@
     text-rendering: auto;
     line-height: 1;
     font-size: 15px;
-    color: #1D1929;
+    z-index: 1;
+    top: 0px;
     font-weight: 600;
     padding: 5px;
-    right: 47px;
+    right: -25px;
     position: relative;
-    background-color: #D9D9D9;
     border-radius: 50%;
   }
   header #minus:before {
     content: "\f068";
-    color: #000000;
+    color: #D9D9D9;
   }
   header #minus span {
     display: none;
@@ -198,6 +200,9 @@
   }
   header #userLogin span {
     display: none;
+  }
+  header #userLogin:hover {
+    color: #CA8383;
   }
   header .cart {
     font-family: "Font Awesome 5 Free";
@@ -299,10 +304,10 @@
     color: #000000;
   }
   header .valuequanty {
-    width: 50px;
+    width: 100px;
     padding: 0;
     position: relative;
-    right: -25px;
+    right: 0px;
     border: 0.5px solid #E8E8EA;
     text-align: center;
     display: inline-block;
@@ -327,6 +332,7 @@
     border-radius: 10px;
     float: right;
     background-color: #D9D9D9;
+    cursor: pointer;
   }
   header #btnshop {
     position: absolute;
@@ -385,6 +391,7 @@
     font-size: 30px;
     bottom: 45px;
     position: relative;
+    cursor: pointer;
   }
   header .shop {
     display: none;
@@ -933,6 +940,9 @@ h6 {
 
 main {
   min-height: 600px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }
 
 h1 {
@@ -947,19 +957,17 @@ h1 {
 
 #root {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding: 30px;
+  max-width: 800px;
 }
 
 form {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  width: 250px;
+  min-width: 250px;
   justify-content: space-evenly;
-  height: 350px;
+  min-height: 500px;
   background-color: #F9F9F9;
   border-radius: 16px;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);

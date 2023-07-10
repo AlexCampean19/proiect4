@@ -39,6 +39,65 @@ h6 {
 }
 
 @media (min-width: 320px) {
+    .arrowupuseropen {
+        border: 0;
+        background-color: transparent;
+        font-family: "Font Awesome 5 Free";
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-size: 30px;
+        color: $cultitlu;
+        font-weight: 900;
+        text-decoration: none;
+        padding-left: 10px;
+        &:after {
+            content: "\f106";
+            color: $culbacklact;
+        }
+    }
+    .arrowupuser2open {
+        display: none;
+    }
+    .arrowupuserclose {
+        border: 0;
+        background-color: transparent;
+        font-family: "Font Awesome 5 Free";
+        -webkit-font-smoothing: antialiased;
+        display: none;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-size: 30px;
+        color: $cultitlu;
+        font-weight: 900;
+        text-decoration: none;
+        transform: rotate(180deg);
+        &:after {
+            content: "\f106";
+            color: $culbacklact;
+        }
+    }
+    .ofMenu {
+        display: none;
+    }
+    .onMenu {
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .onMenuBox {
+        display: inline-block;
+    }
+    .ofMenuBox {
+        display: none;
+    }
+    .arrowupuser2close {
+        display: none;
+    }
     #loader {
         border: 12px solid $backfot;
         border-radius: 50%;
@@ -113,6 +172,7 @@ h6 {
         }
         #addres {
             .addresbx {
+                min-width: 250px;
                 padding: 43px 10px 50px 10px;
                 background-color: $background;
                 border-radius: 16px;
@@ -213,7 +273,10 @@ h6 {
     }
 }
 
-@media (min-width: 720px) {
+@media(min-width:1024px) {
+    .arrowupuseropen {
+        display: none;
+    }
     main {
         #boxText {
             display: inline-block;
@@ -229,15 +292,9 @@ h6 {
                 .addresbx {
                     margin-right: 25px;
                     width: 22%;
-                    text-align: center;
                 }
             }
         }
-    }
-}
-
-@media(min-width:1024px) {
-    main {
         .nume {
             display: flex;
             flex-direction: column;

@@ -47,6 +47,7 @@
             width: 100%;
         }
         #plus {
+            cursor: pointer;
             border: 0;
             background-color: transparent;
             font-family: "Font Awesome 5 Free";
@@ -57,17 +58,16 @@
             text-rendering: auto;
             line-height: 1;
             font-size: 15px;
-            color: $cultitlu;
+            top: 0px;
             font-weight: 600;
             padding: 5px;
+            right: 25px;
             position: relative;
-            right: 0px;
-            background-color: $backfot;
             border-radius: 50%;
             cursor: pointer;
             &:after {
                 content: "\f067";
-                color: $cultxtcateg;
+                color: $backfot;
             }
             span {
                 display: none;
@@ -85,16 +85,16 @@
             text-rendering: auto;
             line-height: 1;
             font-size: 15px;
-            color: $cultitlu;
+            z-index: 1;
+            top: 0px;
             font-weight: 600;
             padding: 5px;
-            right: 47px;
+            right: -25px;
             position: relative;
-            background-color: $backfot;
             border-radius: 50%;
             &:before {
                 content: "\f068";
-                color: $cultxtcateg;
+                color: $backfot;
             }
             span {
                 display: none;
@@ -196,6 +196,9 @@
                 display: none;
             }
         }
+        #userLogin:hover {
+            color: $culpretred;
+        }
         .cart {
             font-family: "Font Awesome 5 Free";
             -webkit-font-smoothing: antialiased;
@@ -285,10 +288,10 @@
             @include tipografie(14px, 500, 16px, $cultxtcateg);
         }
         .valuequanty {
-            width: 50px;
+            width: 100px;
             padding: 0;
             position: relative;
-            right: -25px;
+            right: 0px;
             border: 0.5px solid $culborder;
             text-align: center;
             display: inline-block;

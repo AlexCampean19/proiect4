@@ -1,5 +1,20 @@
 
 function Infousers(){
+  function showMenu(e) {
+    e.preventDefault();
+    jQuery('.arrowupuseropen').addClass('ofMenu');
+    jQuery('.arrowupuserclose').addClass('onMenu')
+jQuery('#boxText').removeClass('ofMenuBox')
+jQuery('#boxText').addClass('onMenuBox')
+  }
+  function closeMenu(e) {
+    jQuery('.arrowupuseropen').removeClass('onMenu');
+    jQuery('.arrowupuserclose').removeClass('onMenu');
+    jQuery('.arrowupuseropen').removeClass('ofMenu');
+
+    jQuery('#boxText').addClass('ofMenuBox')
+    jQuery('#boxText').removeClass('onMenuBox')
+  }
   if (!sessionStorage.getItem('users'))
   {
 
@@ -31,6 +46,7 @@ const userOrders=()=>{
         window.location.href=window.location.origin+'/orders.html'
       }
 }
+
 const open=()=>{
   $(".popup-overlay, .popup-content").addClass("active");
 }
@@ -118,7 +134,7 @@ let raspuns=JSON.parse(response)
 sessionStorage.setItem('customers',response)
 for (const [key, value] of Object.entries(raspuns.addresses)){
 
-template+='<div class="addresbx"><p class="adresstext">'+value.firstname+'</p><p class="adresstext">'+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+' '+value.street+'</p><p class="adresstext">'+value.city+' '+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></div>';
+template+='<div class="addresbx"><p class="adresstext">'+value.firstname+' '+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+' '+value.street+'</p><p class="adresstext">'+value.city+' '+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></div>';
 }
 jQuery("#addres").append(template)
 setTimeout(function() {
@@ -128,11 +144,15 @@ setTimeout(function() {
 })
     return(
 <div id="continut">
+ 
 <h2>My account</h2>
-    <div id="boxAdress"><div id="boxText"><a id="btnaccountinfo" onClick={userinfolink} >Account Info</a><a onClick={userOrders} id="btnorders" >Orders</a><div className="popup-overlay">
+<a className="arrowupuseropen userinfomenu" href="#" onClick={showMenu}><span className="arrowupuser2open">arrow</span></a>
+<a className="arrowupuserclose userinfomenu" href="#" onClick={closeMenu}><span className="arrowupuser2close">arrow</span></a>
+    <div  id="boxAdress"><div id="boxText"className="ofMenuBox"><a id="btnaccountinfo" onClick={userinfolink} >Account Info</a><a onClick={userOrders} id="btnorders" >Orders</a><div className="popup-overlay">
 
 <div className="headernewadres">
     <h2 >New Adress</h2>
+ 
      <button id="close" onClick={close}>X</button> </div>
   <form className="popup-content">
 

@@ -52,6 +52,7 @@
     width: 100%;
   }
   header #plus {
+    cursor: pointer;
     border: 0;
     background-color: transparent;
     font-family: "Font Awesome 5 Free";
@@ -62,18 +63,17 @@
     text-rendering: auto;
     line-height: 1;
     font-size: 15px;
-    color: #1D1929;
+    top: 0px;
     font-weight: 600;
     padding: 5px;
+    right: 25px;
     position: relative;
-    right: 0px;
-    background-color: #D9D9D9;
     border-radius: 50%;
     cursor: pointer;
   }
   header #plus:after {
     content: "\f067";
-    color: #000000;
+    color: #D9D9D9;
   }
   header #plus span {
     display: none;
@@ -90,17 +90,17 @@
     text-rendering: auto;
     line-height: 1;
     font-size: 15px;
-    color: #1D1929;
+    z-index: 1;
+    top: 0px;
     font-weight: 600;
     padding: 5px;
-    right: 47px;
+    right: -25px;
     position: relative;
-    background-color: #D9D9D9;
     border-radius: 50%;
   }
   header #minus:before {
     content: "\f068";
-    color: #000000;
+    color: #D9D9D9;
   }
   header #minus span {
     display: none;
@@ -200,6 +200,9 @@
   }
   header #userLogin span {
     display: none;
+  }
+  header #userLogin:hover {
+    color: #CA8383;
   }
   header .cart {
     font-family: "Font Awesome 5 Free";
@@ -301,10 +304,10 @@
     color: #000000;
   }
   header .valuequanty {
-    width: 50px;
+    width: 100px;
     padding: 0;
     position: relative;
-    right: -25px;
+    right: 0px;
     border: 0.5px solid #E8E8EA;
     text-align: center;
     display: inline-block;
@@ -972,6 +975,11 @@ h6 {
   }
   main #orders {
     display: block;
+    z-index: 0;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: unset;
+    max-height: 500px;
   }
   main #OrdersHeadTable {
     display: none;
@@ -1032,18 +1040,14 @@ h6 {
     display: inline-block;
     width: 20%;
   }
-  main #orders {
-    width: 80%;
-  }
 }
 @media (min-width: 1024px) {
   main #boxAdress {
     display: flex;
+    flex-direction: column;
   }
   main #orders {
-    display: table;
     text-align: center;
-    width: 80%;
   }
   main .comanda {
     display: table-row;
@@ -1105,6 +1109,12 @@ h6 {
   }
   main .comanda > .tableSmall:last-child > .tableCell:last-child {
     border-bottom: none;
+  }
+}
+@media (min-width: 1390px) {
+  main #boxAdress {
+    display: flex;
+    flex-direction: row;
   }
 }
 

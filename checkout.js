@@ -74,7 +74,7 @@ sessionStorage.setItem('adrese',response.addresses)
 for (const [key, value] of Object.entries(raspuns.addresses)){
 
 
-template1+='<input type="radio" name="radiobut" id="'+value.id+'" class="selectaddress"  value="'+value.id+'"/><label class="adrsel"  for="'+value.id+'"><span class="input-radio-faux"></span><p class="adresstext">'+value.firstname+'</p><p class="adresstext">'+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+'</p><p class="adresstext">'+value.street+'</p><p class="adresstext">'+value.city+'</p><p class="adresstext">'+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></label>';
+template1+='<input type="radio" name="radiobut" id="'+value.id+'" class="selectaddress"  value="'+value.id+'"/><label class="adrsel"  for="'+value.id+'"><span class="input-radio-faux"></span><p class="adresstext">'+value.firstname+' '+value.lastname+'</p><p class="adresstext">'+raspuns.dob+'</p><p class="adresstext">'+value.postcode+' '+value.street+'</p><p class="adresstext">'+value.city+' '+value.region.region_code+' '+value.region.region_id+'</p><p class="adresstext">'+value.country_id+'</p><p class="adresstext">'+value.telephone+'</p></label>';
 }
 
 jQuery("#adrese").append(template1)
