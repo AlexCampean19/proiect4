@@ -39,6 +39,9 @@
     }
     
     @media (min-width: 320px) {
+        footer {
+            padding-top: 50px;
+        }
         #loader {
             border: 12px solid $backfot;
             border-radius: 50%;
@@ -98,9 +101,6 @@
                 display: block;
                 z-index: 0;
                 text-align: center;
-                overflow-y: auto;
-                overflow-x: unset;
-                max-height: 500px;
             }
             #OrdersHeadTable {
                 display: none;
@@ -164,7 +164,7 @@
         }
     }
     
-    @media (min-width: 1024px) {
+    @media (min-width: 1235px) {
         main {
             #boxAdress {
                 display: flex;
@@ -182,6 +182,7 @@
             .table_header {
                 display: table-cell;
                 padding-top: 15px;
+                min-width: 200px;
                 border-top: 1px solid $cultitlu;
                 border-bottom: 1px solid $cultitlu;
                 @include tipografie(18x, 800, 22px, $cultitlu)
@@ -236,6 +237,9 @@
             #boxAdress {
                 display: flex;
                 flex-direction: row;
+            }
+            #boxAdress:last-child {
+                margin-left: auto;
             }
         }
     }

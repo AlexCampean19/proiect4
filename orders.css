@@ -911,6 +911,9 @@ h6 {
 }
 
 @media (min-width: 320px) {
+  footer {
+    padding-top: 50px;
+  }
   #loader {
     border: 12px solid #D9D9D9;
     border-radius: 50%;
@@ -977,9 +980,6 @@ h6 {
     display: block;
     z-index: 0;
     text-align: center;
-    overflow-y: auto;
-    overflow-x: unset;
-    max-height: 500px;
   }
   main #OrdersHeadTable {
     display: none;
@@ -1041,7 +1041,7 @@ h6 {
     width: 20%;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1235px) {
   main #boxAdress {
     display: flex;
     flex-direction: column;
@@ -1058,6 +1058,7 @@ h6 {
   main .table_header {
     display: table-cell;
     padding-top: 15px;
+    min-width: 200px;
     border-top: 1px solid #1D1929;
     border-bottom: 1px solid #1D1929;
     font-size: 18x;
@@ -1115,6 +1116,9 @@ h6 {
   main #boxAdress {
     display: flex;
     flex-direction: row;
+  }
+  main #boxAdress:last-child {
+    margin-left: auto;
   }
 }
 
